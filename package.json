@@ -9,7 +9,7 @@
     },
     "main": "./main.js",
     "activationEvents": [
-        "onCommand:conditional-generator.start"
+        "*"
     ],
     "contributes": {
         "commands": [
@@ -17,11 +17,20 @@
                 "command": "conditional-generator.start",
                 "title": "Start Conditional Generator Agent"
             }
+        ],
+        "copilotAgents": [
+            {
+                "id": "conditional-generator",
+                "name": "Conditional Generator",
+                "description": "Generates text based on conditions"
+            }
         ]
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/ishwaryaramesh200-byte/Generator-Agent.git"
     },
-    "dependencies": {}
+    "dependencies": {
+        "vscode": "^1.80.0"
+    }
 }

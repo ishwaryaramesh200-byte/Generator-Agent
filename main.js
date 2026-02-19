@@ -1,7 +1,6 @@
 const vscode = require('vscode');
 
 function activate(context) {
-    // Register the command defined in package.json
     let disposable = vscode.commands.registerCommand(
         'conditional-generator.start',
         function () {
