@@ -1,26 +1,18 @@
 const vscode = require('vscode');
 
-/**
- * Called when your agent is activated
- * @param {vscode.ExtensionContext} context
- */
 function activate(context) {
-    console.log("Conditional Generator Agent Activated!");
-
-    // Register command
-    let disposable = vscode.commands.registerCommand('conditional-generator.start', () => {
-        vscode.window.showInformationMessage('Conditional Generator Agent is running!');
-    });
+    // Register the command defined in package.json
+    let disposable = vscode.commands.registerCommand(
+        'conditional-generator.start',
+        function () {
+            vscode.window.showInformationMessage('Conditional Generator Agent started!');
+        }
+    );
 
     context.subscriptions.push(disposable);
 }
 
-/**
- * Called when your agent is deactivated
- */
-function deactivate() {
-    console.log("Conditional Generator Agent Deactivated!");
-}
+function deactivate() { }
 
 module.exports = {
     activate,

@@ -1,0 +1,5 @@
+{
+    "name": "Generator",
+    "description": "Rule-based data generator agent",
+    "entryCommand": "conditional-generator.start"
+}
