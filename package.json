@@ -18,11 +18,16 @@
                 "title": "Start Conditional Generator Agent"
             }
         ],
-        "copilotAgents": [
+        "agents": [
             {
                 "id": "conditional-generator",
-                "name": "Conditional Generator",
-                "description": "Generates text based on conditions"
+                "label": "Conditional Generator",
+                "description": "Generates text based on conditional rules"
+            },
+            {
+                "id": "generators",
+                "label": "Generators",
+                "description": "Generator Configuration Agent responsible for generating generators"
             }
         ]
     },
