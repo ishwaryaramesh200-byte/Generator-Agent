@@ -30,7 +30,7 @@
         "type": "git",
         "url": "https://github.com/ishwaryaramesh200-byte/Generator-Agent.git"
     },
-    "dependencies": {
+    "devDependencies": {
         "vscode": "^1.80.0"
     }
 }
