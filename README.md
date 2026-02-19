@@ -2,7 +2,24 @@
 
 ## Installation
 
-### Option 1: Build from Source (Recommended)
+### Option 1: Quick Install (Pre-built)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ishwaryaramesh200-byte/Generator-Agent.git
+   cd Generator-Agent
+   ```
+
+2. Install in VS Code from pre-built .vsix:
+   ```bash
+   code --install-extension conditional-generator-agent-1.0.0.vsix
+   ```
+
+3. Reload VS Code:
+   - Press `Ctrl+Shift+P`
+   - Type "Reload Window" and press Enter
+
+### Option 2: Build from Source
 
 1. Clone the repository:
    ```bash
@@ -21,11 +38,15 @@
    ```
 
 4. Install in VS Code:
-   - Open VS Code
-   - Go to Extensions → Install from VSIX
-   - Select the generated `conditional-generator-agent-1.0.0.vsix` file
+   ```bash
+   code --install-extension conditional-generator-agent-1.0.0.vsix
+   ```
 
-### Option 2: From Marketplace (Coming Soon)
+5. Reload VS Code:
+   - Press `Ctrl+Shift+P`
+   - Type "Reload Window" and press Enter
+
+### Option 3: From Marketplace (Coming Soon)
 The extension will be available on the VS Code Marketplace.
 
 ## Usage
