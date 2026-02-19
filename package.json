@@ -9,25 +9,13 @@
     },
     "main": "./main.js",
     "activationEvents": [
-        "*"
+        "onStartupFinished"
     ],
     "contributes": {
         "commands": [
             {
                 "command": "conditional-generator.start",
                 "title": "Start Conditional Generator Agent"
-            }
-        ],
-        "agents": [
-            {
-                "id": "conditional-generator",
-                "label": "Conditional Generator",
-                "description": "Generates text based on conditional rules"
-            },
-            {
-                "id": "generators",
-                "label": "Generators",
-                "description": "Generator Configuration Agent responsible for generating generators"
             }
         ]
     },
