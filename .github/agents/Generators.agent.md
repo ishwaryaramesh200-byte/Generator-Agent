@@ -43,7 +43,7 @@ description: 'Generator Configuration Agent responsible for generating "generato
 
 # where to create the generators file:
 
-19. Create a subfolder only inside the `source/api-data-generators/support` directory with the specified name, and inside that subfolder create a file called test_data_generation_configurations.json.
+19. Create a subfolder only inside the `Generators` directory with the specified name, and inside that subfolder create a file called test_data_generation_configurations.json.
 
 ---
 
