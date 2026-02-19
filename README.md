@@ -46,9 +46,6 @@
    - Press `Ctrl+Shift+P`
    - Type "Reload Window" and press Enter
 
-### Option 3: From Marketplace (Coming Soon)
-The extension will be available on the VS Code Marketplace.
-
 ## Usage
 
 1. Copy the `.github/agents` folder into your project root.
