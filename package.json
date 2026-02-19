@@ -31,6 +31,7 @@
         "url": "https://github.com/ishwaryaramesh200-byte/Generator-Agent.git"
     },
     "devDependencies": {
-        "vscode": "^1.80.0"
+        "@types/vscode": "^1.80.0",
+        "@vscode/vsce": "^2.20.0"
     }
 }
