@@ -1,0 +1,68 @@
+{
+  "apis": {
+    "DeleteTranslation": {
+      "204": {
+        "languageIds[*]": "#/generators/translation_language_id"
+      },
+      "422": {
+        "languageIds[*]": "#/generators/translation_language_id"
+      }
+    },
+    "updateTranslation": {
+      "200": {
+        "languageId": "#/generators/translation_language_id"
+      },
+      "422": {
+        "languageId": "#/generators/translation_language_id"
+      }
+    },
+    "downloadExportedFile": {
+      "200": {
+        "exportId": "#/generators/translation_export_id"
+      },
+      "204": {
+        "exportId": "#/generators/translation_export_id"
+      },
+      "422": {
+        "exportId": "#/generators/translation_export_id"
+      }
+    },
+    "getTranslation": {
+      "200": {
+        "languageId": "#/generators/translation_language_id",
+        "languageCode": "#/generators/translation_language_code"
+      },
+      "204": {
+        "languageId": "#/generators/translation_language_id",
+        "languageCode": "#/generators/translation_language_code"
+      },
+      "422": {
+        "languageId": "#/generators/translation_language_id",
+        "languageCode": "#/generators/translation_language_code"
+      }
+    }
+  },
+  "generators": {
+    "translation_language_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.TranslationLanguages.addTranslation",
+        "dataPath": "$.response.body:$.data[*].id",
+        "name": "translation_language"
+      }
+    ],
+    "translation_language_code": [
+      {
+        "type": "reference",
+        "ref": "$translation_language.response.body:$.data[*].code"
+      }
+    ],
+    "translation_export_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.TranslationLanguages.exportTranslation",
+        "dataPath": "$.response.body:$.id"
+      }
+    ]
+  }
+}

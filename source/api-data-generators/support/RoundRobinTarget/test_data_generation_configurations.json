@@ -1,0 +1,50 @@
+{
+  "apis" : {
+    "getRRTarget" : {
+      "200" : {
+        "targetId" : "#/generators/getRRTarget_targetId",
+        "ruleId" : "#/generators/getRRTarget_ruleId"
+      }
+    },
+    "reorderTargets" : {
+      "422" : {
+        "ruleId" : "#/generators/getRRTarget_ruleId",
+        "targetIds[*]" : "#/generators/getReorderTarget_targetId"
+      },
+      "204" : {
+        "ruleId" : "#/generators/getRRTarget_ruleId",
+        "targetIds[*]" : "#/generators/getReorderTarget_targetId"
+      }
+    }
+  },
+  "generators" : {
+    "getRRTarget_targetId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "RoundRobin.getAllRRRules",
+      "dataPath" : "$.response.body:$.data[0].targets[0].targetId",
+      "params" : { }
+    } ],
+    "getRRTarget_ruleId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "RoundRobin.getAllRRRules",
+      "name" : "rule_id",
+      "dataPath" : "$.response.body:$.data[0].ruleId",
+      "params" : { }
+    } ],
+    "getReorderTarget_targetId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "RoundRobin.getRoundRobinRule",
+      "dataPath" : "$.response.body:$.targets[*].targetId",
+      "params" : {
+        "ruleId" : "$rule_id.response.body:$.data[0].ruleId"
+      }
+    } ],
+    "reorderTargets_ruleId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "roundRobinIdForTargetOrder",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ]
+  }
+}

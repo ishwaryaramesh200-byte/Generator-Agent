@@ -1,0 +1,70 @@
+{
+  "apis" : {
+    "addThread" : {
+      "422" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      },
+      "200" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    },
+    "updateThread" : {
+      "422" : {
+        "threadId" : "#/generators/addNewThreadId_Draft",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      },
+      "200" : {
+        "threadId" : "#/generators/addNewThreadId_Draft",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    },
+    "getThread" : {
+      "200" : {
+        "threadId" : "#/generators/addRequestThread",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    },
+    "getConversation" : {
+      "200" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    },
+    "deleteDraftedThread" : {
+      "422" : {
+        "threadId" : "#/generators/addNewThreadId_Draft",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      },
+      "200" : {
+        "threadId" : "#/generators/addNewThreadId_Draft",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    },
+    "listAllThreads" : {
+      "200" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      },
+      "204" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    }
+  },
+  "generators" : {
+    "addNewThreadId_Draft" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Thread.addThread",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "isDraft" : "true",
+        "requestId" : "$portalAddRequest.response.body:$.id"
+      }
+    } ],
+    "addRequestThread" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Thread.addThread",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "requestId" : "$portalAddRequest.response.body:$.id"
+      }
+    } ]
+  }
+}

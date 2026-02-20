@@ -1,0 +1,121 @@
+{
+  "apis" : {
+    "getACategory" : {
+      "200" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "getCommunityCategory" : {
+      "200" : {
+        "departmentId" : "#/generators/getCommunityCategory_departmentId"
+      }
+    },
+    "addSecondaryPermalink" : {
+      "422" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      },
+      "204" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "getACategoryByPermalink" : {
+      "422" : {
+        "permalink" : "#/generators/getACategoryByPermalink_permalink"
+      },
+      "200" : {
+        "permalink" : "#/generators/getACategoryByPermalink_permalink"
+      }
+    },
+    "updateACategoryOrForum" : {
+      "422" : {
+        "moderators[*]" : "#/generators/updateACategoryOrForum_[*]",
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "moderators[*]" : "#/generators/updateACategoryOrForum_[*]",
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "disableACategory" : {
+      "422" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      },
+      "204" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "addForum" : {
+      "422" : {
+        "parentCategoryId" : "#/generators/addForum_parentCategoryId"
+      },
+      "200" : {
+        "parentCategoryId" : "#/generators/addForum_parentCategoryId"
+      }
+    },
+    "followACategory" : {
+      "422" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      },
+      "204" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "enableACategory" : {
+      "422" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      },
+      "204" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "unfollowACategory" : {
+      "422" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      },
+      "204" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "getAllPermalinksOfCategory" : {
+      "200" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    },
+    "categoryFollowers" : {
+      "422" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "#/generators/getCommunityCategoryId"
+      }
+    }
+  },
+  "generators" : {
+    "getACategoryByPermalink_permalink" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityCategory.getCommunityCategory",
+      "dataPath" : "$.response.body:$.categories[0].permalink",
+      "params" : { }
+    } ],
+    "getCommunityCategoryId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityCategory.getCommunityCategoriesForSetup",
+      "dataPath" : "$.response.body:$.categories[*].id"
+    } ],
+    "getCommunityCategory_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateACategoryOrForum_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addForum_parentCategoryId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityCategory.getCommunityCategoriesForSetup",
+      "dataPath" : "$.response.body:$.categories[*].child[*].parentCategoryId"
+    } ]
+  }
+}

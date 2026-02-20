@@ -1,0 +1,29 @@
+{
+  "apis": {
+    "markPending": {
+      "422": {
+        "items[*]": "#/generators/onboarding_items"
+      },
+      "204": {
+        "items[*]": "#/generators/onboarding_items"
+      }
+    },
+    "markComplete": {
+      "422": {
+        "items[*]": "#/generators/onboarding_items"
+      },
+      "204": {
+        "items[*]": "#/generators/onboarding_items"
+      }
+    }
+  },
+  "generators": {
+    "onboarding_items": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Onboarding.getItems",
+        "dataPath": "$.response.body:$.pending[*]"
+      }
+    ]
+  }
+}

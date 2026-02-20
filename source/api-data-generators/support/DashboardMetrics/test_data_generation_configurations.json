@@ -1,0 +1,205 @@
+{
+  "apis" : {
+    "getCustomerHappinessMetrics" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getOnholdTickets" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getSolvedTickets" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getInferenceValueMetrics" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getTicketByStatus" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getBacklogTickets" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getReopenedTickets" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getZiaInferenceMetrics" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getSlaMetrics" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "slaId" : "../SLAMetaInfo/test_data_generation_configurations.json#/generators/get_slaId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "slaId" : "../SLAMetaInfo/test_data_generation_configurations.json#/generators/get_slaId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getResolutionTime" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getCreatedTickets" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getSlaOverViewMetrics" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "slaId" : "../SLAMetaInfo/test_data_generation_configurations.json#/generators/get_slaId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "slaId" : "../SLAMetaInfo/test_data_generation_configurations.json#/generators/get_slaId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getResponseCount" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    },
+    "getResponseTime" : {
+      "422" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      },
+      "200" : {
+        "channel" : "#/generators/channel",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "teamId" : "#/generators/teamId"
+      }
+    }
+  },
+  "generators" : {
+    "teamId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Team.getTeamsInDepartment",
+      "dataPath" : "$.response.body:$.teams[*].id"
+    } ],
+    "channel" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "channel",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ]
+
+  }
+}

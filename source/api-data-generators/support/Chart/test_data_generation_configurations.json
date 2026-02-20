@@ -1,0 +1,35 @@
+{
+  "apis" : {
+    "getReportChartData" : {
+      "200" : {
+        "limit" : "#/generators/getReportChartData_limit",
+        "from" : "#/generators/getReportChartData_from",
+        "reportId" : "#/generators/getReportChartData_reportId",
+        "filterField" : "../Field/test_data_generation_configurations.json#/generators/field_id"
+      }
+    }
+  },
+  "generators" : {
+    "getReportChartData_filterField" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getFieldPermissionsForProfile",
+      "dataPath" : "$.response.body:$.data[*].fieldId"
+    } ],
+    "getReportChartData_from" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Product.getProductsCount",
+      "dataPath" : "$.response.body:$.count"
+    } ],
+    "getReportChartData_limit" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Product.getProductsCount",
+      "dataPath" : "$.response.body:$.count"
+    } ],
+    "getReportChartData_reportId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ReportFolder.getAllReports",
+      "dataPath" : "$.response.body:$.data[?((@.reportType == 'summary') || (@.reportType == 'matrix'))].id",
+      "params" : { }
+    } ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "apis" : {
+    "unfollowATopic" : {
+      "200" : {
+        "topicId" : "#/generators/unfollowATopic_topicId"
+      }
+    },
+    "followACategory" : {
+      "200" : {
+        "categoryId" : "#/generators/followACategory_categoryId"
+      }
+    },
+    "unFollowACategory" : {
+      "200" : {
+        "categoryId" : "#/generators/unFollowACategory_categoryId"
+      }
+    },
+    "followATopic" : {
+      "200" : {
+        "topicId" : "#/generators/followATopic_topicId"
+      }
+    }
+  },
+  "generators" : {
+    "unfollowATopic_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Topic.addTopic",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "followATopic_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Topic.addTopic",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "unFollowACategory_categoryId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Category.myFollowedCategories",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "followACategory_categoryId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Category.myFollowedCategories",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

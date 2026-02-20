@@ -1,0 +1,25 @@
+{
+  "apis" : {
+    "uploadFile" : {
+      "422" : {
+        "helpCenterId" : "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "imageUrl" : "#/generators/image_url"
+      },
+      "200" : {
+        "helpCenterId" : "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "imageUrl" : "#/generators/image_url"
+      }
+    }
+  },
+  "generators" : {
+    "image_url" : [ {
+      "type" : "static",
+      "value" : [ "https://www.zohowebstatic.com/sites/zweb/images/desk/zdesk-logo.svg" ]
+    } ],
+    "help_center_upload_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.HelpcenterUpload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

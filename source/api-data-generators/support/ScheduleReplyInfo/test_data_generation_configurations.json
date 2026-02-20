@@ -1,0 +1,182 @@
+{
+  "apis" : {
+    "sendDrafts" : {
+      "422" : {
+        "threadIds[*]" : "#/generators/sendDrafts_[*]"
+      },
+      "202" : {
+        "threadIds[*]" : "#/generators/sendDrafts_[*]"
+      }
+    },
+    "discardScheduleReplies" : {
+      "422" : {
+        "threadIds[*]" : "#/generators/discardScheduleReplies_[*]"
+      },
+      "202" : {
+        "threadIds[*]" : "#/generators/discardScheduleReplies_[*]"
+      }
+    },
+    "sendScheduleReplies" : {
+      "422" : {
+        "threadIds[*]" : "#/generators/sendScheduleReplies_[*]"
+      },
+      "202" : {
+        "threadIds[*]" : "#/generators/sendScheduleReplies_[*]"
+      }
+    },
+    "createScheduleReply" : {
+      "422" : {
+        "threadId" : "#/generators/createScheduleReply_threadId",
+        "scheduleAfter.businessHourId" : "#/generators/createScheduleReply_businessHourId",
+        "ticketId" : "#/generators/createScheduleReply_ticketId",
+        "ticketStatus" : "#/generators/createScheduleReply_ticketStatus"
+      },
+      "200" : {
+        "threadId" : "#/generators/createScheduleReply_threadId",
+        "scheduleAfter.businessHourId" : "#/generators/createScheduleReply_businessHourId",
+        "ticketId" : "#/generators/createScheduleReply_ticketId",
+        "ticketStatus" : "#/generators/createScheduleReply_ticketStatus"
+      }
+    },
+    "stopScheduleReply" : {
+      "422" : {
+        "threadId" : "#/generators/stopScheduleReply_threadId",
+        "ticketId" : "#/generators/stopScheduleReply_ticketId"
+      },
+      "200" : {
+        "threadId" : "#/generators/stopScheduleReply_threadId",
+        "ticketId" : "#/generators/stopScheduleReply_ticketId"
+      }
+    },
+    "editScheduleReply" : {
+      "422" : {
+        "threadId" : "#/generators/editScheduleReply_threadId",
+        "scheduleAfter.businessHourId" : "#/generators/editScheduleReply_businessHourId",
+        "ticketId" : "#/generators/editScheduleReply_ticketId",
+        "ticketStatus" : "#/generators/editScheduleReply_ticketStatus"
+      },
+      "200" : {
+        "threadId" : "#/generators/editScheduleReply_threadId",
+        "scheduleAfter.businessHourId" : "#/generators/editScheduleReply_businessHourId",
+        "ticketId" : "#/generators/editScheduleReply_ticketId",
+        "ticketStatus" : "#/generators/editScheduleReply_ticketStatus"
+      }
+    },
+    "discardScheduleReply" : {
+      "422" : {
+        "threadId" : "#/generators/discardScheduleReply_threadId",
+        "ticketId" : "#/generators/discardScheduleReply_ticketId"
+      },
+      "200" : {
+        "threadId" : "#/generators/discardScheduleReply_threadId",
+        "ticketId" : "#/generators/discardScheduleReply_ticketId"
+      }
+    },
+    "discardDrafts" : {
+      "422" : {
+        "threadIds[*]" : "#/generators/discardDrafts_[*]"
+      },
+      "202" : {
+        "threadIds[*]" : "#/generators/discardDrafts_[*]"
+      }
+    }
+  },
+  "generators" : {
+    "stopScheduleReply_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ScheduleReplyInfo.createScheduleReply",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "createScheduleReply_ticketStatus" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "ticketStatus",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "discardDrafts_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "stopScheduleReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "editScheduleReply_businessHourId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.BusinessHour.createBusinessHour",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "editScheduleReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "sendScheduleReplies_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "discardScheduleReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "discardScheduleReplies_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "editScheduleReply_ticketStatus" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "ticketStatus",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "sendDrafts_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "discardScheduleReply_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ScheduleReplyInfo.createScheduleReply",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "createScheduleReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "editScheduleReply_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ScheduleReplyInfo.createScheduleReply",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "createScheduleReply_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Thread.draftEmailReply",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "createScheduleReply_businessHourId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.BusinessHour.createBusinessHour",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

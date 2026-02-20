@@ -1,0 +1,41 @@
+{
+	"apis": {
+		"getHelpCentersDetails": {
+			"200": {
+				"helpCenterId": "#/generators/help_center_id"
+			}
+		},
+		"helpCenterFavicon": {
+			"200": {
+				"helpCenterId": "#/generators/help_center_id"
+			},
+			"204": {
+				"helpCenterId": "#/generators/help_center_id"
+			}
+		},
+		"helpCenterLogo": {
+			"200": {
+				"helpCenterId": "#/generators/help_center_id"
+			},
+			"204": {
+				"helpCenterId": "#/generators/help_center_id"
+			}
+		}
+	},
+	"generators": {
+		"help_center_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.Helpcenter.getAllHelpCenters",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		],
+		"help_center_locale": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.Helpcenter.getHelpCentersDetails",
+				"dataPath": "$.response.body:$.activeLocales[*].locale"
+			}
+		]
+	}
+}

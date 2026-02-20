@@ -1,0 +1,18 @@
+{
+	"apis": {
+		"getUserLabels": {
+			"200": {
+				"userId": "#/generators/user_id"
+			}
+		}
+	},
+	"generators": {
+		"user_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.HelpCenterUser.getMyProfileInformation",
+				"dataPath" : "$.response.body:$.id"
+			}
+		]
+	}
+}

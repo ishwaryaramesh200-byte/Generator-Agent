@@ -1,0 +1,92 @@
+{
+  "apis" : {
+    "getCannedMessageTranslations" : {
+      "422" : {
+        "cannedMessageId" : "#/generators/getCannedMessageTranslations_cannedMessageId"
+      },
+      "200" : {
+        "cannedMessageId" : "#/generators/getCannedMessageTranslations_cannedMessageId"
+      }
+    },
+    "addCannedMessageTranslation" : {
+      "422" : {
+        "cannedMessageId" : "#/generators/addCannedMessageTranslation_cannedMessageId"
+      },
+      "200" : {
+        "cannedMessageId" : "#/generators/addCannedMessageTranslation_cannedMessageId"
+      }
+    },
+    "getCannedMessageTranslation" : {
+      "422" : {
+        "translationId" : "#/generators/getCannedMessageTranslation_translationId",
+        "cannedMessageId" : "#/generators/getCannedMessageTranslation_cannedMessageId"
+      },
+      "200" : {
+        "translationId" : "#/generators/getCannedMessageTranslation_translationId",
+        "cannedMessageId" : "#/generators/getCannedMessageTranslation_cannedMessageId"
+      }
+    },
+    "deleteCannedMessageTranslation" : {
+      "422" : {
+        "translationId" : "#/generators/deleteCannedMessageTranslation_translationId",
+        "cannedMessageId" : "#/generators/deleteCannedMessageTranslation_cannedMessageId"
+      },
+      "204" : {
+        "translationId" : "#/generators/deleteCannedMessageTranslation_translationId",
+        "cannedMessageId" : "#/generators/deleteCannedMessageTranslation_cannedMessageId"
+      }
+    },
+    "patchCannedMessageTranslation" : {
+      "422" : {
+        "cannedMessageId" : "#/generators/patchCannedMessageTranslation_cannedMessageId",
+        "translationId" : "#/generators/patchCannedMessageTranslation_translationId"
+      },
+      "200" : {
+        "cannedMessageId" : "#/generators/patchCannedMessageTranslation_cannedMessageId",
+        "translationId" : "#/generators/patchCannedMessageTranslation_translationId"
+      }
+    }
+  },
+  "generators" : {
+    "getCannedMessageTranslation_translationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMCannedMessageTranslation.addCannedMessageTranslation",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "patchCannedMessageTranslation_translationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMCannedMessageTranslation.addCannedMessageTranslation",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deleteCannedMessageTranslation_translationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMCannedMessageTranslation.addCannedMessageTranslation",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deleteCannedMessageTranslation_cannedMessageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMTemplateMessage.getTemplateMessages",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addCannedMessageTranslation_cannedMessageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMTemplateMessage.getTemplateMessages",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getCannedMessageTranslations_cannedMessageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMTemplateMessage.getTemplateMessages",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getCannedMessageTranslation_cannedMessageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMTemplateMessage.getTemplateMessages",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "patchCannedMessageTranslation_cannedMessageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IMTemplateMessage.getTemplateMessages",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

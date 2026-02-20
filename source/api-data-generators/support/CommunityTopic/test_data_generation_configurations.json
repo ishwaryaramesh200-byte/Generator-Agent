@@ -1,0 +1,509 @@
+{
+  "apis" : {
+    "unmoderateATopic" : {
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "getTicketForATopic" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicId"
+      },
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "addTopicFromSupport" : {
+      "422" : {
+        "featuredImage.imageId" : "#/generators/addTopicFromSupport_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/addTopicFromSupport_[*]"
+      },
+      "200" : {
+        "featuredImage.imageId" : "#/generators/addTopicFromSupport_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/addTopicFromSupport_[*]"
+      }
+    },
+    "addTagsToATopic" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "approveTopics" : {
+      "422" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      }
+    },
+    "markATopicAsSpam" : {
+      "422" : {
+        "topicId" : "#/generators/markATopicAsSpam_topicId"
+      },
+      "204" : {
+        "topicId" : "#/generators/markATopicAsSpam_topicId"
+      }
+    },
+    "updateDraft" : {
+      "422" : {
+        "topicId" : "#/generators/updateDraft_topicId",
+        "featuredImage.imageId" : "#/generators/updateDraft_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/updateDraft_[*]"
+      },
+      "200" : {
+        "topicId" : "#/generators/updateDraft_topicId",
+        "featuredImage.imageId" : "#/generators/updateDraft_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/updateDraft_[*]"
+      }
+    },
+    "updateATopic" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId",
+        "featuredImage.imageId" : "#/generators/updateATopic_imageId",
+        "attachmentIds[*]" : "#/generators/updateATopic_[*]"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicId",
+        "featuredImage.imageId" : "#/generators/updateATopic_imageId",
+        "attachmentIds[*]" : "#/generators/updateATopic_[*]"
+      }
+    },
+    "deleteTopics" : {
+      "422" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      }
+    },
+    "updateMany" : {
+      "422" : {
+        "ids[*]" : "#/generators/getTopicId",
+        "fieldValue" : "#/generators/updateMany_fieldValue"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/getTopicId",
+        "fieldValue" : "#/generators/updateMany_fieldValue"
+      }
+    },
+    "deleteDraft" : {
+      "422" : {
+        "topicId" : "#/generators/deleteDraft_topicId"
+      },
+      "204" : {
+        "topicId" : "#/generators/deleteDraft_topicId"
+      }
+    },
+    "listAllCommunityTopicFollowers" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "deleteTagsoFATopic" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId",
+        "tags[*]": "#/generators/deleteTagsoFATopic_tags"
+      },
+      "204" : {
+        "topicId" : "#/generators/getTopicId",
+        "tags[*]": "#/generators/deleteTagsoFATopic_tags"
+      }
+    },
+    "unmoderateTopics" : {
+      "422" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      }
+    },
+    "markAllTopicsAsSpam" : {
+      "422" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      }
+    },
+    "unlockATopic" : {
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "addDraft" : {
+      "422" : {
+        "featuredImage.imageId" : "#/generators/addDraft_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/addDraft_[*]"
+      },
+      "200" : {
+        "featuredImage.imageId" : "#/generators/addDraft_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/addDraft_[*]"
+      }
+    },
+    "listAllModerationTopics" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "convertManyPostsAsRequest" : {
+      "422" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      }
+    },
+    "getParticipantsList" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "unfollowATopic" : {
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "trashTopics" : {
+      "422" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      }
+    },
+    "SearchTopics" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "topicsViewsCount" : {
+      "422" : {
+        "type" : "#/generators/topicsViewsCount_type",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "viewId" : "#/generators/topicsViewsCount_viewId"
+      },
+      "200" : {
+        "type" : "#/generators/topicsViewsCount_type",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "viewId" : "#/generators/topicsViewsCount_viewId"
+      }
+    },
+    "unlikeATopic" : {
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "followATopic" : {
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "moderateATopic" : {
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "moveATopic" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "204" : {
+        "topicId" : "#/generators/getTopicId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "restoreTopics" : {
+      "422" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicIds[*]" : "#/generators/getTopicId"
+      }
+    },
+    "listAllModeratedTopics" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "getATopic" : {
+      "200" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "listAllUserTopics" : {
+      "422" : {
+        "userId" : "#/generators/listAllUserTopics_userId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "userId" : "#/generators/listAllUserTopics_userId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "addAsRequest" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "getVotersList" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "likeATopic" : {
+      "204" : {
+        "topicId" : "#/generators/getTopicId"
+      }
+    },
+    "myDraftedTopics" : {
+      "422" : {
+        "type" : "#/generators/myDraftedTopics_type",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "type" : "#/generators/myDraftedTopics_type",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "publishDraft" : {
+      "422" : {
+        "topicId" : "#/generators/publishDraft_topicId",
+        "featuredImage.imageId" : "#/generators/publishDraft_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/publishDraft_[*]"
+      },
+      "200" : {
+        "topicId" : "#/generators/publishDraft_topicId",
+        "featuredImage.imageId" : "#/generators/publishDraft_imageId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "attachmentIds[*]" : "#/generators/publishDraft_[*]"
+      }
+    },
+    "getATopicByPermalink":{
+      "422": {
+        "permalink": "#/generators/getATopicByPermalink_permalink"
+      },
+      "200": {
+        "permalink": "#/generators/getATopicByPermalink_permalink"
+      }
+    }
+  },
+  "generators" : {
+    "getTopicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "getCommunityCategoryId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityCategory.getCommunityCategoriesForSetup",
+      "dataPath" : "$.response.body:$.categories[*].id"
+    } ],
+    "updateATopic_imageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.HelpcenterUpload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "topicsViewsCount_getViews_module" : [ {
+      "type" : "static",
+      "value" : [ "communityTopics" ]
+    } ],
+    "updateDraft_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityAttachment.addAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deleteTagsoFATopic_tags": [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTagsToATopic",
+      "dataPath" : "$.response.body:$[*].name",
+      "params":{
+        "topicId": "$.input.path:$.topicId"
+      }
+    } ],
+    "publishDraft_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addDraft",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "topicsViewsCount_viewId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "CustomView.getViews",
+      "dataPath" : "$.response.body:$.data[*].id",
+      "params" : {
+        "module" : "$generators:#/generators/topicsViewsCount_getViews_module",
+        "featureFlags" : "$generators:#/generators/topicsViewsCount_getViews_featureFlags"
+      }
+    } ],
+    "deleteDraft_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addDraft",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "publishDraft_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityAttachment.addAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "myDraftedTopics_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.type"
+    } ],
+    "updateATopic_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityAttachment.addAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "type" : [ {
+      "type" : "static",
+      "value" : [ "IDEA", "QUESTION", "PROBLEM" ]
+    } ],
+    "markATopicAsSpam_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "type" : "$generators:#/generators/type"
+      }
+    } ],
+    "topicsViewsCount_getViews_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "requestFromNewClient" ]
+    } ],
+    "listAllUserTopics_userId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.creator.id",
+      "params" : { }
+    } ],
+    "addTopicFromSupport_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityAttachment.addAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "topicsViewsCount_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.type"
+    } ],
+    "publishDraft_imageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.HelpcenterUpload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addDraft_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityAttachment.addAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addDraft_imageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.HelpcenterUpload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateDraft_imageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.HelpcenterUpload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addTopicFromSupport_imageId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.HelpcenterUpload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateDraft_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addDraft",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "getATopicByPermalink_permalink": [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.permalink"
+    } ],
+    "booleanValue" : [ {
+      "type" : "static",
+      "value" : [ "true","false" ]
+    } ],
+    "updateMany_fieldValue":[ {
+      "type":"conditional",
+      "conditions":[
+        {
+          "when":{
+            "key":"$.input.body:$.fieldName",
+            "equals":"categoryId"
+          },
+          "then":{
+            "use":"$generators:#/generators/getCommunityCategoryId"
+          }
+        },
+        {
+          "when":{
+            "key":"$.input.body:$.fieldName",
+            "equals":"type"
+          },
+          "then":{
+            "use":"$generators:#/generators/type"
+          }
+        },
+        {
+          "when":{
+            "key":"$.input.body:$.fieldName",
+            "equals":"isSticky"
+          },
+          "then":{
+            "use":"$generators:#/generators/booleanValue"
+          }
+        },
+        {
+          "when":{
+            "key":"$.input.body:$.fieldName",
+            "equals":"isLocked"
+          },
+          "then":{
+            "use":"$generators:#/generators/booleanValue"
+          }
+        }
+      ]
+    }]
+  }
+}

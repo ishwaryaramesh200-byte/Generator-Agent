@@ -1,0 +1,50 @@
+{
+  "apis" : {
+    "deployChangeSets" : {
+      "422" : {
+        "sandboxId" : "#/generators/deployChangeSets_sandboxId",
+        "changeSetIds[*]" : "#/generators/deployChangeSets_[*]"
+      },
+      "204" : {
+        "sandboxId" : "#/generators/deployChangeSets_sandboxId",
+        "changeSetIds[*]" : "#/generators/deployChangeSets_[*]"
+      }
+    },
+    "validateChangesets" : {
+      "422" : {
+        "sandboxId" : "#/generators/validateChangesets_sandboxId",
+        "changeSetIds[*]" : "#/generators/validateChangesets_[*]"
+      },
+      "200" : {
+        "sandboxId" : "#/generators/validateChangesets_sandboxId",
+        "changeSetIds[*]" : "#/generators/validateChangesets_[*]"
+      },
+      "204" : {
+        "sandboxId" : "#/generators/validateChangesets_sandboxId",
+        "changeSetIds[*]" : "#/generators/validateChangesets_[*]"
+      }
+    }
+  },
+  "generators" : {
+    "validateChangesets_sandboxId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Sandbox.addSandbox",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deployChangeSets_sandboxId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Sandbox.addSandbox",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deployChangeSets_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.SandboxChangeset.getAllChangeSets",
+      "dataPath" : "$.response.body:$.data[*].changeSetId"
+    } ],
+    "validateChangesets_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.SandboxChangeset.getAllChangeSets",
+      "dataPath" : "$.response.body:$.data[*].changeSetId"
+    } ]
+  }
+}

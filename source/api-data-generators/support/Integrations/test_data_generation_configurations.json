@@ -1,0 +1,25 @@
+{
+    "apis" : {
+        "getChannelsInfo" : {
+            "200" : {
+                "channelIds[*]" : "#/generators/getChannelsInfo_channelIds",
+                "workspaceId" : "#/generators/getChannelsInfo_workspaceId"
+            }
+        }
+    },
+    "generators" : {
+        "getChannelsInfo_channelIds" : [
+            {
+                "type" : "static",
+                "value" : ["C12345,C67890"]
+            }
+        ],
+        "getChannelsInfo_workspaceId" : [
+            {
+                "type" : "dynamic",
+                "generatorOperationId" : "support.Slack.getIntegratedSlackTeams",
+                "dataPath": "$.response.body:$.integDetail[*].id"
+            }
+        ]
+    }
+}

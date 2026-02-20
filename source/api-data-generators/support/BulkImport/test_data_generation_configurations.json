@@ -1,0 +1,211 @@
+{
+  "apis": {
+    "bulkImportRead": {
+      "200": {
+        "bulkImportId": "#/generators/stopped_bulk_import_id"
+      },
+      "204": {
+        "bulkImportId": "#/generators/stopped_bulk_import_id"
+      }
+    },
+    "bulkImportMoveForward": {
+      "200": {
+        "bulkImportId": "#/generators/drafted_bulk_import_id"
+      },
+      "204": {
+        "bulkImportId": "#/generators/drafted_bulk_import_id"
+      },
+      "422": {
+        "bulkImportId": "#/generators/drafted_bulk_import_id",
+        "fileId": "#/generators/zfs_file_id"
+      }
+    },
+    "bulkImportAddMoreData": {
+      "422": {
+        "bulkImportId": "#/generators/bulk_import_id",
+        "fileId": "#/generators/zfs_file_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/bulk_import_id",
+        "fileId": "#/generators/zfs_file_id"
+      }
+    },
+    "bulkImportStop": {
+      "422": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      }
+    },
+    "bulkImportHistory": {
+      "422": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      }
+    },
+    "bulkImportRetry": {
+      "422": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      }
+    },
+    "bulkImportRevert": {
+      "422": {
+        "bulkImportId": "#/generators/imported_bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/imported_bulk_import_id"
+      }
+    },
+    "saveFiles": {
+      "200": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      }
+    },
+    "bulkImportDelete": {
+      "204": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      }
+    },
+    "bulkImportResume": {
+      "422": {
+        "bulkImportId": "#/generators/stopped_bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/stopped_bulk_import_id"
+      }
+    },
+    "bulkImportMapFields": {
+      "422": {
+        "bulkImportId": "#/generators/map_field_stage_bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/map_field_stage_bulk_import_id"
+      }
+    },
+    "bulkImportFiles": {
+      "422": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/bulk_import_id"
+      }
+    },
+    "bulkImportStart": {
+      "422": {
+        "bulkImportId": "#/generators/review_stage_bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/review_stage_bulk_import_id"
+      }
+    },
+    "bulkImportSubmitMappings": {
+      "422": {
+        "bulkImportId": "#/generators/map_field_stage_bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/map_field_stage_bulk_import_id"
+      }
+    },
+    "bulkImportMoveBack": {
+      "422": {
+        "bulkImportId": "#/generators/review_stage_bulk_import_id"
+      },
+      "200": {
+        "bulkImportId": "#/generators/review_stage_bulk_import_id"
+      }
+    },
+    "bulkImportCreate": {
+      "422": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "fileId": "#/generators/zfs_file_id"
+      },
+      "200": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "fileId": "#/generators/zfs_file_id"
+      }
+    }
+  },
+  "generators": {
+    "bulk_import_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.BulkImport.bulkImportList",
+        "dataPath": "$.response.body:$.data[*].id"
+      }
+    ],
+    "create_bulk_import_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.BulkImport.bulkImportCreate",
+        "dataPath": "$.response.body:$.id"
+      }
+    ],
+    "zfs_file_id": [
+      {
+        "type": "static",
+        "value": [
+          ""
+        ]
+      }
+    ],
+    "review_stage_bulk_import_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "BulkImport.bulkImportList",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "processInStage": "REVIEW",
+          "status": "WAITING"
+        }
+      }
+    ],
+    "map_field_stage_bulk_import_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "BulkImport.bulkImportList",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "processInStage": "MAP_FIELD",
+          "status": "WAITING"
+        }
+      }
+    ],
+    "stopped_bulk_import_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.BulkImport.bulkImportList",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "status": "STOP"
+        }
+      }
+    ],
+    "drafted_bulk_import_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.BulkImport.bulkImportList",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "status": "DRAFTED"
+        }
+      }
+    ],
+    "imported_bulk_import_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "BulkImport.bulkImportList",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "processInStage": "IMPORTED",
+          "status": "COMPLETED"
+        }
+      }
+    ]
+  }
+}

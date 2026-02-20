@@ -1,0 +1,26 @@
+{
+  "apis" : {
+    "getCriteria" : {
+      "422" : {
+        "layoutId" : "#/generators/getCriteria_layoutId",
+        "departmentId" : "#/generators/getCriteria_departmentId"
+      },
+      "200" : {
+        "layoutId" : "#/generators/getCriteria_layoutId",
+        "departmentId" : "#/generators/getCriteria_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "getCriteria_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getCriteria_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

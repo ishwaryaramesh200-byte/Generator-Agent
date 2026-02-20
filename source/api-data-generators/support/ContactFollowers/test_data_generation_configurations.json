@@ -1,0 +1,52 @@
+{
+  "apis": {
+    "removeFollowers": {
+      "404": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "followerIds[*]": "#/generators/contact_follow_id"
+      },
+      "422": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "followerIds[*]": "#/generators/contact_follow_id"
+      },
+      "204": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "followerIds[*]": "#/generators/contact_follow_id"
+      }
+    },
+    "addFollowers": {
+      "404": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "followerIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      },
+      "422": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "followerIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      },
+      "204": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "followerIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    },
+    "getFollowers": {
+      "404": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      },
+      "200": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      }
+    }
+  },
+  "generators": {
+    "contact_follow_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.ContactFollowers.addFollowers",
+        "dataPath": "$.input.body:$.followerIds[*]",
+        "params": {
+          "contactId": "$contacts.response.body:$.id"
+        }
+      }
+    ]
+  }
+}

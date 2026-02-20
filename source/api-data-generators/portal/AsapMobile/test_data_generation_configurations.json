@@ -1,0 +1,21 @@
+{
+  "apis" : {
+    "getAsapMobileSDK" : {
+      "200" : {
+        "appId" : "#/generators/AsapMobile_appId"
+      },
+      "204" : {
+        "appId" : "#/generators/AsapMobile_appId"
+      }
+    }
+  },
+  "generators" : {
+    "AsapMobile_appId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getSdkAppId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.portalId"
+      }
+    } ]
+  }
+}

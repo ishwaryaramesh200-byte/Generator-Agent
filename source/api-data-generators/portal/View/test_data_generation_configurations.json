@@ -1,0 +1,19 @@
+{
+  "apis" : {
+    "UpdateLastAccessedView" : {
+      "422" : {
+        "viewId" : "#/generators/UpdateLastAccessedView_viewId"
+      },
+      "200" : {
+        "viewId" : "#/generators/UpdateLastAccessedView_viewId"
+      }
+    }
+  },
+  "generators" : {
+    "UpdateLastAccessedView_viewId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.View.GetLastAccessedView",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

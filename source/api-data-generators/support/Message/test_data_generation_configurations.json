@@ -1,0 +1,38 @@
+{
+  "apis" : {
+    "getMessageAttachmentContent" : {
+      "200" : {
+        "messageId" : "#/generators/getMessageAttachmentContent_messageId",
+        "attachmentId" : "../Upload/test_data_generation_configurations.json#/generators/upload_id"
+      }
+    },
+    "getMessages" : {
+      "200" : {
+        "threadId" : "#/generators/getMessages_threadId"
+      }
+    }
+  },
+  "generators" : {
+    "getMessageAttachmentContent_attachmentId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "messageAttachmentId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "getMessages_threadId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "messageThreadId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "getMessageAttachmentContent_messageId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "attachmentMessageId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ]
+  }
+}

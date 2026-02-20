@@ -1,0 +1,17 @@
+{
+  "apis" : {
+    "getDARTarget" : {
+      "200" : {
+        "targetId" : "#/generators/direct_assign_rule_targer_id",
+        "ruleId" : "../DirectAssignmentRules/test_data_generation_configurations.json#/generators/direct_assignment_rule_id"
+      }
+    }
+  },
+  "generators" : {
+    "direct_assign_rule_targer_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "DirectAssignmentRules.getAllDARRules",
+      "dataPath" : "$.response.body:$.data[0].targets[0].targetId"
+    } ]
+  }
+}

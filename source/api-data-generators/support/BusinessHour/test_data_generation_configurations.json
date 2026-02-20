@@ -1,0 +1,72 @@
+{
+  "apis" : {
+    "updateBusinessHour" : {
+      "422" : {
+        "holidayListId" : "../HolidayList/test_data_generation_configurations.json#/generators/holiday_list_id",
+        "businessHourId" : "#/generators/business_hour_id",
+        "timeZoneId" : "#/generators/timezone_id",
+        "businessTimes[*]" : "#/generators/businessTimes"
+      },
+      "200" : {
+        "holidayListId" : "../HolidayList/test_data_generation_configurations.json#/generators/holiday_list_id",
+        "businessHourId" : "#/generators/business_hour_id",
+        "timeZoneId" : "#/generators/timezone_id",
+        "businessTimes[*]" : "#/generators/businessTimes"
+      }
+    },
+    "getBusinessHour" : {
+      "422" : {
+        "businessHourId" : "#/generators/business_hour_id"
+      },
+      "200" : {
+        "businessHourId" : "#/generators/business_hour_id"
+      }
+    },
+    "createBusinessHour" : {
+      "422" : {
+        "holidayListId" : "../HolidayList/test_data_generation_configurations.json#/generators/holiday_list_id",
+        "timeZoneId" : "#/generators/timezone_id",
+        "businessTimes[*]" : "#/generators/businessTimes"
+      },
+      "201" : {
+        "holidayListId" : "../HolidayList/test_data_generation_configurations.json#/generators/holiday_list_id",
+        "timeZoneId" : "#/generators/timezone_id",
+        "businessTimes[*]" : "#/generators/businessTimes"
+      }
+    },
+    "getRelatedRules" : {
+      "200" : {
+        "businessHourId" : "#/generators/business_hour_id"
+      }
+    },
+    "getBusinessHours" : {
+      "200" : {
+        "businessHourIds[*]" : "#/generators/business_hour_id"
+      }
+    }
+  },
+  "generators" : {
+    "timezone_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CountriesAndLanguages.getAllTimeZones",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "business_hour_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.BusinessHour.createBusinessHour",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "type" : "24X7",
+        "status" : "ACTIVE"
+      }
+    } ],
+    "businessTimes" : [ {
+      "type" : "static",
+      "value" : [ {
+        "startTime" : "10:00",
+        "endTime" : "16:00",
+        "day" : "MONDAY"
+      } ]
+    } ]
+  }
+}

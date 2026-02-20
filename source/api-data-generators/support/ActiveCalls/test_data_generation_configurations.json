@@ -1,0 +1,38 @@
+{
+  "apis" : {
+    "getCalls" : {
+      "200" : {
+        "number" : "#/generators/getCalls_number",
+        "ivrMenuId" : "#/generators/getCalls_ivrMenuId"
+      }
+    },
+    "getCount" : {
+      "200" : {
+        "number" : "#/generators/getCount_number",
+        "ivrMenuId" : "#/generators/getCount_ivrMenuId"
+      }
+    }
+  },
+  "generators" : {
+    "getCount_ivrMenuId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.PBXPhoneNumbers.getSpecificNumber",
+      "dataPath" : "$.response.body:$.IVRs[*].menuId"
+    } ],
+    "getCount_number" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.PBXPhoneNumbers.getConfiguredNumbers",
+      "dataPath" : "$.response.body:$.data[*].number"
+    } ],
+    "getCalls_ivrMenuId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.PBXPhoneNumbers.getSpecificNumber",
+      "dataPath" : "$.response.body:$.IVRs[*].menuId"
+    } ],
+    "getCalls_number" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.PBXPhoneNumbers.getConfiguredNumbers",
+      "dataPath" : "$.response.body:$.data[*].number"
+    } ]
+  }
+}

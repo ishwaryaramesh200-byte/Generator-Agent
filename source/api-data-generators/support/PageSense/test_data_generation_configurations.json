@@ -1,0 +1,77 @@
+{
+  "apis" : {
+    "getReports" : {
+      "422" : {
+        "resourceId" : "#/generators/getReports_resourceId"
+      },
+      "200" : {
+        "resourceId" : "#/generators/getReports_resourceId"
+      }
+    },
+    "getFormsList" : {
+      "422" : {
+        "departmentId" : "#/generators/getFormsList_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getFormsList_departmentId"
+      }
+    },
+    "updateStatus" : {
+      "200" : {
+        "goalAnalytics[*].departmentId" : "#/generators/updateStatus_departmentId",
+        "formAnalytics[*].isEnabled" : "#/generators/updateStatus_isEnabled",
+        "formAnalytics[*].departmentId" : "#/generators/updateStatus_departmentId",
+        "goalAnalytics[*].isEnabled" : "#/generators/updateStatus_isEnabled"
+      }
+    },
+    "getSegmentReports" : {
+      "422" : {
+        "resourceId" : "#/generators/getSegmentReports_resourceId"
+      },
+      "200" : {
+        "resourceId" : "#/generators/getSegmentReports_resourceId"
+      }
+    }
+  },
+  "generators" : {
+    "getReports_getFormsList_formTypes" : [ {
+      "type" : "static",
+      "value" : [ "feedbackWidget" ]
+    } ],
+    "getSegmentReports_getFormsList_formTypes" : [ {
+      "type" : "static",
+      "value" : [ "feedbackWidget" ]
+    } ],
+    "updateStatus_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getSegmentReports_resourceId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "PageSense.getFormsList",
+      "dataPath" : "$.response.body:$.feedbackWidget[0].formId",
+      "params" : {
+        "formTypes" : "$generators:#/generators/getSegmentReports_getFormsList_formTypes"
+      }
+    } ],
+    "getReports_resourceId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "PageSense.getFormsList",
+      "dataPath" : "$.response.body:$.feedbackWidget[0].formId",
+      "params" : {
+        "formTypes" : "$generators:#/generators/getReports_getFormsList_formTypes"
+      }
+    } ],
+    "getFormsList_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateStatus_isEnabled" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.PageSense.getStatus",
+      "dataPath" : "$.response.body:$.goalAnalytics[*].isEnabled"
+    } ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "apis": {
+    "getTimerForActivity": {
+      "200": {
+        "activityId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      }
+    },
+    "saveTimerForTasks": {
+      "422": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      },
+      "200": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      }
+    },
+    "getActiveTimerForEntity": {
+      "200": {
+        "entityId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      },
+      "204": {
+        "entityId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "apis" : {
+    "getLanguages" : {
+      "422" : {
+        "targetLanguage" : "#/generators/getLanguages_targetLanguage",
+        "sourceLanguage" : "#/generators/getLanguages_sourceLanguage"
+      },
+      "200" : {
+        "targetLanguage" : "#/generators/getLanguages_targetLanguage",
+        "sourceLanguage" : "#/generators/getLanguages_sourceLanguage"
+      }
+    },
+    "translation" : {
+      "422" : {
+        "targetLanguage" : "#/generators/translation_targetLanguage",
+        "sourceLanguage" : "#/generators/translation_sourceLanguage"
+      },
+      "200" : {
+        "targetLanguage" : "#/generators/translation_targetLanguage",
+        "sourceLanguage" : "#/generators/translation_sourceLanguage"
+      },
+      "202" : {
+        "targetLanguage" : "#/generators/translation_targetLanguage",
+        "sourceLanguage" : "#/generators/translation_sourceLanguage"
+      }
+    }
+  },
+  "generators" : {
+    "getLanguages_sourceLanguage" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.zlabsnlp.languageDetection",
+      "dataPath" : "$.response.body:$.langId"
+    } ],
+    "translation_targetLanguage" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.zlabsnlp.languageDetection",
+      "dataPath" : "$.response.body:$.langId"
+    } ],
+    "translation_sourceLanguage" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.zlabsnlp.languageDetection",
+      "dataPath" : "$.response.body:$.langId"
+    } ],
+    "getLanguages_targetLanguage" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.zlabsnlp.languageDetection",
+      "dataPath" : "$.response.body:$.langId"
+    } ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "apis" : {
+    "getInvoices" : {
+      "422" : {
+        "departmentId" : "#/generators/getInvoices_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getInvoices_departmentId"
+      },
+      "204" : {
+        "departmentId" : "#/generators/getInvoices_departmentId"
+      }
+    },
+    "addOrganization" : {
+      "422" : {
+        "organizationId" : "#/generators/addOrganization_organizationId",
+        "baseCurrency" : "#/generators/addOrganization_baseCurrency"
+      },
+      "204" : {
+        "organizationId" : "#/generators/addOrganization_organizationId",
+        "baseCurrency" : "#/generators/addOrganization_baseCurrency"
+      }
+    },
+    "markInvoicesAsSent" : {
+      "422" : {
+        "ids[*]" : "#/generators/markInvoicesAsSent_[*]"
+      },
+      "204" : {
+        "ids[*]" : "#/generators/markInvoicesAsSent_[*]"
+      }
+    },
+    "getSalesReturns" : {
+      "200" : {
+        "id" : "#/generators/getSalesReturns_id"
+      },
+      "204" : {
+        "id" : "#/generators/getSalesReturns_id"
+      }
+    },
+    "getActivity" : {
+      "422" : {
+        "id" : "#/generators/getActivity_id"
+      },
+      "200" : {
+        "id" : "#/generators/getActivity_id"
+      },
+      "204" : {
+        "id" : "#/generators/getActivity_id"
+      }
+    },
+    "updateEstimateStatus" : {
+      "422" : {
+        "id" : "#/generators/updateEstimateStatus_id"
+      },
+      "204" : {
+        "id" : "#/generators/updateEstimateStatus_id"
+      }
+    },
+    "getTicketsForInvoiceId" : {
+      "422" : {
+        "id" : "#/generators/getTicketsForInvoiceId_id"
+      },
+      "200" : {
+        "id" : "#/generators/getTicketsForInvoiceId_id"
+      },
+      "204" : {
+        "id" : "#/generators/getTicketsForInvoiceId_id"
+      }
+    },
+    "updateInvoiceStatus" : {
+      "422" : {
+        "id" : "#/generators/updateInvoiceStatus_id"
+      },
+      "204" : {
+        "id" : "#/generators/updateInvoiceStatus_id"
+      }
+    },
+    "getSalesOrderPackages" : {
+      "200" : {
+        "id" : "#/generators/getSalesOrderPackages_id"
+      },
+      "204" : {
+        "id" : "#/generators/getSalesOrderPackages_id"
+      }
+    },
+    "markEstimatesAsSent" : {
+      "422" : {
+        "ids[*]" : "#/generators/markEstimatesAsSent_[*]"
+      },
+      "204" : {
+        "ids[*]" : "#/generators/markEstimatesAsSent_[*]"
+      }
+    },
+    "createFinanceContactRequestHandler" : {
+      "422" : {
+        "currencyId" : "#/generators/createFinanceContactRequestHandler_currencyId",
+        "paymentTerm" : "#/generators/createFinanceContactRequestHandler_paymentTerm"
+      },
+      "204" : {
+        "currencyId" : "#/generators/createFinanceContactRequestHandler_currencyId",
+        "paymentTerm" : "#/generators/createFinanceContactRequestHandler_paymentTerm"
+      }
+    }
+  },
+  "generators" : {
+    "updateEstimateStatus_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.getEstimates",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "markEstimatesAsSent_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Finance.paymentMeta",
+      "dataPath" : "$.response.body:$.currencies[*].id"
+    } ],
+    "getSalesReturns_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.getSalesOrders",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "createFinanceContactRequestHandler_currencyId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.paymentMeta",
+      "dataPath" : "$.response.body:$.currencies[0].id",
+      "params" : { }
+    } ],
+    "updateInvoiceStatus_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.getInvoices",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "getTicketsForInvoiceId_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.getInvoices",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "createFinanceContactRequestHandler_paymentTerm" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.paymentMeta",
+      "dataPath" : "$.response.body:$.payment_terms[0].paymentTerm",
+      "params" : { }
+    } ],
+    "markInvoicesAsSent_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Finance.paymentMeta",
+      "dataPath" : "$.response.body:$.currencies[*].id"
+    } ],
+    "getSalesOrderPackages_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.getSalesOrders",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "addOrganization_baseCurrency" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Finance.getConfiguration",
+      "dataPath" : "$.response.body:$.baseCurrency"
+    } ],
+    "getActivity_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Finance.searchContacts",
+      "dataPath" : "$.response.body:$.contacts[0].id",
+      "params" : { }
+    } ],
+    "addOrganization_organizationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Finance.getConfiguration",
+      "dataPath" : "$.response.body:$.organizationId"
+    } ],
+    "getInvoices_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ]
+  }
+}

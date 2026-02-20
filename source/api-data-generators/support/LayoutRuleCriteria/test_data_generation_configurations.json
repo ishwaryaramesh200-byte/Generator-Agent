@@ -1,0 +1,19 @@
+{
+  "apis" : {
+    "getLayoutRuleCriteria" : {
+      "422" : {
+        "layoutId" : "#/generators/getLayoutRuleCriteria_layoutId"
+      },
+      "200" : {
+        "layoutId" : "#/generators/getLayoutRuleCriteria_layoutId"
+      }
+    }
+  },
+  "generators" : {
+    "getLayoutRuleCriteria_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

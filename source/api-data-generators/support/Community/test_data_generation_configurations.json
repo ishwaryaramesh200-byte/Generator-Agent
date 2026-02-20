@@ -1,0 +1,313 @@
+{
+  "apis" : {
+    "scheduleTrashAllUserTopics" : {
+      "422" : {
+        "communityUserId" : "#/generators/scheduleTrashAllUserTopics_communityUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "communityUserId" : "#/generators/scheduleTrashAllUserTopics_communityUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "getStats" : {
+      "422" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "scheduleBulkTrashOfAwaitingComments" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "getTopicResponseTrend" : {
+      "422" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "getTopicTypeResponsiveness" : {
+      "422" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "downloadTopicAttachment" : {
+      "200" : {
+        "topicId" : "#/generators/downloadTopicAttachment_topicId",
+        "attachmentId" : "#/generators/downloadTopicAttachment_attachmentId"
+      }
+    },
+    "scheduleBulkApprovalOfSpamComments" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "getTopicResponsiveness" : {
+      "422" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "getUniqueUserParticipationTrend" : {
+      "422" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "scheduleBulkTrashOfSpamComments" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "getTopicVotersTrend" : {
+      "200" : {
+        "topicId" : "../CommunityTopic/test_data_generation_configurations.json#/generators/getTopicId"
+      }
+    },
+    "getTopicTypeTrend" : {
+      "422" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryIds" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "getStatsOfUser" : {
+      "422" : {
+        "communityUserId" : "../CommunityUser/test_data_generation_configurations.json#/generators/getUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      },
+      "200" : {
+        "communityUserId" : "../CommunityUser/test_data_generation_configurations.json#/generators/getUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "trashTopic" : {
+      "204" : {
+        "topicId" : "../CommunityTopic/test_data_generation_configurations.json#/generators/getTopicId"
+      }
+    },
+    "scheduleBulkTrashOfSpamTopics" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "scheduleTrashAllUserComments" : {
+      "422" : {
+        "communityUserId" : "#/generators/scheduleTrashAllUserComments_communityUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "communityUserId" : "#/generators/scheduleTrashAllUserComments_communityUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "scheduleBulkTrashOfAwaitingTopics" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "scheduleBulkApprovalOfSpamTopics" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "getTopContributors" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "downloadReplyAttachment" : {
+      "200" : {
+        "replyId" : "#/generators/downloadReplyAttachment_replyId",
+        "topicId" : "../CommunityTopic/test_data_generation_configurations.json#/generators/getTopicId",
+        "attachmentId" : "#/generators/downloadReplyAttachment_attachmentId"
+      }
+    },
+    "lockTopic" : {
+      "204" : {
+        "topicId" : "../CommunityTopic/test_data_generation_configurations.json#/generators/getTopicId"
+      }
+    },
+    "downloadCommentAttachment" : {
+      "200" : {
+        "commentId" : "#/generators/downloadCommentAttachment_commentId",
+        "topicId" : "../CommunityTopic/test_data_generation_configurations.json#/generators/getTopicId",
+        "attachmentId" : "#/generators/downloadCommentAttachment_attachmentId"
+      }
+    },
+    "getTopicResponseTrendOfUser" : {
+      "422" : {
+        "communityUserId" : "../CommunityUser/test_data_generation_configurations.json#/generators/getUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      },
+      "200" : {
+        "communityUserId" : "../CommunityUser/test_data_generation_configurations.json#/generators/getUserId",
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId",
+        "startTime":"#/generators/common_startTime",
+        "endTime":"#/generators/common_endTime"
+      }
+    },
+    "scheduleBulkApprovalOfAwaitingComments" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    },
+    "scheduleBulkApprovalOfAwaitingTopics" : {
+      "422" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      },
+      "200" : {
+        "categoryId" : "../CommunityCategory/test_data_generation_configurations.json#/generators/getCommunityCategoryId"
+      }
+    }
+  },
+  "generators" : {
+    "addCommunityAttachment" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityAttachment.addAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "downloadCommentAttachment_attachmentId" : [ {
+      "type" : "reference",
+      "ref" : "$attachmentComments.response.body:$.attachments[*].id"
+    } ],
+    "getStatsOfUser_communityUserId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.CommunityUser.myFollowedUsers",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "getTopicResponseTrendOfUser_communityUserId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.CommunityUser.myFollowedUsers",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "downloadCommentAttachment_commentId" : [ {
+      "type" : "dynamic",
+      "name" : "attachmentComments",
+      "generatorOperationId" : "CommunityComment.addComment",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "topicId" : "$.input.path:$.topicId",
+        "attachmentIds[*]" : "$generators:#/generators/addCommunityAttachment"
+      }
+    } ],
+    "downloadReplyAttachment_replyId" : [ {
+      "type" : "dynamic",
+      "name" : "attachmentReply",
+      "generatorOperationId" : "support.CommunityComment.addReply",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "topicId" : "$.input.path:$.topicId",
+        "attachmentIds[*]" : "$generators:#/generators/addCommunityAttachment"
+      }
+    } ],
+    "downloadTopicAttachment_topicId" : [ {
+      "type" : "dynamic",
+      "name" : "attachmentTopic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "attachmentIds[*]" : "$generators:#/generators/addCommunityAttachment"
+      }
+    } ],
+    "scheduleTrashAllUserComments_communityUserId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "User.getUsers",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "scheduleTrashAllUserTopics_communityUserId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "User.getUsers",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "downloadReplyAttachment_attachmentId" : [ {
+      "type" : "reference",
+      "ref" : "$attachmentReply.response.body:$.attachments[*].id"
+    } ],
+    "downloadTopicAttachment_attachmentId" : [ {
+      "type" : "reference",
+      "ref" : "$attachmentTopic.response.body:$.attachments[*].id"
+    } ],
+    "common_startTime":[{
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId",
+        "timeLine" : "past",
+        "start" : "10",
+        "format" : "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+      }
+    }],
+    "common_endTime":[{
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId",
+        "timeLine" : "future",
+        "start" : "10",
+        "format" : "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+      }
+    }]
+  }
+}

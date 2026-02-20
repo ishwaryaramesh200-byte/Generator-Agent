@@ -1,0 +1,49 @@
+{
+  "apis": {
+    "getSecretKey": {
+      "200": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "204": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "get": {
+      "200": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "204": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "create": {
+      "422": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "200": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "204": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "update": {
+      "422": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "200": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "204": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "delete": {
+      "204": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

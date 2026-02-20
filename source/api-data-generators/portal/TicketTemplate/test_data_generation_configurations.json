@@ -1,0 +1,24 @@
+{
+  "apis" : {
+    "getTicketTemplate" : {
+      "200" : {
+        "ticketTemplateId" : "#/generators/getTicketTemplate_ticketTemplateId"
+      }
+    },
+    "getAllTicketTemplates" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : {
+    "getTicketTemplate_ticketTemplateId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.TicketTemplate.getAllTicketTemplates",
+      "dataPath" : "$.response.body:$[*].id"
+    } ]
+  }
+}

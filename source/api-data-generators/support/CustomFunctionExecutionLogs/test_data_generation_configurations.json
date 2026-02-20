@@ -1,0 +1,68 @@
+{
+  "apis" : {
+    "getAllCustomFunctionExecutionLogs" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "customFunctionId" : "#/generators/getAllCustomFunctionExecutionLogs_customFunctionId",
+        "startDate" : "#/generators/startDate",
+        "endDate": "#/generators/endDate"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "customFunctionId" : "#/generators/getAllCustomFunctionExecutionLogs_customFunctionId",
+        "startDate" : "#/generators/startDate",
+        "endDate": "#/generators/endDate"
+      }
+    },
+    "getCustomFunctionExecutionLogs" : {
+      "422" : {
+        "customFunction_logId" : "#/generators/customFunction_logId"
+      },
+      "200" : {
+        "customFunction_logId" : "#/generators/customFunction_logId"
+      }
+    },
+    "getExecutionarguments" : {
+      "422" : {
+        "customFunction_logId" : "#/generators/customFunction_logId"
+      },
+      "200" : {
+        "customFunction_logId" : "#/generators/customFunction_logId"
+      }
+    }
+  },
+  "generators" : {
+    "customFunction_logId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFunctionLogsId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "getAllCustomFunctionExecutionLogs_customFunctionId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomFunctions.getAllCustomFunctions",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "startDate" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId",
+        "timeLine" : "past",
+        "start" : "10",
+        "format" : "yyyy-MM-dd"
+      }
+    } ],
+    "endDate" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId",
+        "timeLine" : "future",
+        "end" : "1",
+        "format" : "yyyy-MM-dd"
+      }
+    } ]
+  }
+}

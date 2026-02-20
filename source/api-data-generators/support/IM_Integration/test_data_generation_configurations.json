@@ -1,0 +1,32 @@
+{
+  "apis" : {
+    "getTemplateCreditExhaustStatus" : {
+      "422" : {
+        "channelId" : "#/generators/getTemplateCreditExhaustStatus_channelId"
+      },
+      "204" : {
+        "channelId" : "#/generators/getTemplateCreditExhaustStatus_channelId"
+      }
+    },
+    "integrateWithCurrentOrg" : {
+      "422" : {
+        "IMOrgId" : "#/generators/integrateWithCurrentOrg_IMOrgId"
+      },
+      "200" : {
+        "IMOrgId" : "#/generators/integrateWithCurrentOrg_IMOrgId"
+      }
+    }
+  },
+  "generators" : {
+    "integrateWithCurrentOrg_IMOrgId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Integration.getIMIntegrationStatus",
+      "dataPath" : "$.response.body:$.imOrgId"
+    } ],
+    "getTemplateCreditExhaustStatus_channelId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Channel.getChannelByCode",
+      "dataPath" : "$.response.body:$.externalId"
+    } ]
+  }
+}

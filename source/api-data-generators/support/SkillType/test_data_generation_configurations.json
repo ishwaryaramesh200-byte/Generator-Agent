@@ -1,0 +1,60 @@
+{
+	"apis": {
+		"createSkillType": {
+			"422": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"201": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"getSkillTypes": {
+			"422": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"getSkillType": {
+			"422": {
+				"skillTypeId": "#/generators/skill_type_id"
+			},
+			"200": {
+				"skillTypeId": "#/generators/skill_type_id"
+			}
+		},
+		"updateSkillType": {
+			"422": {
+				"skillTypeId": "#/generators/skill_type_id"
+			},
+			"200": {
+				"skillTypeId": "#/generators/skill_type_id"
+			}
+		},
+		"deleteSkillType": {
+			"422": {
+				"skillTypeId": "#/generators/create_skill_type"
+			},
+			"204": {
+				"skillTypeId": "#/generators/create_skill_type"
+			}
+		}
+	},
+	"generators": {
+		"skill_type_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SkillType.getSkillTypes",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		] ,
+		"create_skill_type" : [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SkillType.createSkillType",
+				"dataPath": "$.response.body:$.id"
+			}
+		]
+	}
+}

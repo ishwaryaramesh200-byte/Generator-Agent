@@ -1,0 +1,32 @@
+{
+  "apis" : {
+    "addFeedback" : {
+      "422" : {
+        "articleId" : "../Solution/test_data_generation_configurations.json#/generators/articleId",
+        "locale": "../Solution/test_data_generation_configurations.json#/generators/locale"
+      },
+      "200" : {
+        "articleId" : "../Solution/test_data_generation_configurations.json#/generators/articleId",
+        "locale": "../Solution/test_data_generation_configurations.json#/generators/locale"
+      },
+      "204" : {
+        "articleId" : "../Solution/test_data_generation_configurations.json#/generators/articleId",
+        "locale": "../Solution/test_data_generation_configurations.json#/generators/locale"
+      }
+    }
+  },
+  "generators" : {
+    "addFeedback_listAllArticles_sortBy" : [ {
+      "type" : "static",
+      "value" : [ "createdTime" ]
+    } ],
+    "addFeedback_articleId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Solution.listAllArticles",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : {
+        "sortBy" : "$generators:#/generators/addFeedback_listAllArticles_sortBy"
+      }
+    } ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "apis" : {
+    "createScheduler" : {
+      "422" : {
+        "id" : "#/generators/createScheduler_id"
+      },
+      "200" : {
+        "id" : "#/generators/createScheduler_id"
+      },
+      "204" : {
+        "id" : "#/generators/createScheduler_id"
+      }
+    }
+  },
+  "generators" : {
+    "createScheduler_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ZiaScheduler.getScheduler",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"apis": {
+	},
+	"generators": {
+		"department_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.Department.listAllDepartment",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		]
+	}
+}

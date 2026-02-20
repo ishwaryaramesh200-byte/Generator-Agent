@@ -1,0 +1,45 @@
+{
+  "apis": {
+    "getComments": {
+      "200": {
+        "entityId": "../Event/test_data_generation_configurations.json#/generators/event_id"
+      }
+    },
+    "getComment": {
+      "200": {
+        "eventId": "../Event/test_data_generation_configurations.json#/generators/event_id",
+        "commentId": "#/generators/event_comment_id"
+      }
+    },
+    "updateComment": {
+      "422": {
+        "eventId": "../Event/test_data_generation_configurations.json#/generators/event_id",
+        "commentId": "#/generators/event_comment_id"
+      },
+      "200": {
+        "eventId": "../Event/test_data_generation_configurations.json#/generators/event_id",
+        "commentId": "#/generators/event_comment_id"
+      }
+    },
+    "createComment": {
+      "422": {
+        "eventId": "../Event/test_data_generation_configurations.json#/generators/event_id"
+      },
+      "200": {
+        "eventId": "../Event/test_data_generation_configurations.json#/generators/event_id"
+      }
+    }
+  },
+  "generators": {
+    "event_comment_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.EventComments.createComment",
+        "dataPath": "$.response.body:$.id",
+        "params": {
+          "eventId": "$events.response.body:$.id"
+        }
+      }
+    ]
+  }
+}

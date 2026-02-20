@@ -1,0 +1,312 @@
+{
+  "apis" : {
+    "getIMChannelPreference" : {
+      "422" : {
+        "id" : "#/generators/getIMChannelPreference_id"
+      },
+      "200" : {
+        "id" : "#/generators/getIMChannelPreference_id"
+      },
+      "204" : {
+        "id" : "#/generators/getIMChannelPreference_id"
+      }
+    },
+    "removeIMChannelsHandlingAgents" : {
+      "422" : {
+        "agentIds[*]" : "#/generators/removeIMChannelsHandlingAgents_[*]",
+        "channelIds[*][*]" : "#/generators/removeIMChannelsHandlingAgents_[*]"
+      },
+      "200" : {
+        "agentIds[*]" : "#/generators/removeIMChannelsHandlingAgents_[*]",
+        "channelIds[*][*]" : "#/generators/removeIMChannelsHandlingAgents_[*]"
+      }
+    },
+    "saveIMChannelPreference" : {
+      "422" : {
+        "businessHourId" : "#/generators/saveIMChannelPreference_businessHourId",
+        "departmentId" : "#/generators/saveIMChannelPreference_departmentId",
+        "id" : "#/generators/saveIMChannelPreference_id"
+      },
+      "200" : {
+        "businessHourId" : "#/generators/saveIMChannelPreference_businessHourId",
+        "departmentId" : "#/generators/saveIMChannelPreference_departmentId",
+        "id" : "#/generators/saveIMChannelPreference_id"
+      }
+    },
+    "updateConfigParams" : {
+      "422" : {
+        "configParams[*].id" : "#/generators/updateConfigParams_id",
+        "id" : "#/generators/updateConfigParams_id"
+      },
+      "200" : {
+        "configParams[*].id" : "#/generators/updateConfigParams_id",
+        "id" : "#/generators/updateConfigParams_id"
+      }
+    },
+    "getIMChannelHandlingAgents" : {
+      "422" : {
+        "id" : "#/generators/getIMChannelHandlingAgents_id"
+      },
+      "200" : {
+        "id" : "#/generators/getIMChannelHandlingAgents_id"
+      }
+    },
+    "addIMChannelHandlingAgents" : {
+      "422" : {
+        "agentIds[*]" : "#/generators/addIMChannelHandlingAgents_[*]",
+        "id" : "#/generators/addIMChannelHandlingAgents_id"
+      },
+      "200" : {
+        "agentIds[*]" : "#/generators/addIMChannelHandlingAgents_[*]",
+        "id" : "#/generators/addIMChannelHandlingAgents_id"
+      }
+    },
+    "activateChannel" : {
+      "422" : {
+        "id" : "#/generators/activateChannel_id"
+      },
+      "200" : {
+        "id" : "#/generators/activateChannel_id"
+      }
+    },
+    "associateIMChannel" : {
+      "422" : {
+        "id" : "#/generators/associateIMChannel_id",
+        "departmentId" : "#/generators/associateIMChannel_departmentId"
+      },
+      "200" : {
+        "id" : "#/generators/associateIMChannel_id",
+        "departmentId" : "#/generators/associateIMChannel_departmentId"
+      }
+    },
+    "addIMChannelsHandlingAgents" : {
+      "422" : {
+        "agentIds[*]" : "#/generators/addIMChannelsHandlingAgents_[*]",
+        "channelIds[*][*]" : "#/generators/addIMChannelsHandlingAgents_[*]"
+      },
+      "200" : {
+        "agentIds[*]" : "#/generators/addIMChannelsHandlingAgents_[*]",
+        "channelIds[*][*]" : "#/generators/addIMChannelsHandlingAgents_[*]"
+      }
+    },
+    "getConfigParams" : {
+      "422" : {
+        "id" : "#/generators/getConfigParams_id"
+      },
+      "200" : {
+        "id" : "#/generators/getConfigParams_id"
+      }
+    },
+    "getDeskChannelHandlingAgents" : {
+      "422" : {
+        "deskChannelId" : "#/generators/getDeskChannelHandlingAgents_deskChannelId"
+      },
+      "200" : {
+        "deskChannelId" : "#/generators/getDeskChannelHandlingAgents_deskChannelId"
+      }
+    },
+    "getIMChannel" : {
+      "422" : {
+        "id" : "#/generators/getIMChannel_id"
+      },
+      "200" : {
+        "id" : "#/generators/getIMChannel_id"
+      }
+    },
+    "deActivateChannel" : {
+      "422" : {
+        "id" : "#/generators/deActivateChannel_id"
+      },
+      "200" : {
+        "id" : "#/generators/deActivateChannel_id"
+      }
+    },
+    "saveChannelMeta" : {
+      "422" : {
+        "data[*].value" : "#/generators/saveChannelMeta_value",
+        "data[*].name" : "#/generators/saveChannelMeta_name",
+        "id" : "#/generators/saveChannelMeta_id",
+        "data[*].id" : "#/generators/saveChannelMeta_id"
+      },
+      "200" : {
+        "data[*].value" : "#/generators/saveChannelMeta_value",
+        "data[*].name" : "#/generators/saveChannelMeta_name",
+        "id" : "#/generators/saveChannelMeta_id",
+        "data[*].id" : "#/generators/saveChannelMeta_id"
+      }
+    },
+    "getConfigParamsComputedOptions" : {
+      "422" : {
+        "id" : "#/generators/getConfigParamsComputedOptions_id"
+      },
+      "200" : {
+        "id" : "#/generators/getConfigParamsComputedOptions_id"
+      },
+      "204" : {
+        "id" : "#/generators/getConfigParamsComputedOptions_id"
+      }
+    },
+    "updateIMChannel" : {
+      "422" : {
+        "id" : "#/generators/updateIMChannel_id"
+      },
+      "200" : {
+        "id" : "#/generators/updateIMChannel_id"
+      }
+    },
+    "getIMChannelsList" : {
+      "200" : {
+        "departmentId" : "#/generators/getIMChannelsList_departmentId"
+      },
+      "204" : {
+        "departmentId" : "#/generators/getIMChannelsList_departmentId"
+      }
+    },
+    "removeIMChannelHandlingAgents" : {
+      "422" : {
+        "agentIds[*]" : "#/generators/removeIMChannelHandlingAgents_[*]",
+        "id" : "#/generators/removeIMChannelHandlingAgents_id"
+      },
+      "200" : {
+        "agentIds[*]" : "#/generators/removeIMChannelHandlingAgents_[*]",
+        "id" : "#/generators/removeIMChannelHandlingAgents_id"
+      }
+    }
+  },
+  "generators" : {
+    "saveIMChannelPreference_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "associateIMChannel_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "addIMChannelsHandlingAgents_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getDeskChannelHandlingAgents_deskChannelId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Channel.getChannelByCode",
+      "dataPath" : "$.response.body:$.code"
+    } ],
+    "updateConfigParams_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : {
+        "integrationServiceId" : "$generators:#/generators/updateConfigParams_getIMChannelsList_integrationServiceId"
+      }
+    } ],
+    "activateChannel_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[?( @.isActive == false )].id"
+    } ],
+    "deActivateChannel_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[?( @.isActive == true )].id"
+    } ],
+    "removeIMChannelHandlingAgents_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "saveChannelMeta_value" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannel",
+      "dataPath" : "$.response.body:$.meta[*].value"
+    } ],
+    "addIMChannelHandlingAgents_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "removeIMChannelHandlingAgents_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getConfigParams_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getIMChannelPreference_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateIMChannel_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getConfigParamsComputedOptions_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "associateIMChannel_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Department.getDepartments",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "getIMChannel_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "removeIMChannelsHandlingAgents_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "saveChannelMeta_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateConfigParams_getIMChannelsList_integrationServiceId" : [ {
+      "type" : "static",
+      "value" : [ "TWILIO" ]
+    } ],
+    "saveIMChannelPreference_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "saveIMChannelPreference_businessHourId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.BusinessHour.getBusinessHours",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "saveChannelMeta_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannel",
+      "dataPath" : "$.response.body:$.name"
+    } ],
+    "getIMChannelsList_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addIMChannelHandlingAgents_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getIMChannelHandlingAgents_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

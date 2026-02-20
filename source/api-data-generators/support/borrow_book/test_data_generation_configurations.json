@@ -1,0 +1,21 @@
+{
+    "generators": {
+        "user": [
+            {
+                "type": "dynamic",
+                "generatorOperationId": "portal.User.createUser",
+                "dataPath": "$.response.body:$.id"
+            }
+        ],
+        "borrowBook": [
+            {
+                "type": "dynamic",
+                "generatorOperationId": "portal.Book.borrowBook",
+                "dependencies": [
+                    "user"
+                ],
+                "dataPath": "$.response.body:$.borrowId"
+            }
+        ]
+    }
+}

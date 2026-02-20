@@ -1,0 +1,16 @@
+{
+  "apis" : {
+    "getGalleryCustomFunction" : {
+      "200" : {
+        "galleryFunctionId" : "#/generators/getGalleryCustomFunction_galleryFunctionId"
+      }
+    }
+  },
+  "generators" : {
+    "getGalleryCustomFunction_galleryFunctionId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomFunctionGallery.getAllGalleryCustomFunctions",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

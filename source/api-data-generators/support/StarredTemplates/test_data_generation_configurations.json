@@ -1,0 +1,76 @@
+{
+	"apis": {
+		"getAllStarredTemplates": {
+			"422": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"setDefaultTemplate": {
+			"422": {
+				"templateId": "#/generators/starred_template_id"
+			},
+			"204": {
+				"templateId": "#/generators/starred_template_id"
+			}
+		},
+		"unStarTemplate": {
+			"422": {
+				"templateId": "#/generators/create_starred_template_id"
+			},
+			"204": {
+				"templateId": "#/generators/create_starred_template_id"
+			}
+		},
+		"markDefault": {
+			"422": {
+				"agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"templateId": "#/generators/starred_template_id",
+				"profileIds[*]": "../Profile/test_data_generation_configurations.json#/generators/profile_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"templateId": "#/generators/starred_template_id",
+				"profileIds[*]": "../Profile/test_data_generation_configurations.json#/generators/profile_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"reorderStarredTemplates": {
+			"422": {
+				"ids[*]": "#/generators/starred_template_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"204": {
+				"ids[*]": "#/generators/starred_template_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"starTemplate": {
+			"422": {
+				"templateId": "../EmailTemplates/test_data_generation_configurations.json#/generators/email_template_id"
+			},
+			"204": {
+				"templateId": "../EmailTemplates/test_data_generation_configurations.json#/generators/email_template_id"
+			}
+		}
+	},
+	"generators": {
+		"starred_template_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.StarredTemplates.getAllStarredTemplates",
+				"dataPath": "$.response.body:$.data[0].templateId"
+			}
+		] ,
+		"create_starred_template_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.StarredTemplates.starTemplate",
+				"dataPath": "$.input.path:$.templateId"
+			}
+		]
+	}
+}

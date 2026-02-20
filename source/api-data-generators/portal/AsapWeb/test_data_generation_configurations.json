@@ -1,0 +1,18 @@
+{
+  "apis" : {
+    "getWebWidget" : {
+      "200" : {
+        "widgetId" : "#/generators/getWebWidget_widgetId"
+      }
+    }
+  },
+  "generators" : {
+    "getWebWidget_widgetId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getInAppWidgetId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.portalId"
+      }
+    } ]
+  }
+}

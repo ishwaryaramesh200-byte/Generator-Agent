@@ -1,0 +1,60 @@
+{
+  "apis": {
+    "entityFollowAPI": {
+      "204": {
+        "entityId": "#/generators/getEntityId"
+      }
+    },
+    "entityUnFollowAPI" : {
+      "204": {
+        "entityId": "#/generators/getEntityId"
+      }
+    },
+    "entityFollowersCount": {
+      "200": {
+        "entityId": "#/generators/getEntityId"
+      }
+    },
+    "entityFollowersListAPI": {
+      "200": {
+        "entityId": "#/generators/getEntityId"
+      }
+    }
+  },
+  "generators": {
+    "getEntityId": [
+      {
+        "type": "conditional",
+        "conditions": [
+          {
+            "when": {
+              "key": "$.input.path:$.moduleAPIName",
+              "equals": "articleTranslations"
+            },
+            "then": {
+              "use": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+            }
+          },
+          {
+            "when": {
+              "key": "$.input.path:$.moduleAPIName",
+              "equals": "kbRootCategories"
+            },
+            "then": {
+              "use": "../KBRootCategory/test_data_generation_configurations.json#/generators/root_category_id"
+            }
+          },
+          {
+            "when": {
+              "key": "$.input.path:$.moduleAPIName",
+              "equals": "kbSections"
+            },
+            "then": {
+              "use": "../KBSection/test_data_generation_configurations.json#/generators/kb_section_id"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

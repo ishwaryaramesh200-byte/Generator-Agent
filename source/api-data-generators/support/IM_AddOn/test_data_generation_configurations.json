@@ -1,0 +1,19 @@
+{
+  "apis" : {
+    "getIMPaymentStatement" : {
+      "422" : {
+        "channelId" : "#/generators/getIMPaymentStatement_channelId"
+      },
+      "200" : {
+        "channelId" : "#/generators/getIMPaymentStatement_channelId"
+      }
+    }
+  },
+  "generators" : {
+    "getIMPaymentStatement_channelId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

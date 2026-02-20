@@ -1,0 +1,99 @@
+{
+  "apis": {
+    "getTagsByTickets": {
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "deleteTag": {
+      "204": {
+        "id": "#/generators/ticket_tag_id"
+      }
+    },
+    "dissociateTags": {
+      "422": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      },
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "getRecentTags": {
+      "422": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "updateRecentTags": {
+      "200": {
+        "tagId": "#/generators/ticket_tag_id"
+      }
+    },
+    "getTicketsCountByTag": {
+      "200": {
+        "tagId": "#/generators/ticket_tag_id"
+      }
+    },
+    "replaceTag": {
+      "422": {
+        "currentTagId": "#/generators/ticket_tag_id",
+        "id": "#/generators/ticket_tag_id"
+      },
+      "204": {
+        "currentTagId": "#/generators/ticket_tag_id",
+        "id": "#/generators/ticket_tag_id"
+      }
+    },
+    "getTicketTags": {
+      "422": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "associateTags": {
+      "422": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      },
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "getTags": {
+      "422": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "tagsRename": {
+      "422": {
+        "id": "#/generators/ticket_tag_id"
+      },
+      "200": {
+        "id": "#/generators/ticket_tag_id"
+      }
+    },
+    "getCasesForTag": {
+      "200": {
+        "tagId": "#/generators/ticket_tag_id"
+      },
+      "204": {
+        "tagId": "#/generators/ticket_tag_id"
+      }
+    }
+  },
+  "generators": {
+    "ticket_tag_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.TicketTag.associateTags",
+        "dataPath": "$.response.body:$.data[*].id"
+      }
+    ]
+  }
+}

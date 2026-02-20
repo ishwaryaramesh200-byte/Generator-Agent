@@ -1,0 +1,370 @@
+{
+  "apis": {
+    "getContactsUnderProduct": {
+      "200": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      },
+      "204": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      }
+    },
+    "inviteContactsAsEndUser": {
+      "422": {
+        "helpCenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "contactIds[*]": "#/generators/contact_id"
+      },
+      "200": {
+        "helpCenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "contactIds[*]": "#/generators/contact_id"
+      }
+    },
+    "getContactPhotoStream": {
+      "204": {
+        "contactId": "#/generators/contact_id"
+      }
+    },
+    "getStatistics": {
+      "200": {
+        "department": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "contactId": "#/generators/contact_id" ,
+        "timeRange" : "../Common/test_data_generation_configurations.json#/generators/time_range"
+      }
+    },
+    "associateAccountsWithContact": {
+      "422": {
+        "contactId": "#/generators/contact_id",
+        "data[*].id": "../Account/test_data_generation_configurations.json#/generators/account_id"
+      },
+      "200": {
+        "contactId": "#/generators/contact_id",
+        "data[*].id": "../Account/test_data_generation_configurations.json#/generators/account_id"
+      }
+    },
+    "associateProductsWithContact": {
+      "422": {
+        "ids[*]": "../Product/test_data_generation_configurations.json#/generators/product_id",
+        "contactId": "#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "ids[*]": "../Product/test_data_generation_configurations.json#/generators/product_id",
+        "contactId": "#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "dissociateAccountsWithContact": {
+      "422": {
+        "contactId": "#/generators/contact_id",
+        "ids[*]": "#/generators/contact_associate_account_ids"
+      },
+      "200": {
+        "contactId": "#/generators/contact_id",
+        "ids[*]": "#/generators/contact_associate_account_ids"
+      }
+    },
+    "dissociateAccountWithContact": {
+      "422": {
+        "accountId": "#/generators/contact_associate_account_ids",
+        "contactId": "#/generators/contact_id"
+      },
+      "204": {
+        "accountId": "#/generators/contact_associate_account_ids",
+        "contactId": "#/generators/contact_id"
+      }
+    },
+    "moveToTrash": {
+      "422": {
+        "contactIds[*]": "#/generators/contact_id"
+      },
+      "204": {
+        "contactIds[*]": "#/generators/contact_id"
+      }
+    },
+    "getHelpCenter": {
+      "422": {
+        "contactId": "#/generators/contact_id"
+      },
+      "200": {
+        "contactId": "#/generators/contact_id"
+      }
+    },
+    "getTicketHistory": {
+      "422": {
+        "contactId": "#/generators/contact_id",
+        "agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "contactId": "#/generators/contact_id",
+        "agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getContacts": {
+      "200": {
+        "viewId": "#/generators/contact_custom_view_id"
+      }
+    },
+    "updateMany": {
+      "422": {
+        "ids[*]": "#/generators/contact_id",
+        "fieldName": "#/generators/update_many_field_name"
+      },
+      "200": {
+        "ids[*]": "#/generators/contact_id",
+        "fieldName": "#/generators/update_many_field_name"
+      }
+    },
+    "getContactsCount": {
+      "422": {
+        "viewId": "#/generators/contact_custom_view_id"
+      },
+      "200": {
+        "viewId": "#/generators/contact_custom_view_id"
+      }
+    },
+    "getContactsByIds": {
+      "422": {
+        "ids[*]": "#/generators/contact_id"
+      },
+      "200": {
+        "ids[*]": "#/generators/contact_id"
+      }
+    },
+    "deleteContactPhoto": {
+      "422": {
+        "contactId": "#/generators/contact_id"
+      },
+      "204": {
+        "contactId": "#/generators/contact_id"
+      }
+    },
+    "createContact": {
+      "422": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "type": "#/generators/contact_type",
+        "cf": "#/generators/contact_cf",
+        "customFields": "#/generators/contact_cf"
+      },
+      "200": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "type": "#/generators/contact_type",
+        "cf": "#/generators/contact_cf",
+        "customFields": "#/generators/contact_cf"
+      }
+    },
+    "updateContact": {
+      "422": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "contactId": "#/generators/contact_id",
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "type": "#/generators/contact_type",
+        "cf": "#/generators/contact_cf",
+        "customFields": "#/generators/contact_cf"
+      },
+      "200": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "contactId": "#/generators/contact_id",
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "type": "#/generators/contact_type",
+        "cf": "#/generators/contact_cf",
+        "customFields": "#/generators/contact_cf"
+      }
+    },
+    "mergeContacts": {
+      "422": {
+        "ids[*]": "#/generators/contact_id",
+        "contactId": "#/generators/contact_id",
+        "source.zip": "#/generators/merge_contact_source_id",
+        "source.firstName": "#/generators/merge_contact_source_id",
+        "source.email": "#/generators/merge_contact_source_id",
+        "source.city": "#/generators/merge_contact_source_id",
+        "source.mobile": "#/generators/merge_contact_source_id",
+        "source.facebook": "#/generators/merge_contact_source_id",
+        "source.street": "#/generators/merge_contact_source_id",
+        "source.state": "#/generators/merge_contact_source_id",
+        "source.accountId": "#/generators/merge_contact_source_id",
+        "source.country": "#/generators/merge_contact_source_id",
+        "source.description": "#/generators/merge_contact_source_id",
+        "source.type": "#/generators/merge_contact_source_id",
+        "source.secondaryEmail": "#/generators/merge_contact_source_id",
+        "source.twitter": "#/generators/merge_contact_source_id",
+        "source.title": "#/generators/merge_contact_source_id",
+        "source.lastName": "#/generators/merge_contact_source_id",
+        "source.phone": "#/generators/merge_contact_source_id",
+        "source.customFields.patternProperties.value": "#/generators/merge_contact_source_id",
+        "source.cf.patternProperties.value": "#/generators/merge_contact_source_id"
+      },
+      "200": {
+        "ids[*]": "#/generators/contact_id",
+        "contactId": "#/generators/contact_id",
+        "source.zip": "#/generators/merge_contact_source_id",
+        "source.firstName": "#/generators/merge_contact_source_id",
+        "source.email": "#/generators/merge_contact_source_id",
+        "source.city": "#/generators/merge_contact_source_id",
+        "source.mobile": "#/generators/merge_contact_source_id",
+        "source.facebook": "#/generators/merge_contact_source_id",
+        "source.street": "#/generators/merge_contact_source_id",
+        "source.state": "#/generators/merge_contact_source_id",
+        "source.accountId": "#/generators/merge_contact_source_id",
+        "source.country": "#/generators/merge_contact_source_id",
+        "source.description": "#/generators/merge_contact_source_id",
+        "source.type": "#/generators/merge_contact_source_id",
+        "source.secondaryEmail": "#/generators/merge_contact_source_id",
+        "source.twitter": "#/generators/merge_contact_source_id",
+        "source.title": "#/generators/merge_contact_source_id",
+        "source.lastName": "#/generators/merge_contact_source_id",
+        "source.phone": "#/generators/merge_contact_source_id",
+        "source.customFields.patternProperties.value": "#/generators/merge_contact_source_id",
+        "source.cf.patternProperties.value": "#/generators/merge_contact_source_id"
+      }
+    },
+    "approveEndUserInvite": {
+      "422": {
+        "contactId": "#/generators/contact_id",
+        "helpCenterIds[*]": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "200": {
+        "contactId": "#/generators/contact_id",
+        "helpCenterIds[*]": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "rejectEndUserInvite": {
+      "422": {
+        "contactId": "#/generators/contact_id",
+        "helpCenterIds[*]": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "200": {
+        "contactId": "#/generators/contact_id",
+        "helpCenterIds[*]": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "getContact": {
+      "200": {
+        "contactId": "#/generators/contact_id"
+      }
+    },
+    "deleteSpamContacts": {
+      "422": {
+        "contactIds[*]": "#/generators/spam_contact_id"
+      },
+      "200": {
+        "contactIds[*]": "#/generators/spam_contact_id"
+      }
+    },
+    "inviteContactAsEndUser": {
+      "422": {
+        "helpCenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "contactId": "#/generators/contact_id"
+      },
+      "204": {
+        "helpCenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "contactId": "#/generators/contact_id"
+      }
+    },
+    "getContactsUnderAccount": {
+      "200": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id"
+      },
+      "204": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id"
+      }
+    },
+    "addAndInviteAsPortalUser": {
+      "422": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "markSpamContacts" : {
+      "422": {
+        "ids[*]" : "#/generators/contact_id"
+      } ,
+      "200" : {
+        "ids[*]" : "#/generators/contact_id"
+      }
+    }
+  },
+  "generators": {
+    "contact_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Contact.createContact",
+        "dataPath": "$.response.body:$.id",
+        "name": "contacts"
+      }
+    ],
+    "contact_cf": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+        "inputs": {
+          "moduleName": "Contact"
+        }
+      }
+    ],
+    "contact_type": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "type",
+          "moduleName": "Contact",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ],
+    "merge_contact_source_id": [
+      {
+        "type": "reference",
+        "ref": "$.input.body:$.ids[0]"
+      }
+    ],
+    "contact_custom_view_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.CustomView.getViews",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "module": "contacts"
+        }
+      }
+    ] ,
+    "contact_associate_account_ids" : [
+      {
+        "type" :"dynamic" ,
+        "generatorOperationId" : "support.Contact.associateAccountsWithContact",
+        "dataPath" : "$.response.body:$.results[?(@.success == true)].id" ,
+        "params" : {
+          "contactId" : "$contacts.response.body:$.id"
+        }
+      }
+    ] ,
+    "update_many_field_name": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "fieldName",
+          "moduleName": "Contact",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ] ,
+    "spam_contact_id" : [
+      {
+        "type" : "dynamic" ,
+        "generatorOperationId" : "support.Contact.markSpamContacts" ,
+        "dataPath" : "$.response.body:$.results[?(@.success == true)].id",
+        "params" : {
+          "isSpam" : "true",
+          "handleExistingTickets" : "true"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "apis" : {
+    "viewUnassociatedAttachment" : {
+      "200" : {
+        "id" : "#/generators/viewUnassociatedAttachment_id"
+      }
+    }
+  },
+  "generators" : {
+    "viewUnassociatedAttachment_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityAttachment.addAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

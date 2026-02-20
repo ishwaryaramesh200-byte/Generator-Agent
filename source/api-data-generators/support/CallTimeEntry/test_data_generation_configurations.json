@@ -1,0 +1,77 @@
+{
+  "apis": {
+    "getTimeEntryByCallId": {
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "createdTimeRange" : "../Common/test_data_generation_configurations.json#/generators/time_range",
+        "modifiedTimeRange" : "../Common/test_data_generation_configurations.json#/generators/time_range"
+      }
+    },
+    "getSummationOfTimeEntryForCall": {
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id"
+      }
+    },
+    "getTimeEntryForCall": {
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "callTimeEntryId": "#/generators/call_time_entry_id"
+      }
+    },
+    "addTimeEntryForCall": {
+      "422": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "cf": "#/generators/call_time_entry_cf",
+        "customFields": "#/generators/call_time_entry_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id" ,
+        "executedTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      },
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "cf": "#/generators/call_time_entry_cf",
+        "customFields": "#/generators/call_time_entry_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "executedTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      }
+    },
+    "updateTimeEntryForCall": {
+      "422": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "callTimeEntryId": "#/generators/call_time_entry_id",
+        "cf": "#/generators/call_time_entry_cf",
+        "customFields": "#/generators/call_time_entry_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "executedTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      },
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "callTimeEntryId": "#/generators/call_time_entry_id",
+        "cf": "#/generators/call_time_entry_cf",
+        "customFields": "#/generators/call_time_entry_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "executedTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      }
+    }
+  },
+  "generators": {
+    "call_time_entry_cf": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+        "inputs": {
+          "moduleName": "CallTimeEntry"
+        }
+      }
+    ],
+    "call_time_entry_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.CallTimeEntry.addTimeEntryForCall",
+        "dataPath": "$.response.body:$.id",
+        "params" : {
+          "callId" : "$calls.response.body:$.id"
+        }
+      }
+    ]
+  }
+}

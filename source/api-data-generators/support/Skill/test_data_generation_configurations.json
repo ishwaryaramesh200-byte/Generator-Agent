@@ -1,0 +1,164 @@
+{
+	"apis": {
+		"getSkills": {
+			"422": {
+				"skillIds[*]": "#/generators/skill_id",
+				"skillTypeId": "../SkillType/test_data_generation_configurations.json#/generators/skill_type_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"skillIds[*]": "#/generators/skill_id",
+				"skillTypeId": "../SkillType/test_data_generation_configurations.json#/generators/skill_type_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"reorderSkills": {
+			"422": {
+				"skillIds[*]": "#/generators/skill_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"204": {
+				"skillIds[*]": "#/generators/skill_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"executeSkillbasedAssignment": {
+			"200": {
+				"ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+			}
+		},
+		"createSkill": {
+			"422": {
+				"agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"skillTypeId": "../SkillType/test_data_generation_configurations.json#/generators/skill_type_id",
+				"criteria": "#/generators/skill_criteria"
+			},
+			"201": {
+				"agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"skillTypeId": "../SkillType/test_data_generation_configurations.json#/generators/skill_type_id",
+				"criteria": "#/generators/skill_criteria"
+			}
+		},
+		"deleteSkill": {
+			"422": {
+				"skillId": "#/generators/create_skill_with_skill_type_id"
+			},
+			"204": {
+				"skillId": "#/generators/create_skill_with_skill_type_id"
+			}
+		},
+		"getCriteriaFields": {
+			"422": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"mapSkillsWithAgent": {
+			"422": {
+				"skillIds[*]": "#/generators/skill_id",
+				"agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"skillIds[*]": "#/generators/skill_id",
+				"agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"recalculateAndStampSkillForTicket": {
+			"200": {
+				"ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+			}
+		},
+		"updateSkill": {
+			"422": {
+				"agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"skillId": "#/generators/skill_id",
+				"skillTypeId": "../SkillType/test_data_generation_configurations.json#/generators/skill_type_id",
+				"criteria": "#/generators/skill_criteria"
+			},
+			"200": {
+				"agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"skillId": "#/generators/skill_id",
+				"criteria": "#/generators/skill_criteria",
+				"skillTypeId": "../SkillType/test_data_generation_configurations.json#/generators/skill_type_id"
+			}
+		},
+		"getRelatedRules": {
+			"200": {
+				"skillId": "#/generators/skill_id"
+			}
+		},
+		"getSkill": {
+			"200": {
+				"skillId": "#/generators/skill_id"
+			}
+		},
+		"getSkillsOfAgent": {
+			"422": {
+				"departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+			},
+			"200": {
+				"departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+			}
+		}
+	},
+	"generators": {
+		"skill_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.Skill.getSkills",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		],
+		"create_skill" : [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.Skill.createSkill",
+				"dataPath": "$.response.body:$.id"
+			}
+		] ,
+		"skill_criteria": [
+			{
+				"type": "static",
+				"value": [
+					{
+						"fieldConditions": [
+							{
+								"condition": "is",
+								"fieldName": "Subject",
+								"fieldModule": "tickets",
+								"value": [
+									"India"
+								]
+							},
+							{
+								"condition": "is",
+								"fieldName": "Phone",
+								"fieldModule": "tickets",
+								"value": [
+									"06050611111"
+								]
+							}
+						],
+						"pattern": "(1or2)"
+					}
+				]
+			}
+		],
+		"create_skill_with_skill_type_id" : [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.Skill.createSkill",
+				"dataPath": "$.response.body:$.id",
+				"params": {
+					"skillTypeId": "../SkillType/test_data_generation_configurations.json#/generators/create_skill_type"
+				}
+			}
+		]
+	}
+}

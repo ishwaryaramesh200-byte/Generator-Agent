@@ -1,0 +1,16 @@
+{
+  "apis": {
+    "getStatusLifeCycle": {
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "getSLAMetrics": {
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

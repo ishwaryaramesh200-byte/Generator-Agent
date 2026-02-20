@@ -1,0 +1,54 @@
+{
+  "apis" : {
+    "getSpecificIVR" : {
+      "200" : {
+        "pbxName" : "#/generators/getSpecificIVR_pbxName",
+        "ivrMenuId" : "#/generators/getSpecificIVR_ivrMenuId"
+      }
+    },
+    "getSpecificNumber" : {
+      "200" : {
+        "pbxName" : "#/generators/getSpecificNumber_pbxName",
+        "phoneNumber" : "#/generators/getSpecificNumber_phoneNumber"
+      }
+    },
+    "getConfiguredNumbers" : {
+      "200" : {
+        "pbxName" : "#/generators/getConfiguredNumbers_pbxName"
+      }
+    }
+  },
+  "generators" : {
+    "getConfiguredNumbers_pbxName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "PBX.getPBXList",
+      "dataPath" : "$.response.body:$.data[0].name",
+      "params" : { }
+    } ],
+    "getSpecificIVR_pbxName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "PBX.getPBXList",
+      "dataPath" : "$.response.body:$.data[0].name",
+      "params" : { }
+    } ],
+    "getSpecificIVR_ivrMenuId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "PBXPhoneNumbers.getSpecificNumber",
+      "dataPath" : "$.response.body:$.IVRs[0].menuId",
+      "params" : { }
+    } ],
+    "getSpecificNumber_pbxName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "PBX.getPBXList",
+      "dataPath" : "$.response.body:$.data[0].name",
+      "params" : { }
+    } ],
+    "getSpecificNumber_phoneNumber" : [ {
+      "type" : "remote",
+      "generatorMethod" : "getPbxPhoneNum",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "apis": {
+    "updateWidgetTranslation": {
+      "422": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      },
+      "200": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      }
+    },
+    "getWidget": {
+      "422": {
+        "widgetId": "#/generators/widget_id"
+      },
+      "200": {
+        "widgetId": "#/generators/widget_id"
+      }
+    },
+    "getWidgetsInSpecificLanguage": {
+      "422": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale"
+      },
+      "200": {
+        "locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "204": {
+        "locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "getWidgetTranslations": {
+      "422": {
+        "widgetId": "#/generators/widget_id"
+      },
+      "200": {
+        "widgetId": "#/generators/widget_id"
+      }
+    },
+    "deleteWidgetTranslation": {
+      "422": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      },
+      "204": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      }
+    },
+    "updateWidget": {
+      "422": {
+        "widgetId": "#/generators/widget_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "widgetId": "#/generators/widget_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "deleteWidget": {
+      "422": {
+        "widgetId": "#/generators/widget_id"
+      },
+      "204": {
+        "widgetId": "#/generators/widget_id"
+      }
+    },
+    "addWidgetTranslation": {
+      "422": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      },
+      "200": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      }
+    },
+    "getWidgetsList": {
+      "422": {
+        "themeId": "../CustomTheme/test_data_generation_configurations.json#/generators/custom_theme_id",
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "inAppId": "../Asap/test_data_generation_configurations.json#/generators/asap_id"
+      },
+      "200": {
+        "themeId": "../CustomTheme/test_data_generation_configurations.json#/generators/custom_theme_id",
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "inAppId": "../Asap/test_data_generation_configurations.json#/generators/asap_id"
+      },
+      "204": {
+        "themeId": "../CustomTheme/test_data_generation_configurations.json#/generators/custom_theme_id",
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "inAppId": "../Asap/test_data_generation_configurations.json#/generators/asap_id"
+      }
+    },
+    "addAsapMappedWidgets": {
+      "422": {
+        "inAppId": "../Asap/test_data_generation_configurations.json#/generators/asap_id",
+        "widgets[*].id": "#/generators/widget_id"
+      },
+      "200": {
+        "inAppId": "../Asap/test_data_generation_configurations.json#/generators/asap_id",
+        "widgets[*].id": "#/generators/widget_id"
+      }
+    },
+    "getMappedWidgetFromCustomTheme": {
+      "422": {
+        "customThemeId": "../CustomTheme/test_data_generation_configurations.json#/generators/custom_theme_id"
+      },
+      "200": {
+        "customThemeId": "../CustomTheme/test_data_generation_configurations.json#/generators/custom_theme_id"
+      },
+      "204": {
+        "customThemeId": "../CustomTheme/test_data_generation_configurations.json#/generators/custom_theme_id"
+      }
+    },
+    "addWidget": {
+      "422": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "primaryLocale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "helpcenterId": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id",
+        "primaryLocale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getMappedWidgetsFromAsap": {
+      "200": {
+        "inAppId": "../Asap/test_data_generation_configurations.json#/generators/asap_id"
+      },
+      "204": {
+        "inAppId": "../Asap/test_data_generation_configurations.json#/generators/asap_id"
+      }
+    },
+    "getSpecificWidgetTranslation": {
+      "422": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      },
+      "200": {
+        "widgetId": "#/generators/widget_id",
+        "locale": "#/generators/widget_locale"
+      }
+    }
+  },
+  "generators": {
+    "widget_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Widget.getWidgetsList",
+        "dataPath": "$.response.body:$.data[0].id",
+        "name": "widget"
+      }
+    ],
+    "widget_locale": [
+      {
+        "type": "reference",
+        "ref": "$widget.response.body:$.data[0].activeLocales[*]"
+      }
+    ]
+  }
+}

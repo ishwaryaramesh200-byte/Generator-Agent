@@ -1,0 +1,29 @@
+{
+  "apis" : {
+    "updateRoutingPreference" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "customThresholdVsAgents[*].agentIds[*]" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "customThresholdVsAgents[*].agentIds[*]" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    },
+    "getRoutingPreference" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : {
+    "routingPreference_thresholdLimit" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.RoutingPreference.getRoutingPreference",
+      "dataPath" : "$.response.body:$.thresholdLimit"
+    } ]
+  }
+}

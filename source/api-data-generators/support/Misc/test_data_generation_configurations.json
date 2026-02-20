@@ -1,0 +1,16 @@
+{
+  "apis" : {
+    "constructWebURLs" : {
+      "200" : {
+        "entityIds[*]" : "#/generators/constructWebURLs_[*]"
+      }
+    }
+  },
+  "generators" : {
+    "constructWebURLs_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

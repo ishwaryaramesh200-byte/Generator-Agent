@@ -1,0 +1,104 @@
+{
+  "apis" : {
+    "sarExportAll" : {
+      "422" : {
+        "referenceTicketNumber" : "#/generators/sarExportAll_referenceTicketNumber"
+      },
+      "200" : {
+        "referenceTicketNumber" : "#/generators/sarExportAll_referenceTicketNumber"
+      }
+    },
+    "getSubjectAccessRequest" : {
+      "404" : {
+        "sarId" : "#/generators/getSubjectAccessRequest_sarId"
+      },
+      "422" : {
+        "sarId" : "#/generators/getSubjectAccessRequest_sarId"
+      },
+      "200" : {
+        "sarId" : "#/generators/getSubjectAccessRequest_sarId"
+      }
+    },
+    "sarEraseAll" : {
+      "422" : {
+        "referenceTicketNumber" : "#/generators/sarEraseAll_referenceTicketNumber"
+      },
+      "200" : {
+        "referenceTicketNumber" : "#/generators/sarEraseAll_referenceTicketNumber"
+      }
+    },
+    "updateSar" : {
+      "404" : {
+        "sarId" : "#/generators/updateSar_sarId"
+      },
+      "422" : {
+        "sarId" : "#/generators/updateSar_sarId"
+      },
+      "200" : {
+        "sarId" : "#/generators/updateSar_sarId"
+      }
+    },
+    "sarExport" : {
+      "422" : {
+        "ids[*]" : "#/generators/sarExport_[*]",
+        "referenceTicketNumber" : "#/generators/sarExport_referenceTicketNumber"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/sarExport_[*]",
+        "referenceTicketNumber" : "#/generators/sarExport_referenceTicketNumber"
+      }
+    },
+    "sarErase" : {
+      "422" : {
+        "ids[*]" : "#/generators/sarErase_[*]",
+        "referenceTicketNumber" : "#/generators/sarErase_referenceTicketNumber"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/sarErase_[*]",
+        "referenceTicketNumber" : "#/generators/sarErase_referenceTicketNumber"
+      }
+    }
+  },
+  "generators" : {
+    "updateSar_sarId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.SubjectAccessRequest.sarExportAll",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sarEraseAll_referenceTicketNumber" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.getDeskRequest",
+      "dataPath" : "$.response.body:$.ticketNumber"
+    } ],
+    "sarErase_referenceTicketNumber" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.getDeskRequest",
+      "dataPath" : "$.response.body:$.ticketNumber"
+    } ],
+    "sarExport_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "sarErase_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "sarExport_referenceTicketNumber" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.getDeskRequest",
+      "dataPath" : "$.response.body:$.ticketNumber"
+    } ],
+    "getSubjectAccessRequest_sarId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.SubjectAccessRequest.sarExportAll",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sarExportAll_referenceTicketNumber" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.getDeskRequest",
+      "dataPath" : "$.response.body:$.ticketNumber"
+    } ]
+  }
+}

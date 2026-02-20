@@ -1,0 +1,32 @@
+{
+  "apis" : {
+    "getSetupSearchInfo" : {
+      "422" : {
+        "departmentId" : "#/generators/getSetupSearchInfo_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getSetupSearchInfo_departmentId"
+      }
+    },
+    "getSetupHomePageDetails" : {
+      "422" : {
+        "departmentId" : "#/generators/getSetupHomePageDetails_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getSetupHomePageDetails_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "getSetupHomePageDetails_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getSetupSearchInfo_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

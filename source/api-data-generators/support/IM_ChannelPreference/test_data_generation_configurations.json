@@ -1,0 +1,35 @@
+{
+  "apis" : {
+    "updateChannelPreference" : {
+      "422" : {
+        "id" : "#/generators/updateChannelPreference_id"
+      },
+      "200" : {
+        "id" : "#/generators/updateChannelPreference_id"
+      }
+    },
+    "getChannelPreferences" : {
+      "422" : {
+        "channelIds[*]" : "#/generators/getChannelPreferences_[*]"
+      },
+      "200" : {
+        "channelIds[*]" : "#/generators/getChannelPreferences_[*]"
+      },
+      "204" : {
+        "channelIds[*]" : "#/generators/getChannelPreferences_[*]"
+      }
+    }
+  },
+  "generators" : {
+    "updateChannelPreference_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getChannelPreferences_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

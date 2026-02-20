@@ -1,0 +1,76 @@
+{
+	"apis": {
+		"listAllRootCategory": {
+			"200": {
+				"locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"getACategoryTreeByPermalink": {
+			"422": {
+				"locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+				"permalink": "#/generators/category_permalink"
+			},
+			"200": {
+				"locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+				"permalink": "#/generators/category_permalink"
+			}
+		},
+		"getATree": {
+			"200": {
+				"locale": "#/generators/root_category_locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"getARootCategory": {
+			"200": {
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"getARootCategoryTreeByCategoryId": {
+			"200": {
+				"locale": "#/generators/root_category_locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"getATreeByCategoryId": {
+			"200": {
+				"locale": "#/generators/root_category_locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"getACategoryTreeByPermalinkPath": {
+			"422": {
+				"locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+				"permalink": "#/generators/category_permalink"
+			},
+			"200": {
+				"locale": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_locale",
+				"permalink": "#/generators/category_permalink"
+			}
+		}
+	},
+	"generators": {
+		"category_permalink": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.KBRootCategory.listAllRootCategory",
+				"dataPath": "$.response.body:$.data[*].permalink"
+			}
+		],
+		"root_category_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.KBRootCategory.listAllRootCategory",
+				"name": "rootCategory",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		],
+		"root_category_locale": [
+			{
+				"type": "reference",
+				"ref": "$rootCategory.response.body:$.data[*].locale"
+			}
+		]
+	}
+}

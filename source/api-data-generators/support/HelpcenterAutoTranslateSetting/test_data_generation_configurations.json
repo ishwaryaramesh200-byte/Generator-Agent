@@ -1,0 +1,11 @@
+{
+  "apis" : {
+    "getHelpcenterAutoTranslateAppSettings" : {
+      "200" : {
+        "helpcenterId" : "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    }
+  },
+  "generators" : {
+  }
+}

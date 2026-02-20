@@ -1,0 +1,100 @@
+{
+  "apis" : {
+    "searchReports" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getAllReportFolders" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getReportFolder" : {
+      "422" : {
+        "id" : "#/generators/reportsFolder_id"
+      },
+      "200" : {
+        "id" : "#/generators/reportsFolder_id"
+      }
+    },
+    "getAllReports" : {
+      "422" : {
+        "folderId" : "#/generators/reportsFolder_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "folderId" : "#/generators/reportsFolder_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "folderId" : "#/generators/reportsFolder_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "addReportFolder" : {
+      "422" : {
+        "accessibility.teams[*]" : "#/generators/agentId",
+        "accessibility.agents[*]" : "#/generators/agentId",
+        "accessibility.roles[*]" : "#/generators/agentId",
+        "accessibility.rolesAndSubordinates[*]" : "#/generators/agentId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "accessibility.teams[*]" : "#/generators/agentId",
+        "accessibility.agents[*]" : "#/generators/agentId",
+        "accessibility.roles[*]" : "#/generators/agentId",
+        "accessibility.rolesAndSubordinates[*]" : "#/generators/agentId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "updateReportFolder" : {
+      "422" : {
+        "accessibility.teams[*]" : "#/generators/agentId",
+        "accessibility.agents[*]" : "#/generators/agentId",
+        "accessibility.roles[*]" : "#/generators/agentId",
+        "accessibility.rolesAndSubordinates[*]" : "#/generators/agentId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "id" : "#/generators/reportsFolder_id"
+      },
+      "200" : {
+        "accessibility.teams[*]" : "#/generators/agentId",
+        "accessibility.agents[*]" : "#/generators/agentId",
+        "accessibility.roles[*]" : "#/generators/agentId",
+        "accessibility.rolesAndSubordinates[*]" : "#/generators/agentId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "id" : "#/generators/reportsFolder_id"
+      }
+    }
+  },
+  "generators" : {
+    "reportsFolder_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ReportFolder.addReportFolder",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "agentId" : [ {
+      "type" : "conditional",
+      "conditions" : [
+        {
+          "when": {
+            "key": "$.input.body:$.accessibility.type",
+            "equals": "restrictedAccess"
+          },
+          "then": {
+            "use" : "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+          }
+        }
+      ]
+    } ]
+  }
+}

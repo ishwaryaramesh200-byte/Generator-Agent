@@ -1,0 +1,58 @@
+{
+  "apis" : {
+    "updateTicketsComments" : {
+      "422" : {
+        "commentId" : "#/generators/addRequestComment",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest",
+        "attachmentIds[*]" : "#/generators/addRequestAttachment"
+      },
+      "200" : {
+        "commentId" : "#/generators/addRequestComment",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest",
+        "attachmentIds[*]" : "#/generators/addRequestAttachment"
+      }
+    },
+    "listAllTicketsComments" : {
+      "200" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      },
+      "204" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    },
+    "getCommentHistory" : {
+      "200" : {
+        "commentId" : "#/generators/addRequestComment",
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest"
+      }
+    },
+    "addTicketsComments" : {
+      "422" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest",
+        "attachmentIds[*]" : "#/generators/addRequestAttachment"
+      },
+      "200" : {
+        "requestId" : "../Ticket/test_data_generation_configurations.json#/generators/addRequest",
+        "attachmentIds[*]" : "#/generators/addRequestAttachment"
+      }
+    }
+  },
+  "generators" : {
+    "addRequestComment" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.TicketComment.addTicketsComments",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "requestId" : "$portalAddRequest.response.body:$.id"
+      }
+    } ],
+    "addRequestAttachment" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Upload.createAttachments",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "requestId" : "$portalAddRequest.response.body:$.id"
+      }
+    } ]
+  }
+}

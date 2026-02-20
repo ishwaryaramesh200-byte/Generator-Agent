@@ -1,0 +1,77 @@
+{
+  "apis" : {
+    "GetMessagesTimeSeriesMetrics" : {
+      "422" : {
+        "channelIds" : "#/generators/GetMessagesTimeSeriesMetrics_channelIds",
+        "departmentId" : "#/generators/GetMessagesTimeSeriesMetrics_departmentId"
+      },
+      "200" : {
+        "channelIds" : "#/generators/GetMessagesTimeSeriesMetrics_channelIds",
+        "departmentId" : "#/generators/GetMessagesTimeSeriesMetrics_departmentId"
+      }
+    },
+    "GetConversationTimeSeriesMetrics" : {
+      "422" : {
+        "channelIds" : "#/generators/GetConversationTimeSeriesMetrics_channelIds",
+        "agentIds" : "#/generators/GetConversationTimeSeriesMetrics_agentIds",
+        "departmentId" : "#/generators/GetConversationTimeSeriesMetrics_departmentId"
+      },
+      "200" : {
+        "channelIds" : "#/generators/GetConversationTimeSeriesMetrics_channelIds",
+        "agentIds" : "#/generators/GetConversationTimeSeriesMetrics_agentIds",
+        "departmentId" : "#/generators/GetConversationTimeSeriesMetrics_departmentId"
+      }
+    },
+    "getPaymentTimeSeriesMetrics" : {
+      "422" : {
+        "channelIds" : "#/generators/getPaymentTimeSeriesMetrics_channelIds",
+        "departmentId" : "#/generators/getPaymentTimeSeriesMetrics_departmentId"
+      },
+      "200" : {
+        "channelIds" : "#/generators/getPaymentTimeSeriesMetrics_channelIds",
+        "departmentId" : "#/generators/getPaymentTimeSeriesMetrics_departmentId"
+      },
+      "204" : {
+        "channelIds" : "#/generators/getPaymentTimeSeriesMetrics_channelIds",
+        "departmentId" : "#/generators/getPaymentTimeSeriesMetrics_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "GetMessagesTimeSeriesMetrics_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getPaymentTimeSeriesMetrics_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getPaymentTimeSeriesMetrics_channelIds" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "GetConversationTimeSeriesMetrics_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "GetMessagesTimeSeriesMetrics_channelIds" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "GetConversationTimeSeriesMetrics_agentIds" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "GetConversationTimeSeriesMetrics_channelIds" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

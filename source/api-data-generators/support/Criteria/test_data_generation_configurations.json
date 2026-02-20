@@ -1,0 +1,19 @@
+{
+  "apis" : {
+    "getCustomViewCriteria" : {
+      "422" : {
+        "departmentId" : "#/generators/getCustomViewCriteria_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getCustomViewCriteria_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "getCustomViewCriteria_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

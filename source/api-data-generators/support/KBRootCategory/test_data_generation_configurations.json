@@ -1,0 +1,214 @@
+{
+	"apis": {
+		"removeReviewOwners": {
+			"422": {
+				"reviewOwnerIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			},
+			"200": {
+				"reviewOwnerIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			}
+		},
+		"getSecondaryPermalinks": {
+			"422": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			},
+			"200": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"getARootCategory": {
+			"200": {
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"addARootCategory": {
+			"422": {
+				"groupIds[*]": "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id",
+				"feedbackTicketConversionPreference.assigneeId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"feedbackTicketConversionPreference.departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"primaryDepartmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"logoId": "#/generators/logo_id"
+			},
+			"200": {
+				"groupIds[*]": "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id",
+				"feedbackTicketConversionPreference.assigneeId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"feedbackTicketConversionPreference.departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"primaryDepartmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"logoId": "#/generators/logo_id"
+			}
+		},
+		"moveArticlesAndMoveRootCategoryToTrash": {
+			"422": {
+				"targetCategoryId": "#/generators/root_category_id",
+				"rootCategoryId": "#/generators/create_new_root_category_id"
+			},
+			"200": {
+				"targetCategoryId": "#/generators/root_category_id",
+				"rootCategoryId": "#/generators/create_new_root_category_id"
+			}
+		},
+		"addModerators": {
+			"422": {
+				"moderatorIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			},
+			"200": {
+				"moderatorIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			}
+		},
+		"updateRootCategoryPermalinks": {
+			"422": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			},
+			"200": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"listAllRootCategory": {
+			"200": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"getReviewOwners": {
+			"422": {
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			},
+			"200": {
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			}
+		},
+		"addReviewOwners": {
+			"422": {
+				"reviewOwnerIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			},
+			"200": {
+				"reviewOwnerIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"rootCategoryId": "#/generators/review_enabled_root_category_id"
+			}
+		},
+		"removePermalink": {
+			"422": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			},
+			"204": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"addPermalink": {
+			"422": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			},
+			"200": {
+				"locale": "#/generators/locale",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"getATree": {
+			"422": {
+				"rootCategoryId": "#/generators/root_category_id"
+			},
+			"200": {
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"removeModerators": {
+			"422": {
+				"moderatorIds[*]": "#/generators/moderator_id",
+				"rootCategoryId": "#/generators/root_category_id"
+			},
+			"200": {
+				"moderatorIds[*]": "#/generators/moderator_id",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		},
+		"reorderRootCategories": {
+			"422": {
+				"orderedCategoryIds[*]": "#/generators/root_category_id"
+			},
+			"204": {
+				"orderedCategoryIds[*]": "#/generators/root_category_id"
+			}
+		},
+		"updateRootCategory": {
+			"422": {
+				"groupIds[*]": "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id",
+				"feedbackTicketConversionPreference.assigneeId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"feedbackTicketConversionPreference.departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"primaryDepartmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"logoId": "#/generators/logo_id",
+				"rootCategoryId": "#/generators/root_category_id"
+			},
+			"200": {
+				"groupIds[*]": "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id",
+				"feedbackTicketConversionPreference.assigneeId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"feedbackTicketConversionPreference.departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"primaryDepartmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"logoId": "#/generators/logo_id",
+				"rootCategoryId": "#/generators/root_category_id"
+			}
+		}
+	},
+	"generators": {
+		"root_category_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.KBRootCategory.listAllRootCategory",
+				"name": "rootCategory",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		],
+		"create_new_root_category_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.KBRootCategory.addARootCategory",
+				"dataPath": "$.response.body:$.id"
+			}
+		],
+		"review_enabled_root_category_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.KBRootCategory.listAllRootCategory",
+				"dataPath": "$.response.body:$.data[?( @.isReviewEnabled == true )].id"
+			}
+		],
+		"logo_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.KbCategoryLogo.associateEntityAttachment",
+				"dataPath": "$.response.body:$.id"
+			}
+		],
+		"locale": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.KBRootCategory.getARootCategory",
+				"dataPath": "$.response.body:$.translations[*].locale",
+				"params": {
+					"rootCategoryId": "$rootCategory.response.body:$.data[*].id"
+				}
+			}
+		],
+		"moderator_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.KBRootCategory.addModerators",
+				"dataPath": "$.input.body:$.moderatorIds[*]"
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "apis": {
+    "updateUserChannelPreferenceForAdmin": {
+      "200": {
+        "agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    },
+    "updateUserOverallChannelPreferenceForAdmin": {
+      "422": {
+        "agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      },
+      "200": {
+        "agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

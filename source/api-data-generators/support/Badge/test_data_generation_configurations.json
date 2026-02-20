@@ -1,0 +1,64 @@
+{
+  "apis": {
+    "getUserBadges": {
+      "200": {
+        "userId": "../User/test_data_generation_configurations.json#/generators/user_id",
+        "startTime": "#/generators/common_startTime",
+        "endTime": "#/generators/common_endTime"
+      }
+    },
+    "associateBadgesToUsers": {
+      "422": {
+        "userId": "../User/test_data_generation_configurations.json#/generators/user_id",
+        "badgeIds[*]": "#/generators/custom_badges_id"
+      },
+      "200": {
+        "userId": "../User/test_data_generation_configurations.json#/generators/user_id",
+        "badgeIds[*]": "#/generators/custom_badges_id"
+      }
+    },
+    "dissociateBadgesFromUsers": {
+      "422": {
+        "userId": "../User/test_data_generation_configurations.json#/generators/user_id",
+        "badgeIds[*]": "#/generators/custom_badges_id"
+      },
+      "200": {
+        "userId": "../User/test_data_generation_configurations.json#/generators/user_id",
+        "badgeIds[*]": "#/generators/custom_badges_id"
+      }
+    }
+  },
+  "generators": {
+    "custom_badges_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Badge.getBadges",
+        "dataPath": "$.response.body:$[?( @.isCustom == true )].id"
+      }
+    ],
+    "common_startTime": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+        "inputs": {
+          "orgId": "$.input.query:$.orgId",
+          "timeLine": "past",
+          "start": "10",
+          "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        }
+      }
+    ],
+    "common_endTime": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+        "inputs": {
+          "orgId": "$.input.query:$.orgId",
+          "timeLine": "future",
+          "start": "10",
+          "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        }
+      }
+    ]
+  }
+}

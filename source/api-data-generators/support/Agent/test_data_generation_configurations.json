@@ -1,0 +1,217 @@
+{
+  "apis": {
+    "getSyncAgents" : {
+      "200" : {
+        "lastFetchedTime" : "../Common/test_data_generation_configurations.json#/generators/past_time"
+      } ,
+      "422" : {
+        "lastFetchedTime" : "../Common/test_data_generation_configurations.json#/generators/past_time"
+      }
+    },
+    "deleteUnconfirmedAgent": {
+      "422": {
+        "agentIds[*]": "#/generators/unconfirmed_agent_id"
+      },
+      "204": {
+        "agentIds[*]": "#/generators/unconfirmed_agent_id"
+      }
+    },
+    "updateMyPreferences": {
+      "422": {
+        "currentDepartment": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "namePattern": "#/generators/namePattern"
+      },
+      "204": {
+        "currentDepartment": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "namePattern": "#/generators/namePattern"
+      } ,
+      "200": {
+        "currentDepartment": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "namePattern": "#/generators/namePattern"
+      }
+    },
+    "scheduleReassignment": {
+      "422": {
+        "agentId": "#/generators/agent_id",
+        "agentReassignment[*].taskNewOwner": "#/generators/agent_id",
+        "agentReassignment[*].departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agentReassignment[*].ticketNewOwner": "#/generators/agent_id"
+      },
+      "204": {
+        "agentId": "#/generators/agent_id",
+        "agentReassignment[*].taskNewOwner": "#/generators/agent_id",
+        "agentReassignment[*].departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agentReassignment[*].ticketNewOwner": "#/generators/agent_id"
+      }
+    },
+    "getAgentsByIds": {
+      "422": {
+        "agentIds[*]": "#/generators/agent_id"
+      },
+      "200": {
+        "agentIds[*]": "#/generators/agent_id"
+      }
+    },
+    "getAgentPhoto": {
+      "200": {
+        "agentId": "#/generators/agent_id"
+      },
+      "204": {
+        "agentId": "#/generators/agent_id"
+      }
+    },
+    "getAgent": {
+      "200": {
+        "agentId": "#/generators/agent_id"
+      }
+    },
+    "activateAgents": {
+      "422": {
+        "agentIds[*]": "#/generators/agent_id"
+      },
+      "204": {
+        "agentIds[*]": "#/generators/agent_id"
+      }
+    },
+    "anonymizeAgents": {
+      "204": {
+        "agentId": "#/generators/unconfirmed_agent_id"
+      }
+    },
+    "addAgent": {
+      "422": {
+        "associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "associatedChatDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "roleId": "../Role/test_data_generation_configurations.json#/generators/role_id",
+        "profileId": "../Profile/test_data_generation_configurations.json#/generators/profile_id"
+      },
+      "200": {
+        "associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "associatedChatDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "roleId": "../Role/test_data_generation_configurations.json#/generators/role_id",
+        "profileId": "../Profile/test_data_generation_configurations.json#/generators/profile_id"
+      }
+    },
+    "getAgentByZuid": {
+      "200": {
+        "zuid": "#/generators/agent_zuid"
+      }
+    },
+    "getAgentByEmail": {
+      "200": {
+        "emailId": "#/generators/agent_email"
+      },
+      "204": {
+        "emailId": "#/generators/agent_email"
+      }
+    },
+    "updateAgent": {
+      "422": {
+        "associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agentId": "#/generators/agent_id",
+        "associatedChatDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "roleId": "../Role/test_data_generation_configurations.json#/generators/role_id",
+        "profileId": "../Profile/test_data_generation_configurations.json#/generators/profile_id"
+      },
+      "200": {
+        "associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agentId": "#/generators/agent_id",
+        "associatedChatDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "roleId": "../Role/test_data_generation_configurations.json#/generators/role_id",
+        "profileId": "../Profile/test_data_generation_configurations.json#/generators/profile_id"
+      }
+    },
+    "deactivateAgents": {
+      "204": {
+        "agentId": "#/generators/agent_id"
+      }
+    },
+    "reInviteAgents": {
+      "422": {
+        "agentIds[*]": "#/generators/unconfirmed_agent_id"
+      },
+      "204": {
+        "agentIds[*]": "#/generators/unconfirmed_agent_id"
+      }
+    },
+    "getAgents": {
+      "200": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "roleIds[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+        "profileIds[*]": "../Profile/test_data_generation_configurations.json#/generators/profile_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "updateTimeGT" : "../Common/test_data_generation_configurations.json#/generators/past_time"
+      },
+      "204": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "roleIds[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+        "profileIds[*]": "../Profile/test_data_generation_configurations.json#/generators/profile_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "updateTimeGT" : "../Common/test_data_generation_configurations.json#/generators/past_time"
+      }
+    },
+    "getAgentAssociations": {
+      "200": {
+        "agentId": "#/generators/agent_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "addMultipleAgents": {
+      "422": {
+        "agents[*].profileId": "../Profile/test_data_generation_configurations.json#/generators/profile_id",
+        "agents[*].associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agents[*].associatedChatDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "agents[*].profileId": "../Profile/test_data_generation_configurations.json#/generators/profile_id",
+        "agents[*].associatedDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agents[*].associatedChatDepartmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators": {
+    "agent_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Agent.getMyInfo",
+        "dataPath": "$.response.body:$.id"
+      }
+    ],
+    "agent_zuid": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Agent.getMyInfo",
+        "dataPath": "$.response.body:$.zuid"
+      }
+    ],
+    "agent_email": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Agent.getMyInfo",
+        "dataPath": "$.response.body:$.emailId"
+      }
+    ],
+    "unconfirmed_agent_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Agent.addAgent",
+        "dataPath": "$.response.body:$.id"
+      }
+    ],
+    "namePattern": [
+      {
+        "type": "static",
+        "value": [
+          [
+            "LAST_NAME",
+            "FIRST_NAME"
+          ],
+          [
+            "FIRST_NAME",
+            "LAST_NAME"
+          ]
+        ]
+      }
+    ]
+  }
+}

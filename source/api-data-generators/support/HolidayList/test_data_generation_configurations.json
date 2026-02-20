@@ -1,0 +1,65 @@
+{
+  "apis" : {
+    "updateHolidayList" : {
+      "422" : {
+        "holidayListId" : "#/generators/holiday_list_id",
+        "associatedBusinessHourIds[*]" : "../BusinessHour/test_data_generation_configurations.json#/generators/business_hour_id",
+        "holidays[*].from" : "#/generators/holiday_from",
+        "holidays[*].to" : "#/generators/holiday_to"
+      },
+      "200" : {
+        "holidayListId" : "#/generators/holiday_list_id",
+        "associatedBusinessHourIds[*]" : "../BusinessHour/test_data_generation_configurations.json#/generators/business_hour_id",
+        "holidays[*].from" : "#/generators/holiday_from",
+        "holidays[*].to" : "#/generators/holiday_to"
+      }
+    },
+    "getHolidayList" : {
+      "422" : {
+        "holidayListId" : "#/generators/holiday_list_id"
+      },
+      "200" : {
+        "holidayListId" : "#/generators/holiday_list_id"
+      }
+    },
+    "createHolidayList" : {
+      "422" : {
+        "associatedBusinessHourIds[*]" : "../BusinessHour/test_data_generation_configurations.json#/generators/business_hour_id",
+        "holidays[*].from" : "#/generators/holiday_from",
+        "holidays[*].to" : "#/generators/holiday_to"
+      },
+      "201" : {
+        "associatedBusinessHourIds[*]" : "../BusinessHour/test_data_generation_configurations.json#/generators/business_hour_id",
+        "holidays[*].from" : "#/generators/holiday_from",
+        "holidays[*].to" : "#/generators/holiday_to"
+      }
+    }
+  },
+  "generators" : {
+    "holiday_list_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.HolidayList.createHolidayList",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "holiday_from" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+      "inputs" : {
+        "format" : "MM-dd",
+        "timeLine" : "current",
+        "start" : "1",
+        "end" : "3"
+      }
+    } ],
+    "holiday_to" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+      "inputs" : {
+        "format" : "MM-dd",
+        "timeLine" : "future",
+        "start" : "4",
+        "end" : "7"
+      }
+    } ]
+  }
+}

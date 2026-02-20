@@ -1,0 +1,48 @@
+{
+  "apis": {
+    "getAttachments": {
+      "200": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      },
+      "204": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      }
+    },
+    "viewProductAttachment": {
+      "200": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id",
+        "attachmentId": "#/generators/product_attachment_id"
+      }
+    },
+    "createAttachment": {
+      "422": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      },
+      "200": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      }
+    },
+    "deleteAttachment": {
+      "422": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id",
+        "attachmentId": "#/generators/product_attachment_id"
+      },
+      "204": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id",
+        "attachmentId": "#/generators/product_attachment_id"
+      }
+    }
+  },
+  "generators": {
+    "product_attachment_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.ProductAttachment.createAttachment",
+        "dataPath": "$.response.body:$.id",
+        "params": {
+          "productId": "$products.response.body:$.id"
+        }
+      }
+    ]
+  }
+}

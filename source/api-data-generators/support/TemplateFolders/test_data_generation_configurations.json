@@ -1,0 +1,72 @@
+{
+	"apis": {
+		"getTemplateFolderList": {
+			"422": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"updateTemplateFolder": {
+			"422": {
+				"folderAccessDetails.agents[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"folderAccessDetails.teams[*]": "../Team/test_data_generation_configurations.json#/generators/team_id",
+				"folderAccessDetails.rolesAndSubordinates[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"folderAccessDetails.roles[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"folderId": "#/generators/template_folder_id"
+			},
+			"200": {
+				"folderAccessDetails.agents[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"folderAccessDetails.teams[*]": "../Team/test_data_generation_configurations.json#/generators/team_id",
+				"folderAccessDetails.rolesAndSubordinates[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"folderAccessDetails.roles[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"folderId": "#/generators/template_folder_id"
+			}
+		},
+		"addTemplateFolder": {
+			"422": {
+				"folderAccessDetails.agents[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"folderAccessDetails.teams[*]": "../Team/test_data_generation_configurations.json#/generators/team_id",
+				"folderAccessDetails.rolesAndSubordinates[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"folderAccessDetails.roles[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"201": {
+				"folderAccessDetails.agents[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+				"folderAccessDetails.teams[*]": "../Team/test_data_generation_configurations.json#/generators/team_id",
+				"folderAccessDetails.roles[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"folderAccessDetails.rolesAndSubordinates[*]": "../Role/test_data_generation_configurations.json#/generators/role_id",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"getTemplateFolder": {
+			"200": {
+				"folderId": "#/generators/template_folder_id"
+			}
+		},
+		"deleteTemplateFolder": {
+			"204": {
+				"folderId": "#/generators/delete_template_folder_id"
+			}
+		}
+	},
+	"generators": {
+		"template_folder_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.TemplateFolders.getTemplateFolderList",
+				"dataPath": "$.response.body:$.[?(@.category != 'DEFAULT_FOLDER')].folderId"
+			}
+		] ,
+		"delete_template_folder_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.TemplateFolders.addTemplateFolder",
+				"dataPath": "$.response.body:$.folderId"
+			}
+		]
+	}
+}

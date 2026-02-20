@@ -1,0 +1,203 @@
+{
+	"apis": {
+		"GetSavedFilter": {
+			"422": {
+				"filterId": "#/generators/GetSavedFilter_filterId"
+			},
+			"200": {
+				"filterId": "#/generators/GetSavedFilter_filterId"
+			}
+		},
+		"deleteSavedFilter": {
+			"422": {
+				"filterId": "#/generators/GetSavedFilter_filterId"
+			},
+			"204": {
+				"filterId": "#/generators/GetSavedFilter_filterId"
+			}
+		},
+		"updateSavedFilter": {
+			"422": {
+				"filterId": "#/generators/updateSavedFilter_filterId",
+				"criteria.criteriaFields[*].condition": "#/generators/createSavedFilter_condition",
+				"criteria.criteriaFields[*].field.apiName": "#/generators/createSavedFilterField_apiName",
+				"criteria.criteriaFields[*].field.module": "#/generators/createSavedFilter_module",
+				"moduleMapping.primaryModule.apiName": "#/generators/updateSavedFilter_apiName",
+				"department": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"criteria.criteriaFields[*].value.type": "#/generators/value_type_generator",
+				"criteria.criteriaFields[*].value.primitive": "#/generators/value_generator_primitive"
+			},
+			"200": {
+				"filterId": "#/generators/updateSavedFilter_filterId",
+				"criteria.criteriaFields[*].condition": "#/generators/createSavedFilter_condition",
+				"criteria.criteriaFields[*].field.apiName": "#/generators/createSavedFilterField_apiName",
+				"criteria.criteriaFields[*].field.module": "#/generators/createSavedFilter_module",
+				"moduleMapping.primaryModule.apiName": "#/generators/updateSavedFilter_apiName",
+				"department": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"criteria.criteriaFields[*].value.type": "#/generators/value_type_generator",
+				"criteria.criteriaFields[*].value.primitive": "#/generators/value_generator_primitive"
+			}
+		},
+		"GetSavedFilters": {
+			"422": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			},
+			"200": {
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+			}
+		},
+		"createSavedFilter": {
+			"422": {
+				"moduleMapping.primaryModule.apiName": "#/generators/createSavedFilter_apiName",
+				"criteria.criteriaFields[*].condition": "#/generators/createSavedFilter_condition",
+				"department": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"criteria.criteriaFields[*].value.type": "#/generators/value_type_generator",
+				"criteria.criteriaFields[*].value.primitive": "#/generators/value_generator_primitive",
+				"criteria.criteriaFields[*].field.apiName": "#/generators/createSavedFilterField_apiName",
+				"criteria.criteriaFields[*].field.module": "#/generators/createSavedFilter_module"
+			},
+			"200": {
+				"moduleMapping.primaryModule.apiName": "#/generators/createSavedFilter_apiName",
+				"criteria.criteriaFields[*].condition": "#/generators/createSavedFilter_condition",
+				"department": "../Department/test_data_generation_configurations.json#/generators/department_id",
+				"criteria.criteriaFields[*].value.type": "#/generators/value_type_generator",
+				"criteria.criteriaFields[*].value.primitive": "#/generators/value_generator_primitive",
+				"criteria.criteriaFields[*].field.apiName": "#/generators/createSavedFilterField_apiName",
+				"criteria.criteriaFields[*].field.module": "#/generators/createSavedFilter_module"
+			}
+		}
+	},
+	"generators": {
+		"saved_filter_id" : [
+			{
+			   "type": "dynamic" ,
+			   "generatorOperationId": "support.SavedFilters.GetSavedFilters" ,
+			   "dataPath" : "$.response.body:$.data[*].filterId"
+			}
+		],
+		"updateSavedFilter_module": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.Module.getModule",
+				"dataPath": "$.response.body:$.apiName"
+			}
+		],
+		"GetSavedFilter_filterId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SavedFilters.createSavedFilter",
+				"dataPath": "$.response.body:$.data.filterId"
+			}
+		],
+		"updateSavedFilter_condition": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SavedFilters.createSavedFilter",
+				"dataPath": "$.response.body:$.data.criteria.criteriaFields[*].condition"
+			}
+		],
+		"deleteSavedFilter_filterId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SavedFilters.createSavedFilter",
+				"dataPath": "$.response.body:$.data.filterId"
+			}
+		],
+		"value_generator_primitive" : [
+		   {
+		      "type" : "static" ,
+		      "value" : [ [ { "key" : "1745998494193" } ] ]
+		   }
+		],
+		"value_type_generator" : [
+		   {
+		      "type" : "static" ,
+		      "value" : ["primitive"]
+		   }
+		],
+		"createSavedFilter_module": [
+			{
+				"type": "reference",
+				"ref" : "$featureFields.response.body:$.filterFields[0].name"
+			}
+		],
+		"createSavedFilter_type": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SavedFilters.GetSavedFilter",
+				"dataPath": "$.response.body:$.data.criteria.criteriaFields[*].value.type"
+			}
+		],
+		"updateSavedFilter_type": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SavedFilters.createSavedFilter",
+				"dataPath": "$.response.body:$.data.criteria.criteriaFields[*].value.type"
+			}
+		],
+		"createSavedFilter_apiName": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.NewFeatureFields.getFeatureFields",
+				"dataPath": "$.response.body:$.filterFields[*].name",
+				"name" : "featureFields"
+			}
+		],
+		"updateSavedFilter_apiName": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.NewFeatureFields.getFeatureFields",
+				"dataPath": "$.response.body:$.filterFields[*].name",
+				"name" : "featureFields"
+			}
+		],
+		"createSavedFilter_condition": [
+			{
+				"type": "static",
+				"value" : [ "is" ]
+			}
+		],
+		"updateSavedFilter_filterId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.SavedFilters.createSavedFilter",
+				"dataPath": "$.response.body:$.data.filterId"
+			}
+		],
+		"createSavedFilterField_apiName": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.NewFeatureFields.getFeatureFields",
+				"dataPath": "$.response.body:$.filterFields[*].fieldDetails[?(@.type != 'DateTime' && @.type != 'Date') ].apiName",
+				"params": {
+                    "departmentId": "$generators:#/generators/departmentIdGenerator"
+                }
+			}
+		],
+	  "departmentIdGenerator": [
+       {
+        "type": "conditional",
+        "conditions": [
+          {
+            "when": {
+              "key": "$.input.body:$.department",
+              "equals": "allDepartment"
+            },
+            "then": {
+              "use": "$generators:#/generators/null_value"
+            }
+          }
+        ],
+        "else": "$.input.body:$.department"
+      }
+    ],
+    "null_value": [
+      {
+        "type": "static",
+        "value": [
+          null
+        ]
+      }
+    ]
+   }
+}

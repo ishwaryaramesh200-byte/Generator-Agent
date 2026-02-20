@@ -1,0 +1,205 @@
+{
+  "apis" : {
+    "discardDraft" : {
+      "422" : {
+        "transitionId" : "#/generators/discardDraft_transitionId",
+        "ticketId" : "#/generators/discardDraft_ticketId"
+      },
+      "200" : {
+        "transitionId" : "#/generators/discardDraft_transitionId",
+        "ticketId" : "#/generators/discardDraft_ticketId"
+      }
+    },
+    "saveDraft" : {
+      "422" : {
+        "ATTACHMENT.uploads[*].isPublic" : "#/generators/saveDraft_isPublic",
+        "FIELD_UPDATE.teamId" : "#/generators/saveDraft_teamId",
+        "REPLY.bcc" : "#/generators/saveDraft_bcc",
+        "FIELD_UPDATE.productId" : "#/generators/saveDraft_productId",
+        "FIELD_UPDATE.language" : "#/generators/saveDraft_language",
+        "transitionId" : "#/generators/saveDraft_transitionId",
+        "REPLY.contentType" : "#/generators/saveDraft_contentType",
+        "FIELD_UPDATE.channel" : "#/generators/saveDraft_channel",
+        "COMMENT.uploads[*]" : "#/generators/saveDraft_[*]",
+        "ATTACHMENT.uploads[*].id" : "#/generators/saveDraft_id",
+        "APPROVAL.approverIds[*]" : "#/generators/saveDraft_[*]",
+        "COMMENT.isPublicComment" : "#/generators/saveDraft_isPublicComment",
+        "REPLY.cc" : "#/generators/saveDraft_cc",
+        "FIELD_UPDATE.priority" : "#/generators/saveDraft_priority",
+        "REPLY.to" : "#/generators/saveDraft_to",
+        "REPLY.fromEmailAddress" : "#/generators/saveDraft_fromEmailAddress",
+        "COMMENT.content" : "#/generators/saveDraft_content",
+        "FIELD_UPDATE.assigneeId" : "#/generators/saveDraft_assigneeId",
+        "FIELD_UPDATE.customFields" : "#/generators/saveDraft_customFields",
+        "FIELD_UPDATE.dueDate" : "#/generators/saveDraft_dueDate",
+        "ticketId" : "#/generators/saveDraft_ticketId",
+        "REPLY.uploads[*]" : "#/generators/saveDraft_[*]",
+        "FIELD_UPDATE.classification" : "#/generators/saveDraft_classification"
+      },
+      "200" : {
+        "ATTACHMENT.uploads[*].isPublic" : "#/generators/saveDraft_isPublic",
+        "FIELD_UPDATE.teamId" : "#/generators/saveDraft_teamId",
+        "REPLY.bcc" : "#/generators/saveDraft_bcc",
+        "FIELD_UPDATE.productId" : "#/generators/saveDraft_productId",
+        "FIELD_UPDATE.language" : "#/generators/saveDraft_language",
+        "transitionId" : "#/generators/saveDraft_transitionId",
+        "REPLY.contentType" : "#/generators/saveDraft_contentType",
+        "FIELD_UPDATE.channel" : "#/generators/saveDraft_channel",
+        "COMMENT.uploads[*]" : "#/generators/saveDraft_[*]",
+        "ATTACHMENT.uploads[*].id" : "#/generators/saveDraft_id",
+        "APPROVAL.approverIds[*]" : "#/generators/saveDraft_[*]",
+        "COMMENT.isPublicComment" : "#/generators/saveDraft_isPublicComment",
+        "REPLY.cc" : "#/generators/saveDraft_cc",
+        "FIELD_UPDATE.priority" : "#/generators/saveDraft_priority",
+        "REPLY.to" : "#/generators/saveDraft_to",
+        "REPLY.fromEmailAddress" : "#/generators/saveDraft_fromEmailAddress",
+        "COMMENT.content" : "#/generators/saveDraft_content",
+        "FIELD_UPDATE.assigneeId" : "#/generators/saveDraft_assigneeId",
+        "FIELD_UPDATE.customFields" : "#/generators/saveDraft_customFields",
+        "FIELD_UPDATE.dueDate" : "#/generators/saveDraft_dueDate",
+        "ticketId" : "#/generators/saveDraft_ticketId",
+        "REPLY.uploads[*]" : "#/generators/saveDraft_[*]",
+        "FIELD_UPDATE.classification" : "#/generators/saveDraft_classification"
+      }
+    }
+  },
+  "generators" : {
+    "saveDraft_channel" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "channel",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "saveDraft_dueDate" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.getDeskRequest",
+      "dataPath" : "$.response.body:$.dueDate"
+    } ],
+    "saveDraft_cc" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].cc"
+    } ],
+    "saveDraft_isPublicComment" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.TicketComment.getTicketCommentHistory",
+      "dataPath" : "$.response.body:$.data[*].isPublic"
+    } ],
+    "saveDraft_priority" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "priority",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "saveDraft_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.TicketAttachment.getAttachments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "saveDraft_transitionId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "getTransitionId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "saveDraft_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "saveDraft_to" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].to"
+    } ],
+    "saveDraft_content" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.TicketComment.getTicketCommentHistory",
+      "dataPath" : "$.response.body:$.data[*].content"
+    } ],
+    "saveDraft_fromEmailAddress" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].cc"
+    } ],
+    "saveDraft_teamId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Team.getTeamsInDepartment",
+      "dataPath" : "$.response.body:$.teams[*].id"
+    } ],
+    "saveDraft_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Upload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "saveDraft_language" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "language",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "discardDraft_transitionId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "getTransitionId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "saveDraft_isPublic" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.TicketAttachment.getAttachments",
+      "dataPath" : "$.response.body:$.data[*].isPublic"
+    } ],
+    "saveDraft_contentType" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.contentType"
+    } ],
+    "discardDraft_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "saveDraft_assigneeId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "saveDraft_classification" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "classification",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "saveDraft_bcc" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].bcc"
+    } ],
+    "saveDraft_productId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Product.getDuplicateProducts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "saveDraft_customFields" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+      "inputs" : {
+        "moduleName" : "Ticket"
+      }
+    } ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "apis" : {
+    "createMapping" : {
+      "422" : {
+        "entityId" : "#/generators/createMapping_entityId",
+        "installationId" : "#/generators/createMapping_installationId"
+      },
+      "201" : {
+        "entityId" : "#/generators/createMapping_entityId",
+        "installationId" : "#/generators/createMapping_installationId"
+      }
+    },
+    "updateFrameworkPreference" : {
+      "422" : {
+        "installationId" : "#/generators/updateFrameworkPreference_installationId"
+      },
+      "200" : {
+        "installationId" : "#/generators/updateFrameworkPreference_installationId"
+      }
+    },
+    "getUserPresence" : {
+      "422" : {
+        "installationId" : "#/generators/getUserPresence_installationId"
+      },
+      "200" : {
+        "installationId" : "#/generators/getUserPresence_installationId"
+      }
+    },
+    "getIntegModuleMetaInfo" : {
+      "200" : {
+        "installationId" : "#/generators/getIntegModuleMetaInfo_installationId"
+      },
+      "204" : {
+        "installationId" : "#/generators/getIntegModuleMetaInfo_installationId"
+      }
+    },
+    "getInstalledExtensions" : {
+      "422" : {
+        "departmentId" : "#/generators/getInstalledExtensions_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getInstalledExtensions_departmentId"
+      },
+      "204" : {
+        "departmentId" : "#/generators/getInstalledExtensions_departmentId"
+      }
+    },
+    "getChannelIdField" : {
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configuration.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : {
+    "getUserPresence_installationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Extension.myInstalledExtensions",
+      "dataPath" : "$.response.body:$.data[*].installationId"
+    } ],
+    "getIntegModuleMetaInfo_installationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Extension.installExtension",
+      "dataPath" : "$.response.body:$.installationId",
+      "params" : { }
+    } ],
+    "createMapping_installationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Extension.installExtension",
+      "dataPath" : "$.response.body:$.installationId",
+      "params" : { }
+    } ],
+    "createMapping_entityId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Ticket.addRequest",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "getInstalledExtensions_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateFrameworkPreference_installationId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Extension.installExtension",
+      "dataPath" : "$.response.body:$.installationId",
+      "params" : { }
+    } ]
+  }
+}

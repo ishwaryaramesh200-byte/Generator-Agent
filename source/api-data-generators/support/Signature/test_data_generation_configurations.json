@@ -1,0 +1,24 @@
+{
+  "apis": {
+    "getSign": {
+      "200": {
+        "agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    },
+    "getAllSign": {
+      "200": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "updateSign": {
+      "422": {
+        "agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      },
+      "200": {
+        "agentId": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

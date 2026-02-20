@@ -1,0 +1,26 @@
+{
+  "apis" : {
+    "viewTemporaryTransitionDraftAttachment" : {
+      "200" : {
+        "ticket_id" : "#/generators/viewTemporaryTransitionDraftAttachment_ticket_id"
+      }
+    },
+    "deleteTransitionDraftTemporaryAttachment" : {
+      "200" : {
+        "ticket_id" : "#/generators/deleteTransitionDraftTemporaryAttachment_ticket_id"
+      }
+    }
+  },
+  "generators" : {
+    "viewTemporaryTransitionDraftAttachment_ticket_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "deleteTransitionDraftTemporaryAttachment_ticket_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "apis" : {
+    "getLookupValues" : {
+      "422" : {
+        "departmentId" : "#/generators/getLookupValues_departmentId",
+        "fieldId" : "#/generators/getLookupValues_fieldId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getLookupValues_departmentId",
+        "fieldId" : "#/generators/getLookupValues_fieldId"
+      }
+    }
+  },
+  "generators" : {
+    "getLookupValues_getFields_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets" ]
+    } ],
+    "getLookupValues_fieldId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.type == 'LookUp'))].id",
+      "params" : {
+        "module" : "$generators:#/generators/getLookupValues_getFields_module"
+      }
+    } ],
+    "getLookupValues_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Department.getDepartments",
+      "dataPath" : "$.response.body:$.data[?((@.isEnabled == true))].id",
+      "params" : { }
+    } ]
+  }
+}

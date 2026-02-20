@@ -1,0 +1,216 @@
+{
+  "apis" : {
+    "deleteActionMapping" : {
+      "204" : {
+        "id" : "#/generators/deleteActionMapping_id"
+      }
+    },
+    "createActionMapping" : {
+      "200" : {
+        "inputParams[*].origin" : "#/generators/createActionMapping_origin",
+        "inputParams[*].picklistValues[*]" : "#/generators/createActionMapping_[*]",
+        "inputParams[*].type" : "#/generators/createActionMapping_type",
+        "inputParams[*].value" : "#/generators/createActionMapping_value",
+        "inputParams[*].hooks[*]" : "#/generators/createActionMapping_[*]",
+        "inputParams[*].placeHolderContext" : "#/generators/createActionMapping_placeHolderContext",
+        "inputParams[*].order" : "#/generators/createActionMapping_order",
+        "inputParams[*].length" : "#/generators/createActionMapping_length",
+        "inputParams[*].isEncrypted" : "#/generators/createActionMapping_isEncrypted",
+        "inputParams[*].uiType" : "#/generators/createActionMapping_uiType",
+        "inputParams[*].name" : "#/generators/createActionMapping_name",
+        "actionId" : "#/generators/createActionMapping_actionId",
+        "inputParams[*].isMandatory" : "#/generators/createActionMapping_isMandatory",
+        "inputParams[*].id" : "#/generators/createActionMapping_id",
+        "inputParams[*].apiName" : "#/generators/createActionMapping_apiName"
+      }
+    },
+    "updateActionMapping" : {
+      "200" : {
+        "inputParams[*].origin" : "#/generators/updateActionMapping_origin",
+        "inputParams[*].picklistValues[*]" : "#/generators/updateActionMapping_[*]",
+        "inputParams[*].type" : "#/generators/updateActionMapping_type",
+        "inputParams[*].value" : "#/generators/updateActionMapping_value",
+        "inputParams[*].hooks[*]" : "#/generators/updateActionMapping_[*]",
+        "inputParams[*].placeHolderContext" : "#/generators/updateActionMapping_placeHolderContext",
+        "inputParams[*].order" : "#/generators/updateActionMapping_order",
+        "inputParams[*].length" : "#/generators/updateActionMapping_length",
+        "inputParams[*].isEncrypted" : "#/generators/updateActionMapping_isEncrypted",
+        "inputParams[*].uiType" : "#/generators/updateActionMapping_uiType",
+        "inputParams[*].name" : "#/generators/updateActionMapping_name",
+        "actionId" : "#/generators/updateActionMapping_actionId",
+        "id" : "#/generators/updateActionMapping_id",
+        "inputParams[*].isMandatory" : "#/generators/updateActionMapping_isMandatory",
+        "inputParams[*].id" : "#/generators/updateActionMapping_id",
+        "inputParams[*].apiName" : "#/generators/updateActionMapping_apiName"
+      }
+    },
+    "getActionMapping" : {
+      "200" : {
+        "id" : "#/generators/getActionMapping_id"
+      }
+    },
+    "getActionMappings" : {
+      "200" : {
+        "actionId" : "#/generators/getActionMappings_actionId"
+      }
+    }
+  },
+  "generators" : {
+    "deleteActionMapping_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateActionMapping_actionId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getActions",
+      "dataPath" : "$.response.body:$.actions[*].id"
+    } ],
+    "createActionMapping_length" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].length"
+    } ],
+    "createActionMapping_placeHolderContext" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Module.getModule",
+      "dataPath" : "$.response.body:$.apiName"
+    } ],
+    "createActionMapping_uiType" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].uiType"
+    } ],
+    "updateActionMapping_isEncrypted" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].isEncrypted"
+    } ],
+    "updateActionMapping_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].name"
+    } ],
+    "createActionMapping_order" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].order"
+    } ],
+    "updateActionMapping_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].type"
+    } ],
+    "updateActionMapping_order" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].order"
+    } ],
+    "getActionMapping_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getActionMappings_actionId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "GenericAction.getActions",
+      "dataPath" : "$.response.body:$.actions[?((@.apiName == 'moveDepartment'))].id",
+      "params" : { }
+    } ],
+    "createActionMapping_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].type"
+    } ],
+    "updateActionMapping_apiName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].apiName"
+    } ],
+    "createActionMapping_value" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.getActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].value"
+    } ],
+    "updateActionMapping_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].hooks[*]"
+    } ],
+    "updateActionMapping_origin" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].origin"
+    } ],
+    "updateActionMapping_uiType" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].uiType"
+    } ],
+    "createActionMapping_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].hooks[*]"
+    } ],
+    "updateActionMapping_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateActionMapping_length" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].length"
+    } ],
+    "updateActionMapping_value" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].value"
+    } ],
+    "createActionMapping_origin" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].origin"
+    } ],
+    "createActionMapping_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.paramDependencies[*].childId"
+    } ],
+    "createActionMapping_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].name"
+    } ],
+    "updateActionMapping_isMandatory" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericActionMapping.createActionMapping",
+      "dataPath" : "$.response.body:$.actionParamMappings[*].isMandatory"
+    } ],
+    "createActionMapping_isEncrypted" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].isEncrypted"
+    } ],
+    "updateActionMapping_placeHolderContext" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Module.getModule",
+      "dataPath" : "$.response.body:$.apiName"
+    } ],
+    "createActionMapping_apiName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.paramDependencies[*].parentAPIName"
+    } ],
+    "createActionMapping_isMandatory" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getAction",
+      "dataPath" : "$.response.body:$.inputParams[*].isMandatory"
+    } ],
+    "createActionMapping_actionId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GenericAction.getActions",
+      "dataPath" : "$.response.body:$.actions[*].id"
+    } ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "apis": {
+    "getTicketCommentHistory": {
+      "422": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      },
+      "200": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "deleteComment": {
+      "200": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "getComments": {
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "getComment": {
+      "422": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      },
+      "200": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "updateComment": {
+      "422": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      },
+      "200": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "createComment": {
+      "422": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id",
+        "attachmentIds[*]": "../Upload/test_data_generation_configurations.json#/generators/upload_id"
+      },
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id",
+        "attachmentIds[*]": "../Upload/test_data_generation_configurations.json#/generators/upload_id"
+      }
+    },
+    "getCommentAttachmentContent": {
+      "200": {
+        "commentId": "#/generators/ticket_comment_id",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id",
+        "attachmentId": "#/generators/ticket_comment_attachment_id"
+      }
+    }
+  },
+  "generators": {
+    "ticket_comment_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.TicketComment.createComment",
+        "dataPath": "$.response.body:$.id",
+        "name" : "ticket_comments",
+        "generationType" : "COMPLETE",
+        "params": {
+          "ticketId": "$tickets.response.body:$.id"
+        }
+      }
+    ] ,
+    "ticket_comment_attachment_id" : [
+      {
+        "type": "reference",
+        "ref": "$ticket_comments.response.body:$.attachments[*].id"
+      }
+    ]
+  }
+}

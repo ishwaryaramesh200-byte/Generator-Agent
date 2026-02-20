@@ -1,0 +1,42 @@
+{
+  "apis" : {
+    "getsaml" : {
+      "200" : {
+        "helpCenterId" : "#/generators/getsaml_helpCenterId"
+      },
+      "204" : {
+        "helpCenterId" : "#/generators/getsaml_helpCenterId"
+      }
+    },
+    "deletesaml" : {
+      "204" : {
+        "helpCenterId" : "#/generators/deletesaml_helpCenterId"
+      }
+    },
+    "addsaml" : {
+      "422" : {
+        "helpCenterId" : "#/generators/addsaml_helpCenterId"
+      },
+      "200" : {
+        "helpCenterId" : "#/generators/addsaml_helpCenterId"
+      }
+    }
+  },
+  "generators" : {
+    "getsaml_helpCenterId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Helpcenter.getAllHelpCenters",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addsaml_helpCenterId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Helpcenter.getAllHelpCenters",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "deletesaml_helpCenterId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Helpcenter.getAllHelpCenters",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

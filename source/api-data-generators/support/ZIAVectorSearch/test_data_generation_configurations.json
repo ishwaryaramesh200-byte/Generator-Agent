@@ -1,0 +1,22 @@
+{
+  "apis" : {
+    "getSimilarTickets" : {
+      "422" : {
+        "threadId" : "#/generators/getSimilarTickets_threadId"
+      },
+      "200" : {
+        "threadId" : "#/generators/getSimilarTickets_threadId"
+      },
+      "204" : {
+        "threadId" : "#/generators/getSimilarTickets_threadId"
+      }
+    }
+  },
+  "generators" : {
+    "getSimilarTickets_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ZIAVectorSearch.getSimilarContent",
+      "dataPath" : "$.response.body:$.AdditionalDetailsJSON.threadId"
+    } ]
+  }
+}

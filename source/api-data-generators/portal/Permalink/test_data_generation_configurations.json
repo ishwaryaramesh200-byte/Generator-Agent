@@ -1,0 +1,32 @@
+{
+  "apis" : {
+    "getTopicPermalinks" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicPermalinks_topicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicPermalinks_topicId"
+      }
+    },
+    "updateTopicPermalinks" : {
+      "422" : {
+        "topicId" : "#/generators/updateTopicPermalinks_topicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/updateTopicPermalinks_topicId"
+      }
+    }
+  },
+  "generators" : {
+    "getTopicPermalinks_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Topic.addTopic",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTopicPermalinks_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Topic.addTopic",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

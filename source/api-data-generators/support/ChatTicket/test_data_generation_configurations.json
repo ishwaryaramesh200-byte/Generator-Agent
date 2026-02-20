@@ -1,0 +1,185 @@
+{
+  "apis" : {
+    "addRequest" : {
+      "422" : {
+        "subCategory" : "#/generators/addRequest_subCategory",
+        "cf" : "#/generators/addRequest_cf",
+        "productId" : "#/generators/addRequest_productId",
+        "contactId" : "#/generators/addRequest_contactId",
+        "customFields" : "#/generators/addRequest_customFields",
+        "departmentId" : "#/generators/addRequest_departmentId",
+        "channel" : "#/generators/addRequest_channel",
+        "language" : "#/generators/addRequest_language",
+        "classification" : "#/generators/addRequest_classification",
+        "priority" : "#/generators/addRequest_priority",
+        "assigneeId" : "#/generators/addRequest_assigneeId",
+        "webUrl" : "#/generators/addRequest_webUrl",
+        "category" : "#/generators/addRequest_category",
+        "status" : "#/generators/addRequest_status"
+      },
+      "200" : {
+        "subCategory" : "#/generators/addRequest_subCategory",
+        "cf" : "#/generators/addRequest_cf",
+        "productId" : "#/generators/addRequest_productId",
+        "contactId" : "#/generators/addRequest_contactId",
+        "customFields" : "#/generators/addRequest_customFields",
+        "departmentId" : "#/generators/addRequest_departmentId",
+        "channel" : "#/generators/addRequest_channel",
+        "language" : "#/generators/addRequest_language",
+        "classification" : "#/generators/addRequest_classification",
+        "priority" : "#/generators/addRequest_priority",
+        "assigneeId" : "#/generators/addRequest_assigneeId",
+        "webUrl" : "#/generators/addRequest_webUrl",
+        "category" : "#/generators/addRequest_category",
+        "status" : "#/generators/addRequest_status"
+      }
+    },
+    "updateThread" : {
+      "204" : {
+        "threadId" : "#/generators/updateThread_threadId",
+        "ticketId" : "#/generators/updateThread_ticketId",
+        "content" : "#/generators/updateThread_content"
+      }
+    },
+    "addThread" : {
+      "422" : {
+        "ticketId" : "#/generators/addThread_ticketId"
+      },
+      "200" : {
+        "ticketId" : "#/generators/addThread_ticketId"
+      }
+    }
+  },
+  "generators" : {
+    "addRequest_language" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "language",
+        "moduleName" : "ChatTicket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_productId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Product.getDuplicateProducts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addThread_ticketId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "chatTicketId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_contactId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.getContactsUnderProduct",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addRequest_classification" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "classification",
+        "moduleName" : "ChatTicket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_subCategory" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "subCategory",
+        "moduleName" : "ChatTicket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_priority" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "priority",
+        "moduleName" : "ChatTicket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_channel" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "channel",
+        "moduleName" : "ChatTicket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_cf" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+      "inputs" : {
+        "moduleName" : "ChatTicket"
+      }
+    } ],
+    "addRequest_status" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "status",
+        "moduleName" : "ChatTicket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_category" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "category",
+        "moduleName" : "ChatTicket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_webUrl" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.getDeskRequest",
+      "dataPath" : "$.response.body:$.webUrl"
+    } ],
+    "addRequest_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ],
+    "updateThread_threadId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "chatThreadId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_customFields" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+      "inputs" : {
+        "moduleName" : "ChatTicket"
+      }
+    } ],
+    "updateThread_content" : [ {
+      "type" : "remote",
+      "generatorMethod" : "chatTicketContent",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addRequest_assigneeId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateThread_ticketId" : [ {
+      "type" : "remote",
+      "generatorMethod" : "chatTicketId",
+      "inputs" : {
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ]
+  }
+}

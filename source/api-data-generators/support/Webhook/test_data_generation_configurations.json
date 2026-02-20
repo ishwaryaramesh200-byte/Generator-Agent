@@ -1,0 +1,501 @@
+{
+  "apis" : {
+    "getWebhook" : {
+      "200" : {
+        "webhookId" : "#/generators/getWebhook_webhookId"
+      }
+    },
+    "addWebhook" : {
+      "422" : {
+        "subscriptions.KBRootCategory_Delete" : "#/generators/addWebhook_KBRootCategory_Delete",
+        "subscriptions.Call_Update.departmentIds[*]" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "subscriptions.Call_Delete" : "#/generators/addWebhook_Call_Delete",
+        "subscriptions.KBRootCategory_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.KBSection_Add" : "#/generators/addWebhook_KBSection_Add",
+        "subscriptions.Ticket_Update.departmentIds[*]" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "subscriptions.IM_Message_Add.departmentIds[*]" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "subscriptions.Ticket_Attachment_Add" : "#/generators/addWebhook_Ticket_Attachment_Add",
+        "subscriptions.Contact_Add" : "#/generators/addWebhook_Contact_Add",
+        "subscriptions.Ticket_Update.fields[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.KBSection_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Event_Delete" : "#/generators/addWebhook_Event_Delete",
+        "subscriptions.Task_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Call_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Ticket_Thread_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Article_Translation_Add" : "#/generators/addWebhook_Article_Translation_Add",
+        "subscriptions.Account_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.KBSection_Delete" : "#/generators/addWebhook_KBSection_Delete",
+        "subscriptions.Article_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Agent_Add" : "#/generators/addWebhook_Agent_Add",
+        "subscriptions.Account_Add" : "#/generators/addWebhook_Account_Add",
+        "subscriptions.Article_Translation_Delete" : "#/generators/addWebhook_Article_Translation_Delete",
+        "subscriptions.Call_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Ticket_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Ticket_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Article_Add" : "#/generators/addWebhook_Article_Add",
+        "subscriptions.Article_Feedback_Add" : "#/generators/addWebhook_Article_Feedback_Add",
+        "subscriptions.Ticket_Thread_Add.direction" : "#/generators/addWebhook_direction",
+        "subscriptions.Department_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Article_Translation_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.KBRootCategory_Add" : "#/generators/addWebhook_KBRootCategory_Add",
+        "subscriptions.Department_Add" : "#/generators/addWebhook_Department_Add",
+        "subscriptions.Article_Delete" : "#/generators/addWebhook_Article_Delete",
+        "subscriptions.Agent_Delete" : "#/generators/addWebhook_Agent_Delete",
+        "subscriptions.Event_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Task_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Agent_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Ticket_Comment_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Task_Delete" : "#/generators/addWebhook_Task_Delete",
+        "subscriptions.Contact_Delete" : "#/generators/addWebhook_Contact_Delete",
+        "subscriptions.Event_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Ticket_Attachment_Update" : "#/generators/addWebhook_Ticket_Attachment_Update",
+        "subscriptions.Contact_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Task_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Ticket_Delete" : "#/generators/addWebhook_Ticket_Delete",
+        "subscriptions.Agent_Presence_Update" : "#/generators/addWebhook_Agent_Presence_Update",
+        "subscriptions.Ticket_Comment_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Event_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Account_Delete" : "#/generators/addWebhook_Account_Delete"
+      },
+      "200" : {
+        "subscriptions.KBRootCategory_Delete" : "#/generators/addWebhook_KBRootCategory_Delete",
+        "subscriptions.Call_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Call_Delete" : "#/generators/addWebhook_Call_Delete",
+        "subscriptions.KBRootCategory_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.KBSection_Add" : "#/generators/addWebhook_KBSection_Add",
+        "subscriptions.Ticket_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.IM_Message_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Ticket_Attachment_Add" : "#/generators/addWebhook_Ticket_Attachment_Add",
+        "subscriptions.Contact_Add" : "#/generators/addWebhook_Contact_Add",
+        "subscriptions.Ticket_Update.fields[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.KBSection_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Event_Delete" : "#/generators/addWebhook_Event_Delete",
+        "subscriptions.Task_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Call_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Ticket_Thread_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Article_Translation_Add" : "#/generators/addWebhook_Article_Translation_Add",
+        "subscriptions.Account_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.KBSection_Delete" : "#/generators/addWebhook_KBSection_Delete",
+        "subscriptions.Article_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Agent_Add" : "#/generators/addWebhook_Agent_Add",
+        "subscriptions.Account_Add" : "#/generators/addWebhook_Account_Add",
+        "subscriptions.Article_Translation_Delete" : "#/generators/addWebhook_Article_Translation_Delete",
+        "subscriptions.Call_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Ticket_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Ticket_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Article_Add" : "#/generators/addWebhook_Article_Add",
+        "subscriptions.Article_Feedback_Add" : "#/generators/addWebhook_Article_Feedback_Add",
+        "subscriptions.Ticket_Thread_Add.direction" : "#/generators/addWebhook_direction",
+        "subscriptions.Department_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Article_Translation_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.KBRootCategory_Add" : "#/generators/addWebhook_KBRootCategory_Add",
+        "subscriptions.Department_Add" : "#/generators/addWebhook_Department_Add",
+        "subscriptions.Article_Delete" : "#/generators/addWebhook_Article_Delete",
+        "subscriptions.Agent_Delete" : "#/generators/addWebhook_Agent_Delete",
+        "subscriptions.Event_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Task_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Agent_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Ticket_Comment_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Task_Delete" : "#/generators/addWebhook_Task_Delete",
+        "subscriptions.Contact_Delete" : "#/generators/addWebhook_Contact_Delete",
+        "subscriptions.Event_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Ticket_Attachment_Update" : "#/generators/addWebhook_Ticket_Attachment_Update",
+        "subscriptions.Contact_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Task_Update.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Ticket_Delete" : "#/generators/addWebhook_Ticket_Delete",
+        "subscriptions.Agent_Presence_Update" : "#/generators/addWebhook_Agent_Presence_Update",
+        "subscriptions.Ticket_Comment_Add.departmentIds[*]" : "#/generators/addWebhook_[*]",
+        "subscriptions.Event_Update.includePrevState" : "#/generators/addWebhook_includePrevState",
+        "subscriptions.Account_Delete" : "#/generators/addWebhook_Account_Delete"
+      }
+    },
+    "updateWebhook" : {
+      "422" : {
+        "subscriptions.KBRootCategory_Delete" : "#/generators/updateWebhook_KBRootCategory_Delete",
+        "subscriptions.Call_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Call_Delete" : "#/generators/updateWebhook_Call_Delete",
+        "subscriptions.KBRootCategory_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.KBSection_Add" : "#/generators/updateWebhook_KBSection_Add",
+        "subscriptions.Ticket_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.IM_Message_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Attachment_Add" : "#/generators/updateWebhook_Ticket_Attachment_Add",
+        "subscriptions.Contact_Add" : "#/generators/updateWebhook_Contact_Add",
+        "subscriptions.Ticket_Update.fields[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.KBSection_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Event_Delete" : "#/generators/updateWebhook_Event_Delete",
+        "subscriptions.Task_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Call_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Ticket_Thread_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Article_Translation_Add" : "#/generators/updateWebhook_Article_Translation_Add",
+        "subscriptions.Account_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.KBSection_Delete" : "#/generators/updateWebhook_KBSection_Delete",
+        "subscriptions.Article_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Agent_Add" : "#/generators/updateWebhook_Agent_Add",
+        "subscriptions.Account_Add" : "#/generators/updateWebhook_Account_Add",
+        "subscriptions.Article_Translation_Delete" : "#/generators/updateWebhook_Article_Translation_Delete",
+        "subscriptions.Call_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Ticket_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Article_Add" : "#/generators/updateWebhook_Article_Add",
+        "subscriptions.Article_Feedback_Add" : "#/generators/updateWebhook_Article_Feedback_Add",
+        "subscriptions.Ticket_Thread_Add.direction" : "#/generators/updateWebhook_direction",
+        "subscriptions.Department_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Article_Translation_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.KBRootCategory_Add" : "#/generators/updateWebhook_KBRootCategory_Add",
+        "subscriptions.Department_Add" : "#/generators/updateWebhook_Department_Add",
+        "subscriptions.Article_Delete" : "#/generators/updateWebhook_Article_Delete",
+        "subscriptions.Agent_Delete" : "#/generators/updateWebhook_Agent_Delete",
+        "subscriptions.Event_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Task_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "webhookId" : "#/generators/updateWebhook_webhookId",
+        "subscriptions.Agent_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Ticket_Comment_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Task_Delete" : "#/generators/updateWebhook_Task_Delete",
+        "subscriptions.Contact_Delete" : "#/generators/updateWebhook_Contact_Delete",
+        "subscriptions.Event_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Attachment_Update" : "#/generators/updateWebhook_Ticket_Attachment_Update",
+        "subscriptions.Contact_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Task_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Delete" : "#/generators/updateWebhook_Ticket_Delete",
+        "subscriptions.Agent_Presence_Update" : "#/generators/updateWebhook_Agent_Presence_Update",
+        "subscriptions.Ticket_Comment_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Event_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Account_Delete" : "#/generators/updateWebhook_Account_Delete"
+      },
+      "200" : {
+        "subscriptions.KBRootCategory_Delete" : "#/generators/updateWebhook_KBRootCategory_Delete",
+        "subscriptions.Call_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Call_Delete" : "#/generators/updateWebhook_Call_Delete",
+        "subscriptions.KBRootCategory_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.KBSection_Add" : "#/generators/updateWebhook_KBSection_Add",
+        "subscriptions.Ticket_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.IM_Message_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Attachment_Add" : "#/generators/updateWebhook_Ticket_Attachment_Add",
+        "subscriptions.Contact_Add" : "#/generators/updateWebhook_Contact_Add",
+        "subscriptions.Ticket_Update.fields[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.KBSection_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Event_Delete" : "#/generators/updateWebhook_Event_Delete",
+        "subscriptions.Task_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Call_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Ticket_Thread_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Article_Translation_Add" : "#/generators/updateWebhook_Article_Translation_Add",
+        "subscriptions.Account_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.KBSection_Delete" : "#/generators/updateWebhook_KBSection_Delete",
+        "subscriptions.Article_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Agent_Add" : "#/generators/updateWebhook_Agent_Add",
+        "subscriptions.Account_Add" : "#/generators/updateWebhook_Account_Add",
+        "subscriptions.Article_Translation_Delete" : "#/generators/updateWebhook_Article_Translation_Delete",
+        "subscriptions.Call_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Ticket_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Article_Add" : "#/generators/updateWebhook_Article_Add",
+        "subscriptions.Article_Feedback_Add" : "#/generators/updateWebhook_Article_Feedback_Add",
+        "subscriptions.Ticket_Thread_Add.direction" : "#/generators/updateWebhook_direction",
+        "subscriptions.Department_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Article_Translation_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.KBRootCategory_Add" : "#/generators/updateWebhook_KBRootCategory_Add",
+        "subscriptions.Department_Add" : "#/generators/updateWebhook_Department_Add",
+        "subscriptions.Article_Delete" : "#/generators/updateWebhook_Article_Delete",
+        "subscriptions.Agent_Delete" : "#/generators/updateWebhook_Agent_Delete",
+        "subscriptions.Event_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Task_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "webhookId" : "#/generators/updateWebhook_webhookId",
+        "subscriptions.Agent_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Ticket_Comment_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Task_Delete" : "#/generators/updateWebhook_Task_Delete",
+        "subscriptions.Contact_Delete" : "#/generators/updateWebhook_Contact_Delete",
+        "subscriptions.Event_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Attachment_Update" : "#/generators/updateWebhook_Ticket_Attachment_Update",
+        "subscriptions.Contact_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Task_Update.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Ticket_Delete" : "#/generators/updateWebhook_Ticket_Delete",
+        "subscriptions.Agent_Presence_Update" : "#/generators/updateWebhook_Agent_Presence_Update",
+        "subscriptions.Ticket_Comment_Add.departmentIds[*]" : "#/generators/updateWebhook_[*]",
+        "subscriptions.Event_Update.includePrevState" : "#/generators/updateWebhook_includePrevState",
+        "subscriptions.Account_Delete" : "#/generators/updateWebhook_Account_Delete"
+      }
+    },
+    "deleteWebhook" : {
+      "200" : {
+        "webhookId" : "#/generators/deleteWebhook_webhookId"
+      }
+    }
+  },
+  "generators" : {
+    "addWebhook_Ticket_Attachment_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Ticket_Attachment_Add"
+    } ],
+    "addWebhook_Agent_Presence_Update" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Agent_Presence_Update"
+    } ],
+    "updateWebhook_KBSection_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.KBSection_Delete"
+    } ],
+    "updateWebhook_includePrevState" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Event_Update.includePrevState"
+    } ],
+    "updateWebhook_KBRootCategory_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.KBRootCategory_Delete"
+    } ],
+    "addWebhook_KBRootCategory_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.KBRootCategory_Add"
+    } ],
+    "addWebhook_Article_Translation_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Article_Translation_Delete"
+    } ],
+    "addWebhook_direction" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Ticket_Thread_Add.direction"
+    } ],
+    "updateWebhook_Agent_Presence_Update" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Agent_Presence_Update"
+    } ],
+    "addWebhook_includePrevState" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Event_Update.includePrevState"
+    } ],
+    "updateWebhook_Call_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Call_Delete"
+    } ],
+    "updateWebhook_Article_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Article_Add"
+    } ],
+    "addWebhook_Contact_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Contact_Add"
+    } ],
+    "addWebhook_Call_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Call_Delete"
+    } ],
+    "addWebhook_Account_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Account_Delete"
+    } ],
+    "addWebhook_Task_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Task_Delete"
+    } ],
+    "addWebhook_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addWebhook_Article_Translation_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Article_Translation_Add"
+    } ],
+    "addWebhook_KBRootCategory_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.KBRootCategory_Delete"
+    } ],
+    "addWebhook_KBSection_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.KBSection_Add"
+    } ],
+    "updateWebhook_Agent_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Agent_Add"
+    } ],
+    "addWebhook_Event_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Event_Delete"
+    } ],
+    "updateWebhook_Article_Translation_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Article_Translation_Add"
+    } ],
+    "addWebhook_Agent_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Agent_Delete"
+    } ],
+    "updateWebhook_Account_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Account_Add"
+    } ],
+    "updateWebhook_Contact_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Contact_Delete"
+    } ],
+    "updateWebhook_direction" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Ticket_Thread_Add.direction"
+    } ],
+    "updateWebhook_webhookId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addWebhook_Agent_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Agent_Add"
+    } ],
+    "updateWebhook_Department_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Department_Add"
+    } ],
+    "addWebhook_Article_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Article_Delete"
+    } ],
+    "addWebhook_Department_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Department_Add"
+    } ],
+    "addWebhook_Account_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Account_Add"
+    } ],
+    "updateWebhook_Article_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Article_Delete"
+    } ],
+    "updateWebhook_Article_Feedback_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Article_Feedback_Add"
+    } ],
+    "updateWebhook_Agent_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Agent_Delete"
+    } ],
+    "updateWebhook_KBSection_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.KBSection_Add"
+    } ],
+    "deleteWebhook_webhookId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addWebhook_Contact_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Contact_Delete"
+    } ],
+    "addWebhook_KBSection_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.KBSection_Delete"
+    } ],
+    "addWebhook_Ticket_Attachment_Update" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Ticket_Attachment_Update"
+    } ],
+    "updateWebhook_KBRootCategory_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.KBRootCategory_Add"
+    } ],
+    "updateWebhook_Contact_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Contact_Add"
+    } ],
+    "updateWebhook_Account_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Account_Delete"
+    } ],
+    "addWebhook_Ticket_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Ticket_Delete"
+    } ],
+    "updateWebhook_Ticket_Attachment_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Ticket_Attachment_Add"
+    } ],
+    "updateWebhook_Event_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Event_Delete"
+    } ],
+    "updateWebhook_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addWebhook_Article_Feedback_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Article_Feedback_Add"
+    } ],
+    "updateWebhook_Ticket_Attachment_Update" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Ticket_Attachment_Update"
+    } ],
+    "updateWebhook_Task_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Task_Delete"
+    } ],
+    "updateWebhook_Article_Translation_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Article_Translation_Delete"
+    } ],
+    "getWebhook_webhookId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addWebhook_Article_Add" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.getListOfWebhooks",
+      "dataPath" : "$.response.body:$.data[*].subscriptions.Article_Add"
+    } ],
+    "updateWebhook_Ticket_Delete" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Webhook.addWebhook",
+      "dataPath" : "$.response.body:$.subscriptions.Ticket_Delete"
+    } ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "apis": {
+    "getSyncDepartments" : {
+      "200" : {
+        "lastFetchedTime" : "../Common/test_data_generation_configurations.json#/generators/past_time"
+      } ,
+      "422" : {
+        "lastFetchedTime" : "../Common/test_data_generation_configurations.json#/generators/past_time"
+      }
+    },
+    "associateAgents": {
+      "422": {
+        "agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "#/generators/department_id"
+      },
+      "204": {
+        "agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "getDepartment": {
+      "200": {
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "getDepartmentLogo": {
+      "200": {
+        "departmentId": "#/generators/department_id"
+      },
+      "204": {
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "enableDepartment": {
+      "204": {
+        "departmentId": "#/generators/disabled_department_id"
+      }
+    },
+    "disableDepartment": {
+      "422": {
+        "emailNewDepartment": "#/generators/department_id",
+        "agentNewDepartment": "#/generators/department_id",
+        "departmentId": "#/generators/department_id"
+      },
+      "204": {
+        "emailNewDepartment": "#/generators/department_id",
+        "agentNewDepartment": "#/generators/department_id",
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "getDepartmentsByIds": {
+      "422": {
+        "departmentIds[*]": "#/generators/department_id"
+      },
+      "200": {
+        "departmentIds[*]": "#/generators/department_id"
+      },
+      "204": {
+        "departmentIds[*]": "#/generators/department_id"
+      }
+    },
+    "updateLogo": {
+      "422": {
+        "departmentId": "#/generators/department_id"
+      },
+      "204": {
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "getAgentsInDepartment": {
+      "200": {
+        "departmentId": "#/generators/department_id"
+      },
+      "204": {
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "dissociateAgents": {
+      "422": {
+        "agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "#/generators/department_id"
+      },
+      "204": {
+        "agentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "updateDepartment": {
+      "422": {
+        "departmentId": "#/generators/department_id"
+      },
+      "200": {
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "getAssociableAgents": {
+      "422": {
+        "departmentId": "#/generators/department_id"
+      },
+      "200": {
+        "departmentId": "#/generators/department_id"
+      },
+      "204": {
+        "departmentId": "#/generators/department_id"
+      }
+    },
+    "addDepartment": {
+      "422": {
+        "associatedAgentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      },
+      "200": {
+        "associatedAgentIds[*]": "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    },
+    "deleteLogo": {
+      "204": {
+        "departmentId": "#/generators/department_id"
+      }
+    }
+  },
+  "generators": {
+    "department_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Department.getDepartments",
+        "dataPath": "$.response.body:$.data[*].id",
+        "name": "departments",
+        "params": {
+          "isEnabled": "true"
+        }
+      }
+    ],
+    "getSync_DepartmentId": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Department.getDepartments",
+        "dataPath": "$.response.body:$.data[*].id",
+        "name": "departments",
+        "params": {
+          "isEnabled": "true"
+        }
+      }
+    ],
+    "disabled_department_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Department.getDepartments",
+        "dataPath": "$.response.body:$.data[*].id",
+        "name": "departments",
+        "params": {
+          "isEnabled": "false"
+        }
+      }
+    ]
+  }
+}

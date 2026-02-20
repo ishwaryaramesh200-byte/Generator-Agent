@@ -1,0 +1,30 @@
+{
+  "apis" : {
+    "addContractAttachment" : {
+      "422" : {
+        "contractId" : "../../Contract/test_data_generation_configurations.json#/generators/createContractId"
+      },
+      "200" : {
+        "contractId" : "../../Contract/test_data_generation_configurations.json#/generators/createContractId"
+      }
+    },
+    "getContractAttachments" : {
+      "200" : {
+        "contractId" : "../../Contract/test_data_generation_configurations.json#/generators/createContractId"
+      },
+      "204" : {
+        "contractId" : "../../Contract/test_data_generation_configurations.json#/generators/createContractId"
+      }
+    }
+  },
+  "generators" : {
+    "createContractIdWithAttachment" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ContractAttachment.addContractAttachment",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "contractId" : "$createContract.response.body:$.id"
+      }
+    } ]
+  }
+}

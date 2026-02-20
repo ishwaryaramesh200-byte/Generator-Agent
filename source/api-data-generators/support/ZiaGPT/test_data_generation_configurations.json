@@ -1,0 +1,19 @@
+{
+  "apis" : {
+    "addApiKey" : {
+      "422" : {
+        "tokenId" : "#/generators/addApiKey_tokenId"
+      },
+      "200" : {
+        "tokenId" : "#/generators/addApiKey_tokenId"
+      }
+    }
+  },
+  "generators" : {
+    "addApiKey_tokenId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ZiaGPT.createOrg",
+      "dataPath" : "$.response.body:$.tokenId"
+    } ]
+  }
+}

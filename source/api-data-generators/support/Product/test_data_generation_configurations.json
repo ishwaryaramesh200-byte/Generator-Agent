@@ -1,0 +1,196 @@
+{
+  "apis": {
+    "updateMany": {
+      "422": {
+        "ids[*]": "#/generators/product_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "ids[*]": "#/generators/product_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getProduct": {
+      "200": {
+        "productId": "#/generators/product_id"
+      }
+    },
+    "getProductsCount": {
+      "422": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "viewId": "#/generators/product_custom_view_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "viewId": "#/generators/product_custom_view_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "updateProduct": {
+      "422": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "productId": "#/generators/product_id",
+        "cf": "#/generators/product_cf",
+        "customFields": "#/generators/product_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "productCategory": "#/generators/product_category",
+        "manufacturer": "#/generators/product_manufacturer"
+      },
+      "200": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "productId": "#/generators/product_id",
+        "cf": "#/generators/product_cf",
+        "customFields": "#/generators/product_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "productCategory": "#/generators/product_category",
+        "manufacturer": "#/generators/product_manufacturer"
+      }
+    },
+    "createProduct": {
+      "422": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "cf": "#/generators/product_cf",
+        "customFields": "#/generators/product_cf",
+        "productCategory": "#/generators/product_category",
+        "manufacturer": "#/generators/product_manufacturer"
+      },
+      "200": {
+        "departmentIds[*]": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "cf": "#/generators/product_cf",
+        "customFields": "#/generators/product_cf",
+        "productCategory": "#/generators/product_category",
+        "manufacturer": "#/generators/product_manufacturer"
+      }
+    },
+    "moveProductsToTrash": {
+      "422": {
+        "productIds[*]": "#/generators/product_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "productIds[*]": "#/generators/product_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "searchProducts": {
+      "200": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getProductsUnderAccount": {
+      "200": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getProductsUnderContact": {
+      "200": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "associateAccountsWithProduct": {
+      "422": {
+        "productId": "#/generators/product_id",
+        "ids[*]": "../Account/test_data_generation_configurations.json#/generators/account_id"
+      },
+      "200": {
+        "productId": "#/generators/product_id",
+        "ids[*]": "../Account/test_data_generation_configurations.json#/generators/account_id"
+      }
+    },
+    "associateContactsWithProduct": {
+      "422": {
+        "productId": "#/generators/product_id",
+        "ids[*]": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      },
+      "200": {
+        "productId": "#/generators/product_id",
+        "ids[*]": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      }
+    },
+    "getProducts": {
+      "200": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "viewId": "#/generators/product_custom_view_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "viewId": "#/generators/product_custom_view_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators": {
+    "product_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Product.createProduct",
+        "dataPath": "$.response.body:$.id" ,
+        "name" : "products"
+      }
+    ],
+    "product_custom_view_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.CustomView.getViews",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "module": "products"
+        }
+      }
+    ],
+    "product_cf": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+        "inputs": {
+          "moduleName": "Product"
+        }
+      }
+    ],
+    "product_category": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "productCategory",
+          "moduleName": "Product",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ],
+    "product_manufacturer": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "manufacturer",
+          "moduleName": "Product",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ]
+  }
+}

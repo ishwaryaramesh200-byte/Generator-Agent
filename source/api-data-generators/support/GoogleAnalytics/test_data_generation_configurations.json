@@ -1,0 +1,168 @@
+{
+  "apis" : {
+    "getGAnalyticsConfigurations" : {
+      "422" : {
+        "departmentId" : "#/generators/getGAnalyticsConfigurations_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getGAnalyticsConfigurations_departmentId"
+      },
+      "204" : {
+        "departmentId" : "#/generators/getGAnalyticsConfigurations_departmentId"
+      }
+    },
+    "updateGAnalyticsConfigurations" : {
+      "422" : {
+        "updatedTime" : "#/generators/updateGAnalyticsConfigurations_updatedTime",
+        "helpCenterId" : "#/generators/updateGAnalyticsConfigurations_helpCenterId",
+        "propertyName" : "#/generators/updateGAnalyticsConfigurations_propertyName",
+        "accountName" : "#/generators/updateGAnalyticsConfigurations_accountName",
+        "propertyId" : "#/generators/updateGAnalyticsConfigurations_propertyId",
+        "departmentId" : "#/generators/updateGAnalyticsConfigurations_departmentId"
+      },
+      "200" : {
+        "updatedTime" : "#/generators/updateGAnalyticsConfigurations_updatedTime",
+        "helpCenterId" : "#/generators/updateGAnalyticsConfigurations_helpCenterId",
+        "propertyName" : "#/generators/updateGAnalyticsConfigurations_propertyName",
+        "accountName" : "#/generators/updateGAnalyticsConfigurations_accountName",
+        "propertyId" : "#/generators/updateGAnalyticsConfigurations_propertyId",
+        "departmentId" : "#/generators/updateGAnalyticsConfigurations_departmentId"
+      },
+      "204" : {
+        "updatedTime" : "#/generators/updateGAnalyticsConfigurations_updatedTime",
+        "helpCenterId" : "#/generators/updateGAnalyticsConfigurations_helpCenterId",
+        "propertyName" : "#/generators/updateGAnalyticsConfigurations_propertyName",
+        "accountName" : "#/generators/updateGAnalyticsConfigurations_accountName",
+        "propertyId" : "#/generators/updateGAnalyticsConfigurations_propertyId",
+        "departmentId" : "#/generators/updateGAnalyticsConfigurations_departmentId"
+      }
+    },
+    "saveGAnalyticsConfigurations" : {
+      "422" : {
+        "updatedTime" : "#/generators/saveGAnalyticsConfigurations_updatedTime",
+        "propertyName" : "#/generators/saveGAnalyticsConfigurations_propertyName",
+        "accountName" : "#/generators/saveGAnalyticsConfigurations_accountName",
+        "propertyId" : "#/generators/saveGAnalyticsConfigurations_propertyId",
+        "departmentId" : "#/generators/saveGAnalyticsConfigurations_departmentId"
+      },
+      "200" : {
+        "updatedTime" : "#/generators/saveGAnalyticsConfigurations_updatedTime",
+        "propertyName" : "#/generators/saveGAnalyticsConfigurations_propertyName",
+        "accountName" : "#/generators/saveGAnalyticsConfigurations_accountName",
+        "propertyId" : "#/generators/saveGAnalyticsConfigurations_propertyId",
+        "departmentId" : "#/generators/saveGAnalyticsConfigurations_departmentId"
+      },
+      "204" : {
+        "updatedTime" : "#/generators/saveGAnalyticsConfigurations_updatedTime",
+        "propertyName" : "#/generators/saveGAnalyticsConfigurations_propertyName",
+        "accountName" : "#/generators/saveGAnalyticsConfigurations_accountName",
+        "propertyId" : "#/generators/saveGAnalyticsConfigurations_propertyId",
+        "departmentId" : "#/generators/saveGAnalyticsConfigurations_departmentId"
+      }
+    },
+    "getGAWebProperties" : {
+      "422" : {
+        "departmentId" : "#/generators/getGAWebProperties_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getGAWebProperties_departmentId"
+      },
+      "204" : {
+        "departmentId" : "#/generators/getGAWebProperties_departmentId"
+      }
+    },
+    "getWebProperties" : {
+      "200" : {
+        "departmentId" : "#/generators/getWebProperties_departmentId"
+      }
+    },
+    "getAccounts" : {
+      "422" : {
+        "departmentId" : "#/generators/getAccounts_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getAccounts_departmentId"
+      },
+      "204" : {
+        "departmentId" : "#/generators/getAccounts_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "saveGAnalyticsConfigurations_updatedTime" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.updatedTime"
+    } ],
+    "getGAWebProperties_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ],
+    "saveGAnalyticsConfigurations_accountName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.accountName"
+    } ],
+    "saveGAnalyticsConfigurations_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ],
+    "updateGAnalyticsConfigurations_propertyName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.propertyName"
+    } ],
+    "updateGAnalyticsConfigurations_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ],
+    "saveGAnalyticsConfigurations_propertyName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.propertyName"
+    } ],
+    "updateGAnalyticsConfigurations_helpCenterId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Helpcenter.getAllHelpCenters",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateGAnalyticsConfigurations_propertyId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.propertyId"
+    } ],
+    "getAccounts_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ],
+    "updateGAnalyticsConfigurations_accountName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.accountName"
+    } ],
+    "updateGAnalyticsConfigurations_updatedTime" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.updatedTime"
+    } ],
+    "getWebProperties_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ],
+    "saveGAnalyticsConfigurations_propertyId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GoogleAnalytics.getGAnalyticsConfigurations",
+      "dataPath" : "$.response.body:$.propertyId"
+    } ],
+    "getGAnalyticsConfigurations_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ]
+  }
+}

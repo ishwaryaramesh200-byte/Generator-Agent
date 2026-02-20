@@ -1,0 +1,239 @@
+{
+  "apis" : {
+    "deleteMany" : {
+      "422" : {
+        "recordIds[*]" : "#/generators/deleteMany_[*]"
+      },
+      "204" : {
+        "recordIds[*]" : "#/generators/deleteMany_[*]"
+      }
+    },
+    "updateMany" : {
+      "422" : {
+        "ids[*]" : "#/generators/updateMany_[*]",
+        "module" : "#/generators/updateMany_module"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/updateMany_[*]",
+        "module" : "#/generators/updateMany_module"
+      }
+    },
+    "recordsCount" : {
+      "422" : {
+        "viewId" : "#/generators/recordsCount_viewId",
+        "module" : "#/generators/recordsCount_module"
+      },
+      "200" : {
+        "viewId" : "#/generators/recordsCount_viewId",
+        "module" : "#/generators/recordsCount_module"
+      }
+    },
+    "listRecords" : {
+      "422" : {
+        "viewId" : "#/generators/listRecords_viewId",
+        "module" : "#/generators/listRecords_module"
+      },
+      "200" : {
+        "viewId" : "#/generators/listRecords_viewId",
+        "module" : "#/generators/listRecords_module"
+      }
+    },
+    "editRecord" : {
+      "422" : {
+        "layout.layoutName" : "#/generators/editRecord_layoutName",
+        "cf" : "#/generators/editRecord_cf",
+        "layout.id" : "#/generators/editRecord_id",
+        "module" : "#/generators/editRecord_module"
+      },
+      "200" : {
+        "layout.layoutName" : "#/generators/editRecord_layoutName",
+        "cf" : "#/generators/editRecord_cf",
+        "layout.id" : "#/generators/editRecord_id",
+        "module" : "#/generators/editRecord_module"
+      }
+    },
+    "createRecord" : {
+      "422" : {
+        "layout.layoutName" : "#/generators/createRecord_layoutName",
+        "cf" : "#/generators/createRecord_cf",
+        "layout.id" : "#/generators/createRecord_id",
+        "module" : "#/generators/createRecord_module"
+      },
+      "200" : {
+        "layout.layoutName" : "#/generators/createRecord_layoutName",
+        "cf" : "#/generators/createRecord_cf",
+        "layout.id" : "#/generators/createRecord_id",
+        "module" : "#/generators/createRecord_module"
+      }
+    },
+    "moveToTrash" : {
+      "422" : {
+        "recordIds[*]" : "#/generators/moveToTrash_[*]",
+        "module" : "#/generators/moveToTrash_module"
+      },
+      "204" : {
+        "recordIds[*]" : "#/generators/moveToTrash_[*]",
+        "module" : "#/generators/moveToTrash_module"
+      }
+    },
+    "getRecord" : {
+      "422" : {
+        "module" : "#/generators/getRecord_module"
+      },
+      "200" : {
+        "module" : "#/generators/getRecord_module"
+      }
+    }
+  },
+  "generators" : {
+    "editRecord_getModules_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "customModule" ]
+    } ],
+    "createRecord_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "editRecord_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "recordsCount_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Module.getModules",
+      "dataPath" : "$.response.body:$.data[?((@.isCustomModule == true))].apiKey",
+      "params" : {
+        "featureFlags" : "$generators:#/generators/recordsCount_getModules_featureFlags"
+      }
+    } ],
+    "moveToTrash_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Module.getModules",
+      "dataPath" : "$.response.body:$.data[?((@.isCustomModule == true))].apiKey",
+      "params" : {
+        "featureFlags" : "$generators:#/generators/moveToTrash_getModules_featureFlags"
+      }
+    } ],
+    "recordsCount_viewId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "CustomView.getViews",
+      "dataPath" : "$.response.body:$.data[*].id",
+      "params" : {
+        "module" : "$.input.path:$.customModuleApiName"
+      }
+    } ],
+    "editRecord_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Module.getModules",
+      "dataPath" : "$.response.body:$.data[?((@.isCustomModule == true))].apiKey",
+      "params" : {
+        "featureFlags" : "$generators:#/generators/editRecord_getModules_featureFlags"
+      }
+    } ],
+    "createRecord_cf" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+      "inputs" : {
+        "moduleName" : "Records"
+      }
+    } ],
+    "updateMany_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Records.createRecord",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "listRecords_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Module.getModules",
+      "dataPath" : "$.response.body:$.data[?((@.isCustomModule == true))].apiKey",
+      "params" : {
+        "featureFlags" : "$generators:#/generators/listRecords_getModules_featureFlags"
+      }
+    } ],
+    "moveToTrash_getModules_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "customModule" ]
+    } ],
+    "updateMany_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Module.getModules",
+      "dataPath" : "$.response.body:$.data[?((@.isCustomModule == true))].apiKey",
+      "params" : {
+        "featureFlags" : "$generators:#/generators/updateMany_getModules_featureFlags"
+      }
+    } ],
+    "listRecords_getModules_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "customModule" ]
+    } ],
+    "editRecord_layoutName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.cloneLayout",
+      "dataPath" : "$.response.body:$.layoutName"
+    } ],
+    "getRecord_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Module.getModules",
+      "dataPath" : "$.response.body:$.data[?((@.isCustomModule == true))].apiKey",
+      "params" : {
+        "featureFlags" : "$generators:#/generators/getRecord_getModules_featureFlags"
+      }
+    } ],
+    "listRecords_viewId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "CustomView.getViews",
+      "dataPath" : "$.response.body:$.data[*].id",
+      "params" : {
+        "module" : "$.input.path:$.customModuleApiName"
+      }
+    } ],
+    "recordsCount_getModules_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "customModule" ]
+    } ],
+    "createRecord_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Module.getModules",
+      "dataPath" : "$.response.body:$.data[?((@.isCustomModule == true))].apiKey",
+      "params" : {
+        "featureFlags" : "$generators:#/generators/createRecord_getModules_featureFlags"
+      }
+    } ],
+    "deleteMany_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Records.createRecord",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getRecord_getModules_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "customModule" ]
+    } ],
+    "editRecord_cf" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+      "inputs" : {
+        "moduleName" : "Records"
+      }
+    } ],
+    "createRecord_getModules_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "customModule" ]
+    } ],
+    "moveToTrash_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Records.createRecord",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateMany_getModules_featureFlags" : [ {
+      "type" : "static",
+      "value" : [ "customModule" ]
+    } ],
+    "createRecord_layoutName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.cloneLayout",
+      "dataPath" : "$.response.body:$.layoutName"
+    } ]
+  }
+}

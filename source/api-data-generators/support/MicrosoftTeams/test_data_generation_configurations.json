@@ -1,0 +1,50 @@
+{
+  "apis" : {
+    "createBotConfig" : {
+      "200" : {
+        "type" : "#/generators/createBotConfig_type",
+        "departmentIds[*]" : "#/generators/createBotConfig_[*]",
+        "teamId" : "#/generators/createBotConfig_teamId"
+      }
+    },
+    "updateBotConfig" : {
+      "200" : {
+        "type" : "#/generators/updateBotConfig_type",
+        "departmentIds[*]" : "#/generators/updateBotConfig_[*]",
+        "teamId" : "#/generators/updateBotConfig_teamId"
+      }
+    }
+  },
+  "generators" : {
+    "createBotConfig_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.MicrosoftTeams.getBotConfig",
+      "dataPath" : "$.response.body:$.type"
+    } ],
+    "createBotConfig_teamId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.MicrosoftTeams.getBotConfig",
+      "dataPath" : "$.response.body:$.teamId"
+    } ],
+    "updateBotConfig_teamId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.MicrosoftTeams.getBotConfig",
+      "dataPath" : "$.response.body:$.teamId"
+    } ],
+    "createBotConfig_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateBotConfig_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateBotConfig_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.MicrosoftTeams.getBotConfig",
+      "dataPath" : "$.response.body:$.type"
+    } ]
+  }
+}

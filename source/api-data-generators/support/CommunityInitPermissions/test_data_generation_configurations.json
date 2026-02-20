@@ -1,0 +1,16 @@
+{
+  "apis" : {
+    "getCommunityInitPermissions" : {
+      "200" : {
+        "departmentId" : "#/generators/getCommunityInitPermissions_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "getCommunityInitPermissions_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

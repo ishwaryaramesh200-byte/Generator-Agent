@@ -1,0 +1,42 @@
+{
+  "apis": {
+    "getAttachments": {
+      "200": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      },
+      "204": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      }
+    },
+    "createAttachment": {
+      "422": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      },
+      "200": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id"
+      }
+    },
+    "deleteAttachment": {
+      "404": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id",
+        "attachmentId": "#/generators/task_attachment_id"
+      },
+      "200": {
+        "taskId": "../Task/test_data_generation_configurations.json#/generators/task_id",
+        "attachmentId": "#/generators/task_attachment_id"
+      }
+    }
+  },
+  "generators": {
+    "task_attachment_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.TaskAttachment.createAttachment",
+        "dataPath": "$.response.body:$.id",
+        "params": {
+          "taskId": "$tasks.response.body:$.id"
+        }
+      }
+    ]
+  }
+}

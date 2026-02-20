@@ -1,0 +1,42 @@
+{
+  "apis" : {
+    "downloadFile" : {
+      "304" : {
+        "id" : "../Solution/test_data_generation_configurations.json#/generators/articleId"
+      },
+      "422" : {
+        "id" : "../Solution/test_data_generation_configurations.json#/generators/articleId"
+      },
+      "200" : {
+        "id" : "../Solution/test_data_generation_configurations.json#/generators/articleId"
+      },
+      "204" : {
+        "id" : "../Solution/test_data_generation_configurations.json#/generators/articleId"
+      }
+    },
+    "checkFileExportStatus" : {
+      "422" : {
+        "id" : "#/generators/checkFileExportStatus_id"
+      },
+      "200" : {
+        "id" : "#/generators/checkFileExportStatus_id"
+      }
+    },
+    "createFileExport" : {
+      "422" : {
+        "id" : "../Solution/test_data_generation_configurations.json#/generators/articleId"
+      },
+      "200" : {
+        "id" : "../Solution/test_data_generation_configurations.json#/generators/articleId"
+      }
+    }
+  },
+  "generators" : {
+    "checkFileExportStatus_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Solution.listAllArticles",
+      "dataPath" : "$.response.body:$.data[0].translationId",
+      "params" : { }
+    } ]
+  }
+}

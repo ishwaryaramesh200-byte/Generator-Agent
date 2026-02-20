@@ -1,0 +1,334 @@
+{
+  "apis" : {
+    "getCustomActionMappings" : {
+      "200" : {
+        "customActionMappingId" : "#/generators/getCustomActionMappings_customActionMappingId"
+      }
+    },
+    "associateCustomActionMappings" : {
+      "422" : {
+        "ruleId" : "#/generators/associateCustomActionMappings_ruleId",
+        "customActionMappingIds[*]" : "#/generators/associateCustomActionMappings_[*]"
+      },
+      "204" : {
+        "ruleId" : "#/generators/associateCustomActionMappings_ruleId",
+        "customActionMappingIds[*]" : "#/generators/associateCustomActionMappings_[*]"
+      }
+    },
+    "getAssociatedMappings" : {
+      "200" : {
+        "ruleId" : "#/generators/getAssociatedMappings_ruleId"
+      }
+    },
+    "updateCustomActionMappings" : {
+      "422" : {
+        "outputFields[*].apiName" : "#/generators/updateCustomActionMappings_apiName",
+        "fields[*].isMandatory" : "#/generators/updateCustomActionMappings_isMandatory",
+        "fields[*].mappingTargetTemplateName" : "#/generators/updateCustomActionMappings_mappingTargetTemplateName",
+        "fields[*].type" : "#/generators/updateCustomActionMappings_type",
+        "fields[*].isPlaceHolderNeeded" : "#/generators/updateCustomActionMappings_isPlaceHolderNeeded",
+        "fields[*].displayName" : "#/generators/updateCustomActionMappings_displayName",
+        "parents[*]" : "#/generators/updateCustomActionMappings_[*]",
+        "fields[*].value" : "#/generators/updateCustomActionMappings_value",
+        "outputFields[*].length" : "#/generators/updateCustomActionMappings_length",
+        "outputFields[*].jsonPointerPath" : "#/generators/updateCustomActionMappings_jsonPointerPath",
+        "fields[*].length" : "#/generators/updateCustomActionMappings_length",
+        "fields[*].hooks[*].preRequisites" : "#/generators/updateCustomActionMappings_preRequisites",
+        "outputFields[*].type" : "#/generators/updateCustomActionMappings_type",
+        "customActionMappingId" : "#/generators/updateCustomActionMappings_customActionMappingId",
+        "outputFields[*].displayName" : "#/generators/updateCustomActionMappings_displayName",
+        "fields[*].context" : "#/generators/updateCustomActionMappings_context",
+        "fields[*].values[*].prompt" : "#/generators/updateCustomActionMappings_prompt",
+        "fields[*].customActionId" : "#/generators/updateCustomActionMappings_customActionId",
+        "customActionId" : "#/generators/updateCustomActionMappings_customActionId",
+        "outputFields[*].customActionId" : "#/generators/updateCustomActionMappings_customActionId",
+        "fields[*].valueUrl" : "#/generators/updateCustomActionMappings_valueUrl",
+        "fields[*].apiName" : "#/generators/updateCustomActionMappings_apiName",
+        "fields[*].values[*].value" : "#/generators/updateCustomActionMappings_value",
+        "fields[*].hooks[*].event" : "#/generators/updateCustomActionMappings_event",
+        "outputFields[*].context" : "#/generators/updateCustomActionMappings_context"
+      },
+      "200" : {
+        "outputFields[*].apiName" : "#/generators/updateCustomActionMappings_apiName",
+        "fields[*].isMandatory" : "#/generators/updateCustomActionMappings_isMandatory",
+        "fields[*].mappingTargetTemplateName" : "#/generators/updateCustomActionMappings_mappingTargetTemplateName",
+        "fields[*].type" : "#/generators/updateCustomActionMappings_type",
+        "fields[*].isPlaceHolderNeeded" : "#/generators/updateCustomActionMappings_isPlaceHolderNeeded",
+        "fields[*].displayName" : "#/generators/updateCustomActionMappings_displayName",
+        "parents[*]" : "#/generators/updateCustomActionMappings_[*]",
+        "fields[*].value" : "#/generators/updateCustomActionMappings_value",
+        "outputFields[*].length" : "#/generators/updateCustomActionMappings_length",
+        "outputFields[*].jsonPointerPath" : "#/generators/updateCustomActionMappings_jsonPointerPath",
+        "fields[*].length" : "#/generators/updateCustomActionMappings_length",
+        "fields[*].hooks[*].preRequisites" : "#/generators/updateCustomActionMappings_preRequisites",
+        "outputFields[*].type" : "#/generators/updateCustomActionMappings_type",
+        "customActionMappingId" : "#/generators/updateCustomActionMappings_customActionMappingId",
+        "outputFields[*].displayName" : "#/generators/updateCustomActionMappings_displayName",
+        "fields[*].context" : "#/generators/updateCustomActionMappings_context",
+        "fields[*].values[*].prompt" : "#/generators/updateCustomActionMappings_prompt",
+        "fields[*].customActionId" : "#/generators/updateCustomActionMappings_customActionId",
+        "customActionId" : "#/generators/updateCustomActionMappings_customActionId",
+        "outputFields[*].customActionId" : "#/generators/updateCustomActionMappings_customActionId",
+        "fields[*].valueUrl" : "#/generators/updateCustomActionMappings_valueUrl",
+        "fields[*].apiName" : "#/generators/updateCustomActionMappings_apiName",
+        "fields[*].values[*].value" : "#/generators/updateCustomActionMappings_value",
+        "fields[*].hooks[*].event" : "#/generators/updateCustomActionMappings_event",
+        "outputFields[*].context" : "#/generators/updateCustomActionMappings_context"
+      }
+    },
+    "deleteCustomActionMappings" : {
+      "422" : {
+        "customActionMappingId" : "#/generators/deleteCustomActionMappings_customActionMappingId"
+      },
+      "204" : {
+        "customActionMappingId" : "#/generators/deleteCustomActionMappings_customActionMappingId"
+      }
+    },
+    "createCustomActionMappings" : {
+      "422" : {
+        "outputFields[*].apiName" : "#/generators/createCustomActionMappings_apiName",
+        "fields[*].isMandatory" : "#/generators/createCustomActionMappings_isMandatory",
+        "fields[*].mappingTargetTemplateName" : "#/generators/createCustomActionMappings_mappingTargetTemplateName",
+        "fields[*].type" : "#/generators/createCustomActionMappings_type",
+        "fields[*].hooks[*].preRequisites" : "#/generators/createCustomActionMappings_preRequisites",
+        "outputFields[*].type" : "#/generators/createCustomActionMappings_type",
+        "fields[*].isPlaceHolderNeeded" : "#/generators/createCustomActionMappings_isPlaceHolderNeeded",
+        "fields[*].displayName" : "#/generators/createCustomActionMappings_displayName",
+        "outputFields[*].displayName" : "#/generators/createCustomActionMappings_displayName",
+        "fields[*].context" : "#/generators/createCustomActionMappings_context",
+        "fields[*].values[*].prompt" : "#/generators/createCustomActionMappings_prompt",
+        "fields[*].customActionId" : "#/generators/createCustomActionMappings_customActionId",
+        "customActionId" : "#/generators/createCustomActionMappings_customActionId",
+        "outputFields[*].customActionId" : "#/generators/createCustomActionMappings_customActionId",
+        "fields[*].valueUrl" : "#/generators/createCustomActionMappings_valueUrl",
+        "parents[*]" : "#/generators/createCustomActionMappings_[*]",
+        "fields[*].apiName" : "#/generators/createCustomActionMappings_apiName",
+        "fields[*].value" : "#/generators/createCustomActionMappings_value",
+        "outputFields[*].length" : "#/generators/createCustomActionMappings_length",
+        "fields[*].values[*].value" : "#/generators/createCustomActionMappings_value",
+        "fields[*].hooks[*].event" : "#/generators/createCustomActionMappings_event",
+        "outputFields[*].context" : "#/generators/createCustomActionMappings_context",
+        "outputFields[*].jsonPointerPath" : "#/generators/createCustomActionMappings_jsonPointerPath",
+        "fields[*].length" : "#/generators/createCustomActionMappings_length"
+      },
+      "200" : {
+        "outputFields[*].apiName" : "#/generators/createCustomActionMappings_apiName",
+        "fields[*].isMandatory" : "#/generators/createCustomActionMappings_isMandatory",
+        "fields[*].mappingTargetTemplateName" : "#/generators/createCustomActionMappings_mappingTargetTemplateName",
+        "fields[*].type" : "#/generators/createCustomActionMappings_type",
+        "fields[*].hooks[*].preRequisites" : "#/generators/createCustomActionMappings_preRequisites",
+        "outputFields[*].type" : "#/generators/createCustomActionMappings_type",
+        "fields[*].isPlaceHolderNeeded" : "#/generators/createCustomActionMappings_isPlaceHolderNeeded",
+        "fields[*].displayName" : "#/generators/createCustomActionMappings_displayName",
+        "outputFields[*].displayName" : "#/generators/createCustomActionMappings_displayName",
+        "fields[*].context" : "#/generators/createCustomActionMappings_context",
+        "fields[*].values[*].prompt" : "#/generators/createCustomActionMappings_prompt",
+        "fields[*].customActionId" : "#/generators/createCustomActionMappings_customActionId",
+        "customActionId" : "#/generators/createCustomActionMappings_customActionId",
+        "outputFields[*].customActionId" : "#/generators/createCustomActionMappings_customActionId",
+        "fields[*].valueUrl" : "#/generators/createCustomActionMappings_valueUrl",
+        "parents[*]" : "#/generators/createCustomActionMappings_[*]",
+        "fields[*].apiName" : "#/generators/createCustomActionMappings_apiName",
+        "fields[*].value" : "#/generators/createCustomActionMappings_value",
+        "outputFields[*].length" : "#/generators/createCustomActionMappings_length",
+        "fields[*].values[*].value" : "#/generators/createCustomActionMappings_value",
+        "fields[*].hooks[*].event" : "#/generators/createCustomActionMappings_event",
+        "outputFields[*].context" : "#/generators/createCustomActionMappings_context",
+        "outputFields[*].jsonPointerPath" : "#/generators/createCustomActionMappings_jsonPointerPath",
+        "fields[*].length" : "#/generators/createCustomActionMappings_length"
+      }
+    }
+  },
+  "generators" : {
+    "getAssociatedMappings_ruleId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.createCustomActionMappings",
+      "dataPath" : "$.response.body:$.ruleId"
+    } ],
+    "updateCustomActionMappings_apiName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].apiName"
+    } ],
+    "createCustomActionMappings_event" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].hooks[*].event"
+    } ],
+    "updateCustomActionMappings_isPlaceHolderNeeded" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].isPlaceHolderNeeded"
+    } ],
+    "createCustomActionMappings_jsonPointerPath" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.outputFields[*].jsonPointerPath"
+    } ],
+    "createCustomActionMappings_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.getCustomActionMappings",
+      "dataPath" : "$.response.body:$.apiName"
+    } ],
+    "associateCustomActionMappings_ruleId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.createCustomActionMappings",
+      "dataPath" : "$.response.body:$.ruleId"
+    } ],
+    "updateCustomActionMappings_mappingTargetTemplateName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].mappingTargetTemplateName"
+    } ],
+    "updateCustomActionMappings_context" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].context"
+    } ],
+    "createCustomActionMappings_context" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].context"
+    } ],
+    "createCustomActionMappings_mappingTargetTemplateName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].mappingTargetTemplateName"
+    } ],
+    "updateCustomActionMappings_jsonPointerPath" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.outputFields[*].jsonPointerPath"
+    } ],
+    "updateCustomActionMappings_customActionMappingId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.createCustomActionMappings",
+      "dataPath" : "$.response.body:$.mappingId"
+    } ],
+    "createCustomActionMappings_isPlaceHolderNeeded" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].isPlaceHolderNeeded"
+    } ],
+    "createCustomActionMappings_isMandatory" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].isMandatory"
+    } ],
+    "createCustomActionMappings_customActionId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.customActionId"
+    } ],
+    "updateCustomActionMappings_displayName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].displayName"
+    } ],
+    "updateCustomActionMappings_valueUrl" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].valueUrl"
+    } ],
+    "getCustomActionMappings_customActionMappingId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.createCustomActionMappings",
+      "dataPath" : "$.response.body:$.mappingId"
+    } ],
+    "updateCustomActionMappings_customActionId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.customActionId"
+    } ],
+    "updateCustomActionMappings_isMandatory" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].isMandatory"
+    } ],
+    "updateCustomActionMappings_value" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].value"
+    } ],
+    "createCustomActionMappings_displayName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].displayName"
+    } ],
+    "createCustomActionMappings_prompt" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].values[*].prompt"
+    } ],
+    "createCustomActionMappings_preRequisites" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].hooks[*].preRequisites"
+    } ],
+    "associateCustomActionMappings_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.createCustomActionMappings",
+      "dataPath" : "$.response.body:$.mappingId"
+    } ],
+    "createCustomActionMappings_apiName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].apiName"
+    } ],
+    "createCustomActionMappings_valueUrl" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].valueUrl"
+    } ],
+    "updateCustomActionMappings_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.getCustomActionMappings",
+      "dataPath" : "$.response.body:$.apiName"
+    } ],
+    "updateCustomActionMappings_length" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].length"
+    } ],
+    "updateCustomActionMappings_event" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].hooks[*].event"
+    } ],
+    "deleteCustomActionMappings_customActionMappingId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomActionRuleMapping.createCustomActionMappings",
+      "dataPath" : "$.response.body:$.mappingId"
+    } ],
+    "createCustomActionMappings_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].type"
+    } ],
+    "createCustomActionMappings_length" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].length"
+    } ],
+    "updateCustomActionMappings_prompt" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].values[*].prompt"
+    } ],
+    "updateCustomActionMappings_preRequisites" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].hooks[*].preRequisites"
+    } ],
+    "createCustomActionMappings_value" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].value"
+    } ],
+    "updateCustomActionMappings_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomAction.addCustomAction",
+      "dataPath" : "$.response.body:$.inputFields[*].type"
+    } ]
+  }
+}

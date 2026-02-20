@@ -1,0 +1,58 @@
+{
+  "apis" : {
+    "getAllRRRules" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getExecutionStatus" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "reorderRRRules" : {
+      "422" : {
+        "ruleIds[*]" : "#/generators/reorderRRRules_[*]",
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "ruleIds[*]" : "#/generators/reorderRRRules_[*]",
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getRoundRobinRule" : {
+      "200" : {
+        "ruleId" : "#/generators/nth_round_robin_id"
+      }
+    },
+    "updateExecutionStatus" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : {
+    "reorderRRRules_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.RoundRobin.getAllRRRules",
+      "dataPath" : "$.response.body:$.data[*].ruleId",
+      "params" : {
+        "status" : "ACTIVE"
+      }
+    } ],
+    "nth_round_robin_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.RoundRobin.getAllRRRules",
+      "dataPath" : "$.response.body:$.data[0].ruleId"
+    } ]
+  }
+}

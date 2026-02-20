@@ -1,0 +1,56 @@
+{
+  "apis" : {
+    "getResolution" : {
+      "200" : {
+        "feedbackId" : "#/generators/getResolution_feedbackId"
+      }
+    },
+    "updateResolution" : {
+      "422" : {
+        "feedbackId" : "#/generators/updateResolution_feedbackId"
+      },
+      "200" : {
+        "feedbackId" : "#/generators/updateResolution_feedbackId"
+      }
+    },
+    "deleteResolution" : {
+      "204" : {
+        "feedbackId" : "#/generators/deleteResolution_feedbackId"
+      }
+    },
+    "addResolution" : {
+      "422" : {
+        "feedbackId" : "#/generators/addResolution_feedbackId"
+      },
+      "200" : {
+        "feedbackId" : "#/generators/addResolution_feedbackId"
+      }
+    }
+  },
+  "generators" : {
+    "deleteResolution_feedbackId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ArticleFeedbackResolution.addResolution",
+      "dataPath" : "$.response.body:$.feedbackId",
+      "params" : { }
+    } ],
+    "updateResolution_feedbackId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ArticleFeedbackResolution.addResolution",
+      "dataPath" : "$.response.body:$.feedbackId",
+      "params" : { }
+    } ],
+    "addResolution_feedbackId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ArticleFeedback.createFeedback",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "getResolution_feedbackId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ArticleFeedbackResolution.addResolution",
+      "dataPath" : "$.response.body:$.feedbackId",
+      "params" : { }
+    } ]
+  }
+}

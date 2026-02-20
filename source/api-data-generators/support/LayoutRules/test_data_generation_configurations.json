@@ -1,0 +1,334 @@
+{
+  "apis" : {
+    "getLayoutRule" : {
+      "200" : {
+        "layoutRuleId" : "#/generators/getLayoutRule_layoutRuleId",
+        "layoutId" : "#/generators/getLayoutRule_layoutId"
+      }
+    },
+    "listLayoutRules" : {
+      "200" : {
+        "layoutId" : "#/generators/listLayoutRules_layoutId"
+      }
+    },
+    "deleteLayoutRule" : {
+      "200" : {
+        "layoutRuleId" : "#/generators/deleteLayoutRule_layoutRuleId",
+        "layoutId" : "#/generators/deleteLayoutRule_layoutId"
+      }
+    },
+    "getLayoutRulesCount" : {
+      "422" : {
+        "layoutId" : "#/generators/getLayoutRulesCount_layoutId"
+      },
+      "200" : {
+        "layoutId" : "#/generators/getLayoutRulesCount_layoutId"
+      }
+    },
+    "disableAssociatedLayoutRulesExecutionInHelpCentre" : {
+      "200" : {
+        "fieldId" : "#/generators/disableAssociatedLayoutRulesExecutionInHelpCentre_fieldId"
+      },
+      "204" : {
+        "fieldId" : "#/generators/disableAssociatedLayoutRulesExecutionInHelpCentre_fieldId"
+      }
+    },
+    "addLayoutRule" : {
+      "422" : {
+        "displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "modifiedTime" : "#/generators/addLayoutRule_modifiedTime",
+        "fieldConditions[*].conditions[*].displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].condition" : "#/generators/addLayoutRule_condition",
+        "fieldName" : "#/generators/addLayoutRule_fieldName",
+        "systemGenerated" : "#/generators/addLayoutRule_systemGenerated",
+        "layoutId" : "#/generators/addLayoutRule_layoutId",
+        "fieldConditions[*].actions.showFields[*].displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].displayValue[*]" : "#/generators/addLayoutRule_[*]",
+        "fieldConditions[*].actions.showFields[*].fieldName" : "#/generators/addLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].fieldName" : "#/generators/addLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].value[*]" : "#/generators/addLayoutRule_[*]",
+        "createdBy" : "#/generators/addLayoutRule_createdBy",
+        "fieldConditions[*].actions.showSections[*]" : "#/generators/addLayoutRule_[*]",
+        "fieldConditions[*].pattern" : "#/generators/addLayoutRule_pattern",
+        "fieldConditions[*].actions.setMandatoryFields[*].displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "createdTime" : "#/generators/addLayoutRule_createdTime",
+        "modifiedBy" : "#/generators/addLayoutRule_modifiedBy",
+        "fieldConditions[*].actions.setMandatoryFields[*].fieldName" : "#/generators/addLayoutRule_fieldName",
+        "fieldConditions[*].name" : "#/generators/addLayoutRule_name"
+      },
+      "200" : {
+        "displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "modifiedTime" : "#/generators/addLayoutRule_modifiedTime",
+        "fieldConditions[*].conditions[*].displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].condition" : "#/generators/addLayoutRule_condition",
+        "fieldName" : "#/generators/addLayoutRule_fieldName",
+        "systemGenerated" : "#/generators/addLayoutRule_systemGenerated",
+        "layoutId" : "#/generators/addLayoutRule_layoutId",
+        "fieldConditions[*].actions.showFields[*].displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].displayValue[*]" : "#/generators/addLayoutRule_[*]",
+        "fieldConditions[*].actions.showFields[*].fieldName" : "#/generators/addLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].fieldName" : "#/generators/addLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].value[*]" : "#/generators/addLayoutRule_[*]",
+        "createdBy" : "#/generators/addLayoutRule_createdBy",
+        "fieldConditions[*].actions.showSections[*]" : "#/generators/addLayoutRule_[*]",
+        "fieldConditions[*].pattern" : "#/generators/addLayoutRule_pattern",
+        "fieldConditions[*].actions.setMandatoryFields[*].displayLabel" : "#/generators/addLayoutRule_displayLabel",
+        "createdTime" : "#/generators/addLayoutRule_createdTime",
+        "modifiedBy" : "#/generators/addLayoutRule_modifiedBy",
+        "fieldConditions[*].actions.setMandatoryFields[*].fieldName" : "#/generators/addLayoutRule_fieldName",
+        "fieldConditions[*].name" : "#/generators/addLayoutRule_name"
+      }
+    },
+    "editLayoutRule" : {
+      "422" : {
+        "displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "modifiedTime" : "#/generators/editLayoutRule_modifiedTime",
+        "fieldConditions[*].conditions[*].displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].condition" : "#/generators/editLayoutRule_condition",
+        "fieldName" : "#/generators/editLayoutRule_fieldName",
+        "layoutRuleId" : "#/generators/editLayoutRule_layoutRuleId",
+        "systemGenerated" : "#/generators/editLayoutRule_systemGenerated",
+        "layoutId" : "#/generators/editLayoutRule_layoutId",
+        "fieldConditions[*].actions.showFields[*].displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].displayValue[*]" : "#/generators/editLayoutRule_[*]",
+        "fieldConditions[*].actions.showFields[*].fieldName" : "#/generators/editLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].fieldName" : "#/generators/editLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].value[*]" : "#/generators/editLayoutRule_[*]",
+        "createdBy" : "#/generators/editLayoutRule_createdBy",
+        "fieldConditions[*].actions.showSections[*]" : "#/generators/editLayoutRule_[*]",
+        "fieldConditions[*].pattern" : "#/generators/editLayoutRule_pattern",
+        "fieldConditions[*].actions.setMandatoryFields[*].displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "createdTime" : "#/generators/editLayoutRule_createdTime",
+        "modifiedBy" : "#/generators/editLayoutRule_modifiedBy",
+        "fieldConditions[*].actions.setMandatoryFields[*].fieldName" : "#/generators/editLayoutRule_fieldName",
+        "fieldConditions[*].name" : "#/generators/editLayoutRule_name"
+      },
+      "200" : {
+        "displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "modifiedTime" : "#/generators/editLayoutRule_modifiedTime",
+        "fieldConditions[*].conditions[*].displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].condition" : "#/generators/editLayoutRule_condition",
+        "fieldName" : "#/generators/editLayoutRule_fieldName",
+        "layoutRuleId" : "#/generators/editLayoutRule_layoutRuleId",
+        "systemGenerated" : "#/generators/editLayoutRule_systemGenerated",
+        "layoutId" : "#/generators/editLayoutRule_layoutId",
+        "fieldConditions[*].actions.showFields[*].displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "fieldConditions[*].conditions[*].displayValue[*]" : "#/generators/editLayoutRule_[*]",
+        "fieldConditions[*].actions.showFields[*].fieldName" : "#/generators/editLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].fieldName" : "#/generators/editLayoutRule_fieldName",
+        "fieldConditions[*].conditions[*].value[*]" : "#/generators/editLayoutRule_[*]",
+        "createdBy" : "#/generators/editLayoutRule_createdBy",
+        "fieldConditions[*].actions.showSections[*]" : "#/generators/editLayoutRule_[*]",
+        "fieldConditions[*].pattern" : "#/generators/editLayoutRule_pattern",
+        "fieldConditions[*].actions.setMandatoryFields[*].displayLabel" : "#/generators/editLayoutRule_displayLabel",
+        "createdTime" : "#/generators/editLayoutRule_createdTime",
+        "modifiedBy" : "#/generators/editLayoutRule_modifiedBy",
+        "fieldConditions[*].actions.setMandatoryFields[*].fieldName" : "#/generators/editLayoutRule_fieldName",
+        "fieldConditions[*].name" : "#/generators/editLayoutRule_name"
+      }
+    },
+    "listLayoutRulesForDepartment" : {
+      "422" : {
+        "layoutId" : "#/generators/listLayoutRulesForDepartment_layoutId",
+        "departmentId" : "#/generators/listLayoutRulesForDepartment_departmentId"
+      },
+      "200" : {
+        "layoutId" : "#/generators/listLayoutRulesForDepartment_layoutId",
+        "departmentId" : "#/generators/listLayoutRulesForDepartment_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "editLayoutRule_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "editLayoutRule_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.addLayoutRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].actions.showSections[*]"
+    } ],
+    "listLayoutRules_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].id",
+      "params" : {
+        "module" : "$generators:#/generators/listLayoutRules_getLayouts_module"
+      }
+    } ],
+    "addLayoutRule_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addLayoutRule_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].actions.showSections[*]"
+    } ],
+    "getLayoutRule_getLayouts_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets", "contacts", "accounts", "tasks", "calls", "events", "timeEntry", "products" ]
+    } ],
+    "addLayoutRule_modifiedTime" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.modifiedTime"
+    } ],
+    "addLayoutRule_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].name"
+    } ],
+    "disableAssociatedLayoutRulesExecutionInHelpCentre_getFields_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets" ]
+    } ],
+    "addLayoutRule_pattern" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].pattern"
+    } ],
+    "editLayoutRule_modifiedTime" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.modifiedTime"
+    } ],
+    "listLayoutRulesForDepartment_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addLayoutRule_displayLabel" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getFieldPermissionsForProfile",
+      "dataPath" : "$.response.body:$.data[*].fieldLabel"
+    } ],
+    "addLayoutRule_modifiedBy" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "listLayoutRules_getLayouts_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets", "contacts", "accounts", "tasks", "calls", "events", "timeEntry", "products" ]
+    } ],
+    "deleteLayoutRule_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getLayoutRulesCount_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.createLayout",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "editLayoutRule_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.addLayoutRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].name"
+    } ],
+    "disableAssociatedLayoutRulesExecutionInHelpCentre_fieldId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[*].id",
+      "params" : {
+        "module" : "$generators:#/generators/disableAssociatedLayoutRulesExecutionInHelpCentre_getFields_module"
+      }
+    } ],
+    "editLayoutRule_pattern" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.addLayoutRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].pattern"
+    } ],
+    "editLayoutRule_fieldName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getExtensionFields",
+      "dataPath" : "$.response.body:$.data[*].extension.name"
+    } ],
+    "editLayoutRule_createdBy" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "editLayoutRule_createdTime" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.createdTime"
+    } ],
+    "listLayoutRulesForDepartment_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addLayoutRule_createdTime" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.createdTime"
+    } ],
+    "deleteLayoutRule_layoutRuleId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.addLayoutRule",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "editLayoutRule_systemGenerated" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.systemGenerated"
+    } ],
+    "addLayoutRule_systemGenerated" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.getLayoutRule",
+      "dataPath" : "$.response.body:$.systemGenerated"
+    } ],
+    "editLayoutRule_displayLabel" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getFieldPermissionsForProfile",
+      "dataPath" : "$.response.body:$.data[*].fieldLabel"
+    } ],
+    "getLayoutRule_layoutRuleId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.addLayoutRule",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addLayoutRule_condition" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ValidationRules.addValidationRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].conditions[*].condition"
+    } ],
+    "editLayoutRule_layoutRuleId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.LayoutRules.addLayoutRule",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addLayoutRule_fieldName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getExtensionFields",
+      "dataPath" : "$.response.body:$.data[*].extension.name"
+    } ],
+    "editLayoutRule_condition" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ValidationRules.addValidationRule",
+      "dataPath" : "$.response.body:$.fieldConditions[*].conditions[*].condition"
+    } ],
+    "getLayoutRule_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].id",
+      "params" : {
+        "module" : "$generators:#/generators/getLayoutRule_getLayouts_module"
+      }
+    } ],
+    "editLayoutRule_modifiedBy" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addLayoutRule_createdBy" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

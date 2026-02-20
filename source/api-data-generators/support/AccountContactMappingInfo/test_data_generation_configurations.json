@@ -1,0 +1,14 @@
+{
+  "apis": {
+    "updateMappingInfo": {
+      "422": {
+        "mappingId": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      },
+      "200": {
+        "mappingId": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

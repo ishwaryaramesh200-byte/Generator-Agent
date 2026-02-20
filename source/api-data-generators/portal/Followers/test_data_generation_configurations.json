@@ -1,0 +1,92 @@
+{
+	"apis": {
+		"entityFollowersCount": {
+			"200": {
+				"entityId": "#/generators/entityId"
+			}
+		},
+		"entityFollowersListAPI": {
+			"200": {
+				"entityId": "#/generators/entityId"
+			}
+		},
+		"entityUnFollowAPI": {
+			"422": {
+				"entityId": "#/generators/entityId"
+			},
+			"204": {
+				"entityId": "#/generators/entityId"
+			}
+		},
+		"entityFollowAPI": {
+			"422": {
+				"entityId": "#/generators/entityId"
+			},
+			"204": {
+				"entityId": "#/generators/entityId"
+			}
+		}
+	},
+	"generators": {
+		"kbCategoryId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.KBRootCategory.listAllRootCategory",
+				"dataPath": "$.response.body:$.data[?(@.allArticleCount != \"0\")].id",
+				"params" : {
+					"include" : "allArticleCount"
+				}
+			}
+		],
+		"translationId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.Solution.retriveAnArticleTranslation",
+				"dataPath": "$.response.body:$.translationId",
+				"name": "translationId"
+			}
+		],
+		"section_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.KbSection.listAllSections",
+				"dataPath": "$.response.body:$.data[*].id",
+				"name": "section_id"
+			}
+		],
+		"entityId": [
+			{
+				"type": "conditional",
+				"conditions": [
+					{
+						"when": {
+							"key": "$.input.path:$.moduleAPIName",
+							"equals": "articleTranslations"
+						},
+						"then": {
+							"use": "$generators:#/generators/translationId"
+						}
+					},
+					{
+						"when": {
+							"key": "$.input.path:$.moduleAPIName",
+							"equals": "kbRootCategories"
+						},
+						"then": {
+							"use": "$generators:#/generators/kbCategoryId"
+						}
+					},
+					{
+						"when": {
+							"key": "$.input.path:$.moduleAPIName",
+							"equals": "kbSections"
+						},
+						"then": {
+							"use": "$generators:#/generators/section_id"
+						}
+					}
+				]
+			}
+		]
+	}
+}

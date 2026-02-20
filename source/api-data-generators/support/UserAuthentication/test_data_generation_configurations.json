@@ -1,0 +1,49 @@
+{
+  "apis": {
+    "getHCSMSInitConf": {
+      "422": {
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "200": {
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "updateUserAuthenticationStatus": {
+      "422": {
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "204": {
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "SMSAuthenticationInit": {
+      "422": {
+        "smsBridgeOrgId": "#/generators/SMSAuthenticationInit_smsBridgeOrgId",
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "204": {
+        "smsBridgeOrgId": "#/generators/SMSAuthenticationInit_smsBridgeOrgId",
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    },
+    "getListOfUserAuthentication": {
+      "422": {
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      },
+      "200": {
+        "id": "../Helpcenter/test_data_generation_configurations.json#/generators/help_center_id"
+      }
+    }
+  },
+  "generators": {
+    "SMSAuthenticationInit_smsBridgeOrgId": [
+      {
+        "type": "remote",
+        "generatorMethod": "smsBridgeOrgId",
+        "inputs": {
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ]
+  }
+}

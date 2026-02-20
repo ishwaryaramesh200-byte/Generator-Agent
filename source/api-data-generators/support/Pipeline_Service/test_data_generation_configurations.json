@@ -1,0 +1,32 @@
+{
+  "apis" : {
+    "getPipelineCriteria" : {
+      "422" : {
+        "departmentId" : "#/generators/getPipelineCriteria_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getPipelineCriteria_departmentId"
+      }
+    },
+    "getNotifMessage" : {
+      "422" : {
+        "block.name" : "#/generators/getNotifMessage_name"
+      },
+      "204" : {
+        "block.name" : "#/generators/getNotifMessage_name"
+      }
+    }
+  },
+  "generators" : {
+    "getNotifMessage_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Pipeline_Service.getPipelineCriteria",
+      "dataPath" : "$.response.body:$.criteriaFields[*].name"
+    } ],
+    "getPipelineCriteria_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[?( @.isEnabled == true )].id"
+    } ]
+  }
+}

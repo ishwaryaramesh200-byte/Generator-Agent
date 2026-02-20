@@ -1,0 +1,36 @@
+{
+  "apis": {
+    "downloadFile": {
+      "304": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      },
+      "422": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      },
+      "200": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      },
+      "204": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      }
+    },
+    "checkFileExportStatus": {
+      "422": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      },
+      "200": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      }
+    },
+    "createFileExport": {
+      "422": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      },
+      "200": {
+        "id": "../ArticleTranslation/test_data_generation_configurations.json#/generators/getTranslation_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

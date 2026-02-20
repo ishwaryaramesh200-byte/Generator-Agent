@@ -1,0 +1,33 @@
+{
+  "apis" : {
+    "getDataChips" : {
+      "422" : {
+        "layoutId" : "#/generators/layout_id",
+        "module" : "#/generators/chip_module",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "layoutId" : "#/generators/layout_id",
+        "module" : "#/generators/chip_module",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "layoutId" : "#/generators/layout_id",
+        "module" : "#/generators/chip_module",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : {
+    "chip_module" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Module.getOrganizationModules",
+      "dataPath" : "$.response.body:$.data[*].apiName"
+    } ],
+    "layout_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

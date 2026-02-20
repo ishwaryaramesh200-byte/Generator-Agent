@@ -1,0 +1,196 @@
+{
+  "apis": {
+    "addEvent": {
+      "422": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "cf": "#/generators/event_cf",
+        "customFields": "#/generators/event_cf",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "priority": "#/generators/event_priority",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id",
+        "status": "#/generators/event_status",
+        "startTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      },
+      "200": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "cf": "#/generators/event_cf",
+        "customFields": "#/generators/event_cf",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "priority": "#/generators/event_priority",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id",
+        "status": "#/generators/event_status",
+        "startTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      }
+    },
+    "updateEvent": {
+      "422": {
+        "eventId": "#/generators/event_id",
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "cf": "#/generators/event_cf",
+        "customFields": "#/generators/event_cf",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "priority": "#/generators/event_priority",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id",
+        "status": "#/generators/event_status",
+        "startTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      },
+      "200": {
+        "eventId": "#/generators/event_id",
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "cf": "#/generators/event_cf",
+        "customFields": "#/generators/event_cf",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "priority": "#/generators/event_priority",
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id",
+        "status": "#/generators/event_status" ,
+        "startTime" : "../Common/test_data_generation_configurations.json#/generators/current_time"
+      }
+    },
+    "getEvent": {
+      "200": {
+        "eventId": "#/generators/event_id"
+      }
+    },
+    "deleteSpamEvents": {
+      "422": {
+        "eventIds[*]": "#/generators/spam_event_id"
+      },
+      "200": {
+        "eventIds[*]": "#/generators/spam_event_id"
+      }
+    },
+    "updateMany": {
+      "422": {
+        "ids[*]": "#/generators/event_id",
+        "fieldName": "#/generators/update_many_field_name"
+      },
+      "200": {
+        "ids[*]": "#/generators/event_id",
+        "fieldName": "#/generators/update_many_field_name"
+      }
+    },
+    "getEventsByAccountId": {
+      "422": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "accountId": "../Account/test_data_generation_configurations.json#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "moveEventsToTrash": {
+      "422": {
+        "entityIds[*]": "#/generators/event_id"
+      },
+      "204": {
+        "entityIds[*]": "#/generators/event_id"
+      }
+    },
+    "getEventsByTicket": {
+      "200": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      },
+      "204": {
+        "ticketId": "../Ticket/test_data_generation_configurations.json#/generators/ticket_id"
+      }
+    },
+    "getEventsList": {
+      "200": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getEventsByContactId": {
+      "422": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "emptyEventsSpam": {
+      "422": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "202": {
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators": {
+    "event_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Event.addEvent",
+        "dataPath": "$.response.body:$.id" ,
+        "name" : "events"
+      }
+    ],
+    "event_cf": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+        "inputs": {
+          "moduleName": "Event"
+        }
+      }
+    ],
+    "event_priority": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "priority",
+          "moduleName": "Event",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ],
+    "event_status": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "status",
+          "moduleName": "Event",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ],
+    "update_many_field_name": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "fieldName",
+          "moduleName": "Event",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ],
+    "spam_event_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Event.addEvent",
+        "dataPath": "$.response.body:$.id"
+      }
+    ]
+  }
+}

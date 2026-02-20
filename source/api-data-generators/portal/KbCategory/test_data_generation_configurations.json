@@ -1,0 +1,51 @@
+{
+	"apis": {
+		"articlesUnderCategory": {
+			"422": {
+				"topicId": "#/generators/category_id"
+			},
+			"200": {
+				"topicId": "#/generators/category_id"
+			}
+		},
+		"getBreadCrumbTree": {
+			"422": {
+				"categoryIds[*]": "#/generators/category_id"
+			},
+			"200": {
+				"categoryIds[*]": "#/generators/category_id"
+			}
+		},
+		"listAllCategory": {
+			"200": {
+				"categoryId": "#/generators/category_id"
+			}
+		},
+		"categoryLogo": {
+			"200": {
+				"categoryId": "#/generators/category_id",
+				"logoId": "#/generators/category_logo_id"
+			},
+			"204": {
+				"categoryId": "#/generators/category_id",
+				"logoId": "#/generators/category_logo_id"
+			}
+		}
+	},
+	"generators": {
+		"category_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "portal.KbCategory.rootCategoriesOfHelpcenter",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		],
+		"category_logo_id": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.KbCategoryLogo.associateEntityAttachment",
+				"dataPath": "$.response.body:$.id"
+			}
+		]
+	}
+}

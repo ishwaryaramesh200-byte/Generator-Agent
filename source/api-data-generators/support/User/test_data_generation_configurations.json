@@ -1,0 +1,100 @@
+{
+  "apis" : {
+    "getUserDetails" : {
+      "422" : {
+        "userId" : "#/generators/user_id"
+      },
+      "200" : {
+        "userId" : "#/generators/user_id"
+      }
+    },
+    "associateGroupsToUsers" : {
+      "422" : {
+        "userId" : "#/generators/user_id",
+        "groups[*].id" : "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id"
+      },
+      "200" : {
+        "userId" : "#/generators/user_id",
+        "groups[*].id" : "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id"
+      }
+    },
+    "getUserLabels" : {
+      "422" : {
+        "userId" : "#/generators/user_id"
+      },
+      "200" : {
+        "userId" : "#/generators/user_id"
+      }
+    },
+    "removeLabelsFromUser" : {
+      "422" : {
+        "userId" : "#/generators/user_id",
+        "labelIds[*]" : "#/generators/remove_label_id"
+      },
+      "200" : {
+        "userId" : "#/generators/user_id",
+        "labelIds[*]" : "#/generators/remove_label_id"
+      }
+    },
+    "deleteGroupsFromUsers" : {
+      "422" : {
+        "groupIds[*]" : "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id",
+        "userId" : "#/generators/user_id"
+      },
+      "200" : {
+        "groupIds[*]" : "../HelpcenterGroups/test_data_generation_configurations.json#/generators/group_id",
+        "userId" : "#/generators/user_id"
+      }
+    },
+    "deleteEndUser" : {
+      "422" : {
+        "userId" : "#/generators/user_id"
+      },
+      "204" : {
+        "userId" : "#/generators/user_id"
+      }
+    },
+    "assignLabelsToUser" : {
+      "422" : {
+        "userId" : "#/generators/user_id",
+        "labels[*].id" : "../Label/test_data_generation_configurations.json#/generators/label_id"
+      },
+      "200" : {
+        "userId" : "#/generators/user_id",
+        "labels[*].id" : "../Label/test_data_generation_configurations.json#/generators/label_id"
+      }
+    },
+    "getUserGroups" : {
+      "422" : {
+        "userId" : "#/generators/user_id"
+      },
+      "200" : {
+        "userId" : "#/generators/user_id"
+      }
+    },
+    "updateHCUser" : {
+      "422" : {
+        "userId" : "#/generators/user_id"
+      },
+      "200" : {
+        "userId" : "#/generators/user_id"
+      }
+    }
+  },
+  "generators" : {
+    "user_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.User.getUsers",
+      "name" : "helpCenterUser",
+      "dataPath" : "$.response.body:$.data[0].id"
+    } ],
+    "remove_label_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.User.assignLabelsToUser",
+      "dataPath" : "$.input.body:$.labels[*].id",
+      "params" : {
+        "labels[*].isPrimary" : "false"
+      }
+    } ]
+  }
+}

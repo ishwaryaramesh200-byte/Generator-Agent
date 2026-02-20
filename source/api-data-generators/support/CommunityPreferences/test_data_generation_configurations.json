@@ -1,0 +1,19 @@
+{
+  "apis" : {
+    "updateCommunityPreferences" : {
+      "422" : {
+        "landingPage" : "#/generators/updateCommunityPreferences_landingPage"
+      },
+      "204" : {
+        "landingPage" : "#/generators/updateCommunityPreferences_landingPage"
+      }
+    }
+  },
+  "generators" : {
+    "updateCommunityPreferences_landingPage" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityPreferences.getCommunityPreferences",
+      "dataPath" : "$.response.body:$.landingPage"
+    } ]
+  }
+}

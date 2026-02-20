@@ -1,0 +1,202 @@
+{
+  "apis" : {
+    "addDeskCRMConfiguration" : {
+      "422" : {
+        "zgid" : "#/generators/addDeskCRMConfiguration_zgid",
+        "adminEmail" : "#/generators/addDeskCRMConfiguration_adminEmail"
+      },
+      "200" : {
+        "zgid" : "#/generators/addDeskCRMConfiguration_zgid",
+        "adminEmail" : "#/generators/addDeskCRMConfiguration_adminEmail"
+      },
+      "204" : {
+        "zgid" : "#/generators/addDeskCRMConfiguration_zgid",
+        "adminEmail" : "#/generators/addDeskCRMConfiguration_adminEmail"
+      }
+    },
+    "updateDeskCRMConfiguration" : {
+      "422" : {
+        "zgid" : "#/generators/updateDeskCRMConfiguration_zgid",
+        "adminEmail" : "#/generators/updateDeskCRMConfiguration_adminEmail"
+      },
+      "200" : {
+        "zgid" : "#/generators/updateDeskCRMConfiguration_zgid",
+        "adminEmail" : "#/generators/updateDeskCRMConfiguration_adminEmail"
+      },
+      "204" : {
+        "zgid" : "#/generators/updateDeskCRMConfiguration_zgid",
+        "adminEmail" : "#/generators/updateDeskCRMConfiguration_adminEmail"
+      }
+    },
+    "pushCrmProduct" : {
+      "422" : {
+        "productId" : "#/generators/pushCrmProduct_productId"
+      },
+      "204" : {
+        "productId" : "#/generators/pushCrmProduct_productId"
+      }
+    },
+    "searchRequests" : {
+      "422" : {
+        "productId" : "#/generators/searchRequests_productId"
+      },
+      "200" : {
+        "productId" : "#/generators/searchRequests_productId"
+      },
+      "204" : {
+        "productId" : "#/generators/searchRequests_productId"
+      }
+    },
+    "pushCrmAccount" : {
+      "422" : {
+        "accountId" : "#/generators/pushCrmAccount_accountId"
+      },
+      "204" : {
+        "accountId" : "#/generators/pushCrmAccount_accountId"
+      }
+    },
+    "deleteAddOnUser" : {
+      "422" : {
+        "zuid" : "#/generators/deleteAddOnUser_zuid"
+      },
+      "204" : {
+        "zuid" : "#/generators/deleteAddOnUser_zuid"
+      }
+    },
+    "updateCrmInfo" : {
+      "422" : {
+        "ids[*]" : "#/generators/updateCrmInfo_[*]"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/updateCrmInfo_[*]"
+      }
+    },
+    "createAddOnUser" : {
+      "422" : {
+        "groupid" : "#/generators/createAddOnUser_groupid"
+      },
+      "200" : {
+        "groupid" : "#/generators/createAddOnUser_groupid"
+      }
+    },
+    "addComment" : {
+      "422" : {
+        "content" : "#/generators/addComment_content",
+        "zuid" : "#/generators/addComment_zuid"
+      },
+      "200" : {
+        "content" : "#/generators/addComment_content",
+        "zuid" : "#/generators/addComment_zuid"
+      },
+      "204" : {
+        "content" : "#/generators/addComment_content",
+        "zuid" : "#/generators/addComment_zuid"
+      }
+    },
+    "pushCrmContact" : {
+      "422" : {
+        "contactId" : "#/generators/pushCrmContact_contactId"
+      },
+      "204" : {
+        "contactId" : "#/generators/pushCrmContact_contactId"
+      }
+    },
+    "getCRMCustomViewById" : {
+      "422" : {
+        "crmcvid" : "#/generators/getCRMCustomViewById_crmcvid"
+      },
+      "200" : {
+        "crmcvid" : "#/generators/getCRMCustomViewById_crmcvid"
+      }
+    }
+  },
+  "generators" : {
+    "addDeskCRMConfiguration_zgid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "CrmInteg.getBiginOrgDetails",
+      "dataPath" : "$.response.body:$.data[0].orgId",
+      "params" : {
+        "crmService" : "$generators:#/generators/addDeskCRMConfiguration_getBiginOrgDetails_crmService"
+      }
+    } ],
+    "pushCrmContact_contactId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.getContactsUnderProduct",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateCrmInfo_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.getContactsUnderProduct",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateDeskCRMConfiguration_getBiginOrgDetails_crmService" : [ {
+      "type" : "static",
+      "value" : [ "zohoCRM" ]
+    } ],
+    "addComment_content" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CrmInteg.getAccountNotes",
+      "dataPath" : "$.response.body:$.data[*].content"
+    } ],
+    "pushCrmProduct_productId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Product.getDuplicateProducts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateDeskCRMConfiguration_adminEmail" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Agent.getAgents",
+      "dataPath" : "$.response.body:$.data[0].emailId",
+      "params" : { }
+    } ],
+    "updateDeskCRMConfiguration_zgid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "CrmInteg.getBiginOrgDetails",
+      "dataPath" : "$.response.body:$.data[0].orgId",
+      "params" : {
+        "crmService" : "$generators:#/generators/updateDeskCRMConfiguration_getBiginOrgDetails_crmService"
+      }
+    } ],
+    "addDeskCRMConfiguration_adminEmail" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Agent.getAgents",
+      "dataPath" : "$.response.body:$.data[0].emailId",
+      "params" : { }
+    } ],
+    "deleteAddOnUser_zuid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getAgentsByIds",
+      "dataPath" : "$.response.body:$.data[*].zuid"
+    } ],
+    "getCRMCustomViewById_crmcvid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "CrmInteg.getCustomViews",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : { }
+    } ],
+    "addComment_zuid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getAgentsByIds",
+      "dataPath" : "$.response.body:$.data[*].zuid"
+    } ],
+    "createAddOnUser_groupid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getAgentsByIds",
+      "dataPath" : "$.response.body:$.data[*].zuid"
+    } ],
+    "pushCrmAccount_accountId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Account.getAccountsUnderContact",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "searchRequests_productId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Product.getDuplicateProducts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addDeskCRMConfiguration_getBiginOrgDetails_crmService" : [ {
+      "type" : "static",
+      "value" : [ "zohoCRM" ]
+    } ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "apis": {
+  },
+  "generators": {
+    "current_time": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+        "inputs": {
+          "timeLine": "current",
+          "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        }
+      }
+    ],
+    "future_time": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+        "inputs": {
+          "timeLine": "future",
+          "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        }
+      }
+    ],
+    "past_time": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDateTime",
+        "inputs": {
+          "timeLine": "past",
+          "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        }
+      }
+    ] ,
+    "time_range" : [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.generateDateTimeRange",
+        "inputs": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "apis" : {
+    "getArticlesUnderCategory" : {
+      "422" : {
+        "categoryId" : "#/generators/kb_section_id"
+      },
+      "200" : {
+        "categoryId" : "#/generators/kb_section_id"
+      }
+    },
+    "getArticlesForRepositioning" : {
+      "200" : {
+        "categoryId" : "#/generators/kb_category_id"
+      },
+      "204" : {
+        "categoryId" : "#/generators/kb_category_id"
+      }
+    },
+    "createCategory" : {
+      "422" : {
+        "logo" : "#/generators/createCategory_logo",
+        "parentCategoryId" : "#/generators/createCategory_parentCategoryId",
+        "featuredCategory" : "#/generators/createCategory_featuredCategory",
+        "reviewOwners[*]" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "isVisibleInHC" : "#/generators/createCategory_isVisibleInHC"
+      },
+      "200" : {
+        "logo" : "#/generators/createCategory_logo",
+        "parentCategoryId" : "#/generators/createCategory_parentCategoryId",
+        "featuredCategory" : "#/generators/createCategory_featuredCategory",
+        "reviewOwners[*]" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "isVisibleInHC" : "#/generators/createCategory_isVisibleInHC"
+      }
+    },
+    "repositionArticles" : {
+      "422" : {
+        "ids[*]" : "#/generators/repositionArticles_[*]",
+        "categoryId" : "#/generators/kb_category_id"
+      },
+      "204" : {
+        "ids[*]" : "#/generators/repositionArticles_[*]",
+        "categoryId" : "#/generators/kb_category_id"
+      }
+    },
+    "listAllCategory" : {
+      "200" : {
+        "reviewOwnerId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "reviewOwnerId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : {
+    "kb_category_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.KbCategory.listAllCategory",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "kb_section_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.KBSection.listAllSections",
+      "dataPath" : "$.response.body:$.data[?( @.isTrashed == false )].id"
+    } ],
+    "createCategory_parentCategoryId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.KbCategory.listAllCategory",
+      "dataPath" : "$.response.body:$.data[*].parentCategoryId"
+    } ],
+    "createCategory_featuredCategory" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.KbCategory.listAllCategory",
+      "dataPath" : "$.response.body:$.data[*].featuredCategory"
+    } ],
+    "createCategory_isVisibleInHC" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.KbCategory.listAllCategory",
+      "dataPath" : "$.response.body:$.data[*].isVisibleInHC"
+    } ],
+    "repositionArticles_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Article.addArticle",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "createCategory_logo" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.KbCategoryLogo.associateEntityAttachment",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

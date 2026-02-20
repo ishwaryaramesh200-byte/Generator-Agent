@@ -1,0 +1,44 @@
+{
+    "generators": {
+        "department_id": [
+            {
+                "type": "dynamic",
+                "generatorOperationId": "support.Department.getDepartments",
+                "dataPath": "$.response.body:$.data[*].id",
+                "name": "departments",
+                "params": {
+                    "isEnabled": "true"
+                }
+            }
+        ],
+        "agent_id": [
+            {
+                "type": "dynamic",
+                "generatorOperationId": "support.Agent.getMyInfo",
+                "dataPath": "$.response.body:$.id",
+                "name": "agents"
+            }
+        ],
+        "contact_id": [
+            {
+                "type": "dynamic",
+                "generatorOperationId": "support.Contact.createContact",
+                "dataPath": "$.response.body:$.id",
+                "name": "contacts"
+            }
+        ],
+        "delete_ticket_id": [
+            {
+                "type": "dynamic",
+                "generatorOperationId": "support.Ticket.createTicket",
+                "dataPath": "$.response.body:$.id",
+                "name": "tickets",
+                "params": {
+                    "contactId": "$.contacts.response.body:$.id",
+                    "assigneeId": "$.agents.response.body:$.id",
+                    "departmentId": "$.departments.response.body:$.id"
+                }
+            }
+        ]
+    }
+}

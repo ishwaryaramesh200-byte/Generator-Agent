@@ -1,0 +1,61 @@
+{
+  "apis": {
+    "updateFeature": {
+      "422": {
+        "featureId": "#/generators/feature_id"
+      },
+      "200": {
+        "featureId": "#/generators/feature_id"
+      }
+    },
+    "deleteFeature": {
+      "422": {
+        "featureId": "#/generators/feature_id"
+      },
+      "204": {
+        "featureId": "#/generators/feature_id"
+      }
+    },
+    "getAllFeatures": {
+      "200": {
+        "featureName": "#/generators/feature_name",
+        "createdBy": "#/generators/features_createdBy",
+        "uuId": "#/generators/features_uuId"
+      }
+    },
+    "getFeature": {
+      "200": {
+        "featureId": "#/generators/feature_id"
+      }
+    }
+  },
+  "generators": {
+    "feature_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Feature.installNewFeature",
+        "dataPath": "$.response.body:$.id"
+      }
+    ],
+    "features_uuId": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Feature.installNewFeature",
+        "dataPath": "$.response.body:$.uuId",
+        "name": "features"
+      }
+    ],
+    "feature_name": [
+      {
+        "type": "reference",
+        "ref": "$features.response.body:$.featureName"
+      }
+    ],
+    "features_createdBy": [
+      {
+        "type": "reference",
+        "ref": "$features.response.body:$.createdBy"
+      }
+    ]
+  }
+}

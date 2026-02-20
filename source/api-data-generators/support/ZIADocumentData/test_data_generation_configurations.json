@@ -1,0 +1,38 @@
+{
+  "apis" : {
+    "storeDocumentDataList" : {
+      "422" : {
+        "data[*].values[*].order" : "#/generators/storeDocumentDataList_order",
+        "data[*].documentMetaId" : "#/generators/storeDocumentDataList_documentMetaId",
+        "data[*].values[*].content" : "#/generators/storeDocumentDataList_content"
+      },
+      "200" : {
+        "data[*].values[*].order" : "#/generators/storeDocumentDataList_order",
+        "data[*].documentMetaId" : "#/generators/storeDocumentDataList_documentMetaId",
+        "data[*].values[*].content" : "#/generators/storeDocumentDataList_content"
+      },
+      "204" : {
+        "data[*].values[*].order" : "#/generators/storeDocumentDataList_order",
+        "data[*].documentMetaId" : "#/generators/storeDocumentDataList_documentMetaId",
+        "data[*].values[*].content" : "#/generators/storeDocumentDataList_content"
+      }
+    }
+  },
+  "generators" : {
+    "storeDocumentDataList_documentMetaId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ZIADocumentData.getDocumentDataList",
+      "dataPath" : "$.response.body:$.data[*].documentMetaId"
+    } ],
+    "storeDocumentDataList_content" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ZIADocumentData.getDocumentData",
+      "dataPath" : "$.response.body:$.values[*].content"
+    } ],
+    "storeDocumentDataList_order" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ZIADocumentData.getDocumentData",
+      "dataPath" : "$.response.body:$.values[*].order"
+    } ]
+  }
+}

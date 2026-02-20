@@ -1,0 +1,26 @@
+{
+  "apis" : {
+    "createIMBulkAction" : {
+      "422" : {
+        "cvId" : "#/generators/createIMBulkAction_cvId",
+        "departmentId" : "#/generators/createIMBulkAction_departmentId"
+      },
+      "204" : {
+        "cvId" : "#/generators/createIMBulkAction_cvId",
+        "departmentId" : "#/generators/createIMBulkAction_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "createIMBulkAction_cvId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomView.getRecentView",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "createIMBulkAction_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

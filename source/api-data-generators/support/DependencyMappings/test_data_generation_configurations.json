@@ -1,0 +1,50 @@
+{
+  "apis": {
+    "getDependencyMappingsCount": {
+      "422": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id"
+      },
+      "200": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id"
+      }
+    },
+    "getAvailableDepMappings": {
+      "422": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id"
+      },
+      "200": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id"
+      }
+    },
+    "getDependentChildValues": {
+      "422": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id",
+        "parentFieldId": "../Field/test_data_generation_configurations.json#/generators/field_id",
+        "fieldId": "../Field/test_data_generation_configurations.json#/generators/field_id"
+      },
+      "200": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id",
+        "parentFieldId": "../Field/test_data_generation_configurations.json#/generators/field_id",
+        "fieldId": "../Field/test_data_generation_configurations.json#/generators/field_id"
+      },
+      "204": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id",
+        "parentFieldId": "../Field/test_data_generation_configurations.json#/generators/field_id",
+        "fieldId": "../Field/test_data_generation_configurations.json#/generators/field_id"
+      }
+    },
+    "getDependencyMappingsByLayoutId": {
+      "422": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id"
+      },
+      "200": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id"
+      },
+      "204": {
+        "layoutId": "../Layout/test_data_generation_configurations.json#/generators/layout_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

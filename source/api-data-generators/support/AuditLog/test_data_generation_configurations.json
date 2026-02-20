@@ -1,0 +1,58 @@
+{
+  "apis" : {
+    "getAuditLogDetails" : {
+      "422" : {
+        "historyId" : "#/generators/getAuditLogDetails_historyId"
+      },
+      "200" : {
+        "historyId" : "#/generators/getAuditLogDetails_historyId"
+      },
+      "204" : {
+        "historyId" : "#/generators/getAuditLogDetails_historyId"
+      }
+    },
+    "fetchAuditLogs" : {
+      "422" : {
+        "filter.modules[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.actorTypes[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.entityId" : "#/generators/fetchAuditLogs_entityId",
+        "filter.departmentIds[*]" : "#/generators/fetchAuditLogs_[*]"
+      },
+      "200" : {
+        "filter.modules[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.actorTypes[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.entityId" : "#/generators/fetchAuditLogs_entityId",
+        "filter.departmentIds[*]" : "#/generators/fetchAuditLogs_[*]"
+      },
+      "201" : {
+        "filter.modules[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.actorTypes[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.entityId" : "#/generators/fetchAuditLogs_entityId",
+        "filter.departmentIds[*]" : "#/generators/fetchAuditLogs_[*]"
+      },
+      "204" : {
+        "filter.modules[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.actorTypes[*]" : "#/generators/fetchAuditLogs_[*]",
+        "filter.entityId" : "#/generators/fetchAuditLogs_entityId",
+        "filter.departmentIds[*]" : "#/generators/fetchAuditLogs_[*]"
+      }
+    }
+  },
+  "generators" : {
+    "fetchAuditLogs_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Report.getReportModules",
+      "dataPath" : "$.response.body:$.modules"
+    } ],
+    "getAuditLogDetails_historyId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.AuditLog.fetchAuditLogs",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "fetchAuditLogs_entityId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.AuditLog.getAuditLogDetails",
+      "dataPath" : "$.response.body:$.data[*].entityId"
+    } ]
+  }
+}

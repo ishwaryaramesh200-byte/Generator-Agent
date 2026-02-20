@@ -1,0 +1,26 @@
+{
+  "apis" : {
+    "versionsListOfTranslation" : {
+      "422" : {
+        "locale" : "../Article/test_data_generation_configurations.json#/generators/locale",
+        "id" : "../Article/test_data_generation_configurations.json#/generators/article_id"
+      },
+      "200" : {
+        "locale" : "../Article/test_data_generation_configurations.json#/generators/locale",
+        "id" : "../Article/test_data_generation_configurations.json#/generators/article_id"
+      }
+    }
+  },
+  "generators" : {
+    "versionsListOfTranslation_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Article.addArticle",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "versionsListOfTranslation_locale" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.KBRootCategoryTranslation.addARootCategoryTranslation",
+      "dataPath" : "$.response.body:$.locale"
+    } ]
+  }
+}

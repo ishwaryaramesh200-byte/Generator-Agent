@@ -1,0 +1,22 @@
+{
+  "apis" : {
+    "getTemplateMessages" : {
+      "422" : {
+        "departmentId" : "#/generators/getTemplateMessages_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getTemplateMessages_departmentId"
+      },
+      "204" : {
+        "departmentId" : "#/generators/getTemplateMessages_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "getTemplateMessages_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

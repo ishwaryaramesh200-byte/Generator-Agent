@@ -1,0 +1,24 @@
+{
+  "apis" : {
+    "getFieldUpdates" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getFieldUpdate" : {
+      "200" : {
+        "id" : "#/generators/automation_field_update_id"
+      }
+    }
+  },
+  "generators" : {
+    "automation_field_update_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.AutomationFieldUpdates.getFieldUpdates",
+      "dataPath" : "$.response.body:$[*].id"
+    } ]
+  }
+}

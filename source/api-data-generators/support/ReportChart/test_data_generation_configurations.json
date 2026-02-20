@@ -1,0 +1,28 @@
+{
+  "apis" : {
+    "deleteChart" : {
+      "204" : {
+        "reportId" : "#/generators/deleteChart_reportId"
+      }
+    },
+    "getChartConfig" : {
+      "200" : {
+        "reportId" : "#/generators/getChartConfig_reportId"
+      }
+    }
+  },
+  "generators" : {
+    "getChartConfig_reportId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ReportFolder.getAllReports",
+      "dataPath" : "$.response.body:$.data[?((@.reportType == 'summary'))].id",
+      "params" : { }
+    } ],
+    "deleteChart_reportId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "ReportFolder.getAllReports",
+      "dataPath" : "$.response.body:$.data[?((@.reportType == 'summary'))].id",
+      "params" : { }
+    } ]
+  }
+}

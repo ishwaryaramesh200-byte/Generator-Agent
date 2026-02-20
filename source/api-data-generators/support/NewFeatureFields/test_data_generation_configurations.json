@@ -1,0 +1,19 @@
+{
+  "apis" : {
+    "getFeatureFields" : {
+      "422" : {
+        "departmentId" : "#/generators/getFeatureFields_departmentId"
+      },
+      "200" : {
+        "departmentId" : "#/generators/getFeatureFields_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "getFeatureFields_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

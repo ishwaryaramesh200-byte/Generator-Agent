@@ -1,0 +1,29 @@
+{
+  "apis": {
+    "reorderTabs": {
+      "422": {
+        "tabIds[*]": "#/generators/tab_id"
+      },
+      "200": {
+        "tabIds[*]": "#/generators/tab_id"
+      }
+    },
+    "renameTab": {
+      "422": {
+        "tabId": "#/generators/tab_id"
+      },
+      "200": {
+        "tabId": "#/generators/tab_id"
+      }
+    }
+  },
+  "generators": {
+    "tab_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Tab.getTabs",
+        "dataPath": "$.response.body:$.data[*].id"
+      }
+    ]
+  }
+}

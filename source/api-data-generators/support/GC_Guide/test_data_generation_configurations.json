@@ -1,0 +1,240 @@
+{
+  "apis" : {
+    "deleteGCGuide" : {
+      "422" : {
+        "guideId" : "#/generators/deleteGCGuide_guideId",
+        "deptId" : "#/generators/deleteGCGuide_deptId"
+      },
+      "204" : {
+        "guideId" : "#/generators/deleteGCGuide_guideId",
+        "deptId" : "#/generators/deleteGCGuide_deptId"
+      }
+    },
+    "getGCGuides" : {
+      "422" : {
+        "deptId" : "#/generators/getGCGuides_deptId",
+        "type" : "#/generators/getGCGuides_type"
+      },
+      "200" : {
+        "deptId" : "#/generators/getGCGuides_deptId",
+        "type" : "#/generators/getGCGuides_type"
+      }
+    },
+    "deleteTrashedFlows" : {
+      "422" : {
+        "deptId" : "#/generators/deleteTrashedFlows_deptId",
+        "flowIds[*]" : "#/generators/deleteTrashedFlows_[*]"
+      },
+      "204" : {
+        "deptId" : "#/generators/deleteTrashedFlows_deptId",
+        "flowIds[*]" : "#/generators/deleteTrashedFlows_[*]"
+      }
+    },
+    "addGCCloneGuide" : {
+      "422" : {
+        "guideId" : "#/generators/addGCCloneGuide_guideId",
+        "deptId" : "#/generators/addGCCloneGuide_deptId",
+        "toDeptId" : "#/generators/addGCCloneGuide_toDeptId"
+      },
+      "200" : {
+        "guideId" : "#/generators/addGCCloneGuide_guideId",
+        "deptId" : "#/generators/addGCCloneGuide_deptId",
+        "toDeptId" : "#/generators/addGCCloneGuide_toDeptId"
+      }
+    },
+    "getGCGuide" : {
+      "422" : {
+        "guideId" : "#/generators/getGCGuide_guideId",
+        "deptId" : "#/generators/getGCGuide_deptId"
+      },
+      "200" : {
+        "guideId" : "#/generators/getGCGuide_guideId",
+        "deptId" : "#/generators/getGCGuide_deptId"
+      }
+    },
+    "updateGCGuideStatus" : {
+      "422" : {
+        "guideId" : "#/generators/updateGCGuideStatus_guideId",
+        "deptId" : "#/generators/updateGCGuideStatus_deptId"
+      },
+      "200" : {
+        "guideId" : "#/generators/updateGCGuideStatus_guideId",
+        "deptId" : "#/generators/updateGCGuideStatus_deptId"
+      }
+    },
+    "addGCGuide" : {
+      "422" : {
+        "deptId" : "#/generators/addGCGuide_deptId"
+      },
+      "200" : {
+        "deptId" : "#/generators/addGCGuide_deptId"
+      }
+    },
+    "updateGCGuide" : {
+      "422" : {
+        "guideId" : "#/generators/updateGCGuide_guideId",
+        "deptId" : "#/generators/updateGCGuide_deptId"
+      },
+      "200" : {
+        "guideId" : "#/generators/updateGCGuide_guideId",
+        "deptId" : "#/generators/updateGCGuide_deptId"
+      }
+    },
+    "getCount" : {
+      "422" : {
+        "deptId" : "#/generators/getCount_deptId"
+      },
+      "200" : {
+        "deptId" : "#/generators/getCount_deptId"
+      }
+    },
+    "restoreTrashedFlows" : {
+      "422" : {
+        "deptId" : "#/generators/restoreTrashedFlows_deptId",
+        "flowIds[*]" : "#/generators/restoreTrashedFlows_[*]"
+      },
+      "200" : {
+        "deptId" : "#/generators/restoreTrashedFlows_deptId",
+        "flowIds[*]" : "#/generators/restoreTrashedFlows_[*]"
+      }
+    },
+    "getGCGuidesByIds" : {
+      "422" : {
+        "deptId" : "#/generators/getGCGuidesByIds_deptId",
+        "guideIds[*]" : "#/generators/getGCGuidesByIds_[*]"
+      },
+      "200" : {
+        "deptId" : "#/generators/getGCGuidesByIds_deptId",
+        "guideIds[*]" : "#/generators/getGCGuidesByIds_[*]"
+      }
+    },
+    "historyGCGuide" : {
+      "422" : {
+        "guideId" : "#/generators/historyGCGuide_guideId",
+        "deptId" : "#/generators/historyGCGuide_deptId"
+      },
+      "200" : {
+        "guideId" : "#/generators/historyGCGuide_guideId",
+        "deptId" : "#/generators/historyGCGuide_deptId"
+      }
+    }
+  },
+  "generators" : {
+    "addGCCloneGuide_guideId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "GC_Guide.addGCDefaultGuide",
+      "dataPath" : "$.response.body:$.guideId",
+      "params" : { }
+    } ],
+    "deleteGCGuide_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "restoreTrashedFlows_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "addGCCloneGuide_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "deleteGCGuide_guideId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "updateGCGuide_guideId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "getGCGuide_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getGCGuide_guideId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "getGCGuidesByIds_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "historyGCGuide_guideId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "getGCGuides_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCCloneGuide",
+      "dataPath" : "$.response.body:$.guideType"
+    } ],
+    "updateGCGuideStatus_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateGCGuide_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getCount_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getGCGuides_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addGCGuide_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "historyGCGuide_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "deleteTrashedFlows_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "updateGCGuideStatus_guideId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "getGCGuidesByIds_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "deleteTrashedFlows_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "restoreTrashedFlows_deptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "addGCCloneGuide_toDeptId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

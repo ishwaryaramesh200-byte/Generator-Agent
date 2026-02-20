@@ -1,0 +1,21 @@
+{
+  "apis" : {
+    "updateSkillConfiguration" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getSkillConfiguration" : {
+      "422" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : null
+}

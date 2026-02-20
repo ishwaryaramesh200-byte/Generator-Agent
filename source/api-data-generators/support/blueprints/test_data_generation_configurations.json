@@ -1,0 +1,652 @@
+{
+  "apis" : {
+    "getAllBluePrints" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "reorderBlueprints" : {
+      "422" : {
+        "ids[*]" : "#/generators/reorderBlueprints_[*]"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/reorderBlueprints_[*]"
+      },
+      "204" : {
+        "ids[*]" : "#/generators/reorderBlueprints_[*]"
+      }
+    },
+    "getAppliedBlueprintDetails" : {
+      "422" : {
+        "ticket_id" : "#/generators/getAppliedBlueprintDetails_ticket_id"
+      },
+      "200" : {
+        "ticket_id" : "#/generators/getAppliedBlueprintDetails_ticket_id"
+      },
+      "204" : {
+        "ticket_id" : "#/generators/getAppliedBlueprintDetails_ticket_id"
+      }
+    },
+    "updateBlueprint" : {
+      "422" : {
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].condition" : "#/generators/updateBlueprint_condition",
+        "chartData.connectionDetails[*].fromUuid" : "#/generators/updateBlueprint_fromUuid",
+        "orderNumber" : "#/generators/updateBlueprint_orderNumber",
+        "transitions[*].during[*].fieldUpdates.fieldId" : "#/generators/updateBlueprint_fieldId",
+        "transitions[*].after.task.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.agentIds[*]" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "transitions[*].after.alert.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldType" : "#/generators/updateBlueprint_fieldType",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].condition" : "#/generators/updateBlueprint_condition",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.teamIds[*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.connectionDetails[*].isCommTrans" : "#/generators/updateBlueprint_isCommTrans",
+        "chartData.stateDetails[*].lastModifiedStateName" : "#/generators/updateBlueprint_lastModifiedStateName",
+        "transitions[*].before.accessors.owners.teamIds[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].tableName" : "#/generators/updateBlueprint_tableName",
+        "states[*].escalations[*].escalationRecipients.otherRecpts[*]" : "#/generators/updateBlueprint_[*]",
+        "connections[*].fromState.id" : "#/generators/updateBlueprint_id",
+        "draft" : "#/generators/updateBlueprint_draft",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].staticFieldName" : "#/generators/updateBlueprint_staticFieldName",
+        "id" : "#/generators/updateBlueprint_id",
+        "fieldId" : "#/generators/updateBlueprint_fieldId",
+        "states[*].name" : "#/generators/updateBlueprint_name",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].criteriaValues[*].value" : "#/generators/updateBlueprint_value",
+        "chartData.canvasPosition.top" : "#/generators/updateBlueprint_top",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.pattern" : "#/generators/updateBlueprint_pattern",
+        "connections[*].toState.name" : "#/generators/updateBlueprint_name",
+        "states[*].escalations[*].templateId" : "#/generators/updateBlueprint_templateId",
+        "states[*].escalations[*].escalationLevel" : "#/generators/updateBlueprint_escalationLevel",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.agentIds[*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.stateDetails[*].slaTime" : "#/generators/updateBlueprint_slaTime",
+        "strictModeConfig.actions[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.connectionDetails[*].toUuid" : "#/generators/updateBlueprint_toUuid",
+        "chartData.stateDetails[*].position.left" : "#/generators/updateBlueprint_left",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldModule" : "#/generators/updateBlueprint_fieldModule",
+        "states[*].businessHrId" : "#/generators/updateBlueprint_businessHrId",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldName" : "#/generators/updateBlueprint_fieldName",
+        "modifiedTimeInMillis" : "#/generators/updateBlueprint_modifiedTimeInMillis",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].i18nLabel" : "#/generators/updateBlueprint_i18nLabel",
+        "states[*].escalations[*].escalationRecipients.teamIds[*]" : "#/generators/updateBlueprint_[*]",
+        "strictModeConfig.strictModeType" : "#/generators/updateBlueprint_strictModeType",
+        "chartData.canvasPosition.left" : "#/generators/updateBlueprint_left",
+        "chartData.connectionDetails[*].isAuto" : "#/generators/updateBlueprint_isAuto",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldName" : "#/generators/updateBlueprint_fieldName",
+        "chartData.stateDetails[*].position.top" : "#/generators/updateBlueprint_top",
+        "layout.id" : "#/generators/updateBlueprint_id",
+        "transitions[*].after.fieldUpdate.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldModule" : "#/generators/updateBlueprint_fieldModule",
+        "states[*].escalations[*].escalationRecipients.subordinateIds[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].criteriaValues[*].displayValue" : "#/generators/updateBlueprint_displayValue",
+        "transitions[*].after.customFunction.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "modifiedBy" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "createdTimeInMillis" : "#/generators/updateBlueprint_createdTimeInMillis",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].displayValue[*][*][*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.accessors.owners.otherRecpts[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/updateBlueprint_[*]",
+        "states[*].timeInMins" : "#/generators/updateBlueprint_timeInMins",
+        "connections[*].toState.id" : "#/generators/updateBlueprint_id",
+        "chartData.stateDetails[*].stateName" : "#/generators/updateBlueprint_stateName",
+        "layoutId" : "#/generators/updateBlueprint_layoutId",
+        "transitions[*].before.criteriaDetails.criteria.pattern" : "#/generators/updateBlueprint_pattern",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].columnName" : "#/generators/updateBlueprint_columnName",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].displayValue[*][*]" : "#/generators/updateBlueprint_[*]",
+        "strictModeConfig.fieldIds[*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.stateDetails[*].stateId" : "#/generators/updateBlueprint_stateId",
+        "states[*].id" : "#/generators/updateBlueprint_id",
+        "createdBy" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "connections[*].fromState.name" : "#/generators/updateBlueprint_name",
+        "transitions[*].before.accessors.owners.agentIds[*]" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "states[*].escalations[*].whenToEscalate" : "#/generators/updateBlueprint_whenToEscalate",
+        "states[*].transitionsOrder[*]" : "#/generators/updateBlueprint_[*]",
+        "states[*].type" : "#/generators/updateBlueprint_type",
+        "states[*].escalations[*].escalationRecipients.roleIds[*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.stateDetails[*].displayName" : "#/generators/updateBlueprint_displayName",
+        "layout.name" : "#/generators/updateBlueprint_name"
+      },
+      "200" : {
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].condition" : "#/generators/updateBlueprint_condition",
+        "chartData.connectionDetails[*].fromUuid" : "#/generators/updateBlueprint_fromUuid",
+        "orderNumber" : "#/generators/updateBlueprint_orderNumber",
+        "transitions[*].during[*].fieldUpdates.fieldId" : "#/generators/updateBlueprint_fieldId",
+        "transitions[*].after.task.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.agentIds[*]" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "transitions[*].after.alert.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldType" : "#/generators/updateBlueprint_fieldType",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].condition" : "#/generators/updateBlueprint_condition",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.teamIds[*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.connectionDetails[*].isCommTrans" : "#/generators/updateBlueprint_isCommTrans",
+        "chartData.stateDetails[*].lastModifiedStateName" : "#/generators/updateBlueprint_lastModifiedStateName",
+        "transitions[*].before.accessors.owners.teamIds[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].tableName" : "#/generators/updateBlueprint_tableName",
+        "states[*].escalations[*].escalationRecipients.otherRecpts[*]" : "#/generators/updateBlueprint_[*]",
+        "connections[*].fromState.id" : "#/generators/updateBlueprint_id",
+        "draft" : "#/generators/updateBlueprint_draft",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].staticFieldName" : "#/generators/updateBlueprint_staticFieldName",
+        "id" : "#/generators/updateBlueprint_id",
+        "fieldId" : "#/generators/updateBlueprint_fieldId",
+        "states[*].name" : "#/generators/updateBlueprint_name",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].criteriaValues[*].value" : "#/generators/updateBlueprint_value",
+        "chartData.canvasPosition.top" : "#/generators/updateBlueprint_top",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.pattern" : "#/generators/updateBlueprint_pattern",
+        "connections[*].toState.name" : "#/generators/updateBlueprint_name",
+        "states[*].escalations[*].templateId" : "#/generators/updateBlueprint_templateId",
+        "states[*].escalations[*].escalationLevel" : "#/generators/updateBlueprint_escalationLevel",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.agentIds[*]" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "chartData.stateDetails[*].slaTime" : "#/generators/updateBlueprint_slaTime",
+        "strictModeConfig.actions[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.connectionDetails[*].toUuid" : "#/generators/updateBlueprint_toUuid",
+        "chartData.stateDetails[*].position.left" : "#/generators/updateBlueprint_left",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldModule" : "#/generators/updateBlueprint_fieldModule",
+        "states[*].businessHrId" : "#/generators/updateBlueprint_businessHrId",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldName" : "#/generators/updateBlueprint_fieldName",
+        "modifiedTimeInMillis" : "#/generators/updateBlueprint_modifiedTimeInMillis",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].i18nLabel" : "#/generators/updateBlueprint_i18nLabel",
+        "states[*].escalations[*].escalationRecipients.teamIds[*]" : "#/generators/updateBlueprint_[*]",
+        "strictModeConfig.strictModeType" : "#/generators/updateBlueprint_strictModeType",
+        "chartData.canvasPosition.left" : "#/generators/updateBlueprint_left",
+        "chartData.connectionDetails[*].isAuto" : "#/generators/updateBlueprint_isAuto",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldName" : "#/generators/updateBlueprint_fieldName",
+        "chartData.stateDetails[*].position.top" : "#/generators/updateBlueprint_top",
+        "layout.id" : "#/generators/updateBlueprint_id",
+        "transitions[*].after.fieldUpdate.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldModule" : "#/generators/updateBlueprint_fieldModule",
+        "states[*].escalations[*].escalationRecipients.subordinateIds[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].criteriaValues[*].displayValue" : "#/generators/updateBlueprint_displayValue",
+        "transitions[*].after.customFunction.ids[*]" : "#/generators/updateBlueprint_[*]",
+        "modifiedBy" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "createdTimeInMillis" : "#/generators/updateBlueprint_createdTimeInMillis",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].displayValue[*][*][*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].before.accessors.owners.otherRecpts[*]" : "#/generators/updateBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/updateBlueprint_[*]",
+        "states[*].timeInMins" : "#/generators/updateBlueprint_timeInMins",
+        "connections[*].toState.id" : "#/generators/updateBlueprint_id",
+        "chartData.stateDetails[*].stateName" : "#/generators/updateBlueprint_stateName",
+        "layoutId" : "#/generators/updateBlueprint_layoutId",
+        "transitions[*].before.criteriaDetails.criteria.pattern" : "#/generators/updateBlueprint_pattern",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].columnName" : "#/generators/updateBlueprint_columnName",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].displayValue[*][*]" : "#/generators/updateBlueprint_[*]",
+        "strictModeConfig.fieldIds[*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.stateDetails[*].stateId" : "#/generators/updateBlueprint_stateId",
+        "states[*].id" : "#/generators/updateBlueprint_id",
+        "createdBy" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "connections[*].fromState.name" : "#/generators/updateBlueprint_name",
+        "transitions[*].before.accessors.owners.agentIds[*]" : "../../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "states[*].escalations[*].whenToEscalate" : "#/generators/updateBlueprint_whenToEscalate",
+        "states[*].transitionsOrder[*]" : "#/generators/updateBlueprint_[*]",
+        "states[*].type" : "#/generators/updateBlueprint_type",
+        "states[*].escalations[*].escalationRecipients.roleIds[*]" : "#/generators/updateBlueprint_[*]",
+        "chartData.stateDetails[*].displayName" : "#/generators/updateBlueprint_displayName",
+        "layout.name" : "#/generators/updateBlueprint_name"
+      }
+    },
+    "checkIfAppliedToEntity" : {
+      "422" : {
+        "blueprint_id" : "#/generators/getBlueprint_id"
+      },
+      "200" : {
+        "blueprint_id" : "#/generators/getBlueprint_id"
+      }
+    },
+    "createBlueprint" : {
+      "422" : {
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].condition" : "#/generators/createBlueprint_condition",
+        "transitions[*].during[*].fieldUpdates.fieldId" : "#/generators/createBlueprint_fieldId",
+        "transitions[*].after.task.ids[*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.agentIds[*]" : "#/generators/createBlueprint_[*]",
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "transitions[*].after.alert.ids[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].condition" : "#/generators/createBlueprint_condition",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.teamIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldName" : "#/generators/createBlueprint_fieldName",
+        "transitions[*].before.accessors.owners.teamIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].after.fieldUpdate.ids[*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.otherRecpts[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldModule" : "#/generators/createBlueprint_fieldModule",
+        "states[*].escalations[*].escalationRecipients.subordinateIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].after.customFunction.ids[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "fieldId" : "#/generators/createBlueprint_fieldId",
+        "states[*].name" : "#/generators/createBlueprint_name",
+        "transitions[*].before.accessors.owners.otherRecpts[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.pattern" : "#/generators/createBlueprint_pattern",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].templateId" : "#/generators/createBlueprint_templateId",
+        "states[*].escalations[*].escalationLevel" : "#/generators/createBlueprint_escalationLevel",
+        "states[*].timeInMins" : "#/generators/createBlueprint_timeInMins",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.agentIds[*]" : "#/generators/createBlueprint_[*]",
+        "strictModeConfig.actions[*]" : "#/generators/createBlueprint_[*]",
+        "layoutId" : "#/generators/createBlueprint_layoutId",
+        "transitions[*].before.criteriaDetails.criteria.pattern" : "#/generators/createBlueprint_pattern",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*]" : "#/generators/createBlueprint_[*]",
+        "strictModeConfig.fieldIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldModule" : "#/generators/createBlueprint_fieldModule",
+        "states[*].businessHrId" : "#/generators/createBlueprint_businessHrId",
+        "transitions[*].before.accessors.owners.agentIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].whenToEscalate" : "#/generators/createBlueprint_whenToEscalate",
+        "states[*].transitionsOrder[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldName" : "#/generators/createBlueprint_fieldName",
+        "states[*].type" : "#/generators/createBlueprint_type",
+        "states[*].escalations[*].escalationRecipients.roleIds[*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.teamIds[*]" : "#/generators/createBlueprint_[*]",
+        "strictModeConfig.strictModeType" : "#/generators/createBlueprint_strictModeType"
+      },
+      "200" : {
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].condition" : "#/generators/createBlueprint_condition",
+        "transitions[*].during[*].fieldUpdates.fieldId" : "#/generators/createBlueprint_fieldId",
+        "transitions[*].after.task.ids[*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.agentIds[*]" : "#/generators/createBlueprint_[*]",
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "transitions[*].after.alert.ids[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].condition" : "#/generators/createBlueprint_condition",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.teamIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldName" : "#/generators/createBlueprint_fieldName",
+        "transitions[*].before.accessors.owners.teamIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].after.fieldUpdate.ids[*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.otherRecpts[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldModule" : "#/generators/createBlueprint_fieldModule",
+        "states[*].escalations[*].escalationRecipients.subordinateIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].after.customFunction.ids[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "fieldId" : "#/generators/createBlueprint_fieldId",
+        "states[*].name" : "#/generators/createBlueprint_name",
+        "transitions[*].before.accessors.owners.otherRecpts[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.pattern" : "#/generators/createBlueprint_pattern",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].templateId" : "#/generators/createBlueprint_templateId",
+        "states[*].escalations[*].escalationLevel" : "#/generators/createBlueprint_escalationLevel",
+        "states[*].timeInMins" : "#/generators/createBlueprint_timeInMins",
+        "transitions[*].before.accessors.sharedDeptAccessors[*].accessors.agentIds[*]" : "#/generators/createBlueprint_[*]",
+        "strictModeConfig.actions[*]" : "#/generators/createBlueprint_[*]",
+        "layoutId" : "#/generators/createBlueprint_layoutId",
+        "transitions[*].before.criteriaDetails.criteria.pattern" : "#/generators/createBlueprint_pattern",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].value[*][*]" : "#/generators/createBlueprint_[*]",
+        "strictModeConfig.fieldIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].during[*].fieldUpdates.criteria.fieldConditions[*].fieldModule" : "#/generators/createBlueprint_fieldModule",
+        "states[*].businessHrId" : "#/generators/createBlueprint_businessHrId",
+        "transitions[*].before.accessors.owners.agentIds[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].value[*][*][*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].whenToEscalate" : "#/generators/createBlueprint_whenToEscalate",
+        "states[*].transitionsOrder[*]" : "#/generators/createBlueprint_[*]",
+        "transitions[*].before.criteriaDetails.criteria.fieldConditions[*].fieldName" : "#/generators/createBlueprint_fieldName",
+        "states[*].type" : "#/generators/createBlueprint_type",
+        "states[*].escalations[*].escalationRecipients.roleIds[*]" : "#/generators/createBlueprint_[*]",
+        "states[*].escalations[*].escalationRecipients.teamIds[*]" : "#/generators/createBlueprint_[*]",
+        "strictModeConfig.strictModeType" : "#/generators/createBlueprint_strictModeType"
+      }
+    },
+    "revoke" : {
+      "422" : {
+        "blueprint_id" : "#/generators/getBlueprint_id"
+      },
+      "200" : {
+        "blueprint_id" : "#/generators/getBlueprint_id"
+      }
+    },
+    "revokeMany" : {
+      "422" : {
+        "ids[*]" : "#/generators/revokeMany_[*]"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/revokeMany_[*]"
+      }
+    },
+    "revokeBlueprint" : {
+      "422" : {
+        "ticket_id" : "#/generators/revokeBlueprint_ticket_id"
+      },
+      "200" : {
+        "ticket_id" : "#/generators/revokeBlueprint_ticket_id"
+      }
+    },
+    "getBlueprintDetails" : {
+      "422" : {
+        "blueprint_id" : "#/generators/getBlueprint_id"
+      },
+      "200" : {
+        "blueprint_id" : "#/generators/getBlueprint_id"
+      }
+    },
+    "deleteBlueprint" : {
+      "422" : {
+        "blueprint_id" : "#/generators/deleteBlueprint_blueprint_id"
+      },
+      "200" : {
+        "blueprint_id" : "#/generators/deleteBlueprint_blueprint_id"
+      },
+      "204" : {
+        "blueprint_id" : "#/generators/deleteBlueprint_blueprint_id"
+      }
+    }
+  },
+  "generators" : {
+    "updateBlueprint_top" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.canvasPosition.top"
+    } ],
+    "createBlueprint_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "createBlueprint_whenToEscalate" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.states[*].escalations[*].whenToEscalate"
+    } ],
+    "updateBlueprint_displayName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.stateDetails[*].displayName"
+    } ],
+    "updateBlueprint_createdTimeInMillis" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.createdTimeInMillis"
+    } ],
+    "updateBlueprint_draft" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.draft"
+    } ],
+    "updateBlueprint_tableName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.transitions[*].before.criteriaDetails.criteria.fieldConditions[*].tableName"
+    } ],
+    "updateBlueprint_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateBlueprint_slaTime" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.stateDetails[*].slaTime"
+    } ],
+    "updateBlueprint_condition" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.criteria.fieldConditions[*].condition"
+    } ],
+    "updateBlueprint_toUuid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.connectionDetails[*].toUuid"
+    } ],
+    "createBlueprint_condition" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.criteria.fieldConditions[*].condition"
+    } ],
+    "updateBlueprint_fieldType" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getDefaultViewFields",
+      "dataPath" : "$.response.body:$.data[*].type"
+    } ],
+    "createBlueprint_fieldId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getFieldPermissionsForProfile",
+      "dataPath" : "$.response.body:$.data[*].fieldId"
+    } ],
+    "updateBlueprint_whenToEscalate" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.states[*].escalations[*].whenToEscalate"
+    } ],
+    "updateBlueprint_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.states[*].type"
+    } ],
+    "updateBlueprint_modifiedTimeInMillis" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.modifiedTimeInMillis"
+    } ],
+    "updateBlueprint_staticFieldName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.massUpdateFields",
+      "dataPath" : "$.response.body:$.data[*].name"
+    } ],
+    "getAppliedBlueprintDetails_ticket_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateBlueprint_columnName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.transitions[*].before.criteriaDetails.criteria.fieldConditions[*].columnName"
+    } ],
+    "updateBlueprint_strictModeType" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.strictModeConfig.strictModeType"
+    } ],
+    "updateBlueprint_i18nLabel" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Criteria.getCustomViewCriteria",
+      "dataPath" : "$.response.body:$.criteriaFields[*].fieldDetails[*].i18NLabel"
+    } ],
+    "updateBlueprint_templateId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.EmailTemplates.addTemplate",
+      "dataPath" : "$.response.body:$.templateId"
+    } ],
+    "createBlueprint_strictModeType" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.strictModeConfig.strictModeType"
+    } ],
+    "createBlueprint_pattern" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.criteria.pattern"
+    } ],
+    "createBlueprint_type" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.states[*].type"
+    } ],
+    "createBlueprint_timeInMins" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.states[*].timeInMins"
+    } ],
+    "revoke_blueprint_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "createBlueprint_escalationLevel" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.states[*].escalations[*].escalationLevel"
+    } ],
+    "updateBlueprint_displayValue" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.transitions[*].before.criteriaDetails.criteria.fieldConditions[*].criteriaValues[*].displayValue"
+    } ],
+    "updateBlueprint_escalationLevel" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.states[*].escalations[*].escalationLevel"
+    } ],
+    "updateBlueprint_fieldModule" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.criteria.fieldConditions[*].fieldModule"
+    } ],
+    "updateBlueprint_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getFieldPermissionsForProfile",
+      "dataPath" : "$.response.body:$.data[*].fieldId"
+    } ],
+    "updateBlueprint_businessHrId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.BusinessHour.createBusinessHour",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateBlueprint_orderNumber" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.orderNumber"
+    } ],
+    "updateBlueprint_pattern" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.criteria.pattern"
+    } ],
+    "updateBlueprint_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].layoutName"
+    } ],
+    "reorderBlueprints_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateBlueprint_fieldName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.criteria.fieldConditions[*].fieldName"
+    } ],
+    "updateBlueprint_isAuto" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.connectionDetails[*].isAuto"
+    } ],
+    "updateBlueprint_lastModifiedStateName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.stateDetails[*].lastModifiedStateName"
+    } ],
+    "createBlueprint_fieldName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.criteria.fieldConditions[*].fieldName"
+    } ],
+    "updateBlueprint_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "createBlueprint_fieldModule" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.criteria.fieldConditions[*].fieldModule"
+    } ],
+    "revokeMany_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateBlueprint_fieldId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getFieldPermissionsForProfile",
+      "dataPath" : "$.response.body:$.data[*].fieldId"
+    } ],
+    "updateBlueprint_value" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.transitions[*].before.criteriaDetails.criteria.fieldConditions[*].criteriaValues[*].value"
+    } ],
+    "createBlueprint_businessHrId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.BusinessHour.createBusinessHour",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "createBlueprint_templateId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.EmailTemplates.addTemplate",
+      "dataPath" : "$.response.body:$.templateId"
+    } ],
+    "checkIfAppliedToEntity_blueprint_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deleteBlueprint_blueprint_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateBlueprint_fromUuid" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.connectionDetails[*].fromUuid"
+    } ],
+    "updateBlueprint_stateId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.states[*].id"
+    } ],
+    "createBlueprint_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Field.getFieldPermissionsForProfile",
+      "dataPath" : "$.response.body:$.data[*].fieldId"
+    } ],
+    "updateBlueprint_isCommTrans" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.connectionDetails[*].isCommTrans"
+    } ],
+    "updateBlueprint_stateName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.states[*].name"
+    } ],
+    "updateBlueprint_timeInMins" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.states[*].timeInMins"
+    } ],
+    "updateBlueprint_left" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.chartData.canvasPosition.left"
+    } ],
+    "createBlueprint_name" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprintDrafts.createDraft",
+      "dataPath" : "$.response.body:$.states[*].name"
+    } ],
+    "revokeBlueprint_ticket_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.listOfAssociatedRequest",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getBlueprintDetails_blueprint_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.createBlueprint",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getBlueprint_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.blueprints.getAllBluePrints",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

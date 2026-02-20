@@ -1,0 +1,14 @@
+{
+  "apis": {
+    "getMyPendingApprovals": {
+      "422": {
+        "department": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "department": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators": {
+  }
+}

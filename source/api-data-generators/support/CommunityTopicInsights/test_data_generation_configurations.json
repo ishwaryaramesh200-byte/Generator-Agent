@@ -1,0 +1,32 @@
+{
+  "apis" : {
+    "getTopicViewedUserList" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicViewedUserList_topicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicViewedUserList_topicId"
+      }
+    },
+    "getTopicViewUsersCount" : {
+      "422" : {
+        "topicId" : "#/generators/getTopicViewUsersCount_topicId"
+      },
+      "200" : {
+        "topicId" : "#/generators/getTopicViewUsersCount_topicId"
+      }
+    }
+  },
+  "generators" : {
+    "getTopicViewUsersCount_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getTopicViewedUserList_topicId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CommunityTopic.addTopicFromSupport",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

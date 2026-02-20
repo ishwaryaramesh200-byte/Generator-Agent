@@ -1,0 +1,45 @@
+{
+  "apis" : {
+    "getTimeEntryForContact" : {
+      "200" : {
+        "contactId" : "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "contactTimeEntryId" : "#/generators/contact_time_entry_id"
+      }
+    },
+    "getSummationOfTimeEntryForContact" : {
+      "200" : {
+        "contactId" : "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getTimeEntryByContactId" : {
+      "200" : {
+        "contactId" : "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "createdTimeRange" : "../Common/test_data_generation_configurations.json#/generators/time_range",
+        "modifiedTimeRange" : "../Common/test_data_generation_configurations.json#/generators/time_range"
+      }
+    }
+  },
+  "generators" : {
+    "contact_time_entry_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Ticket.createTicket",
+        "dataPath": "$.input.body:$.contactId",
+        "name": "tickets",
+        "params": {
+          "accountId": "$.input.path:$.accountId"
+        }
+      },
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.ContactTimeEntry.getTimeEntryByContactId",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "departmentId": "$tickets.response.body:$.departmentId"
+        }
+      }
+    ]
+  }
+}

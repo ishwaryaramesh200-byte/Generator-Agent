@@ -1,0 +1,265 @@
+{
+  "apis": {
+    "associateProductsWithAccount": {
+      "422": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "../Product/test_data_generation_configurations.json#/generators/product_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "../Product/test_data_generation_configurations.json#/generators/product_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "mergeAccounts": {
+      "422": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "#/generators/account_id",
+        "source.email": "#/generators/merge_account_source_id",
+        "source.city": "#/generators/merge_account_source_id",
+        "source.fax": "#/generators/merge_account_source_id",
+        "source.street": "#/generators/merge_account_source_id",
+        "source.state": "#/generators/merge_account_source_id",
+        "source.country": "#/generators/merge_account_source_id",
+        "source.description": "#/generators/merge_account_source_id",
+        "source.annualrevenue": "#/generators/merge_account_source_id",
+        "source.industry": "#/generators/merge_account_source_id",
+        "source.website": "#/generators/merge_account_source_id",
+        "source.code": "#/generators/merge_account_source_id",
+        "source.phone": "#/generators/merge_account_source_id",
+        "source.customFields.patternProperties.value": "#/generators/merge_account_source_id",
+        "source.cf.patternProperties.value": "#/generators/merge_account_source_id"
+      },
+      "200": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "#/generators/account_id",
+        "source.email": "#/generators/merge_account_source_id",
+        "source.city": "#/generators/merge_account_source_id",
+        "source.fax": "#/generators/merge_account_source_id",
+        "source.street": "#/generators/merge_account_source_id",
+        "source.state": "#/generators/merge_account_source_id",
+        "source.country": "#/generators/merge_account_source_id",
+        "source.description": "#/generators/merge_account_source_id",
+        "source.annualrevenue": "#/generators/merge_account_source_id",
+        "source.industry": "#/generators/merge_account_source_id",
+        "source.website": "#/generators/merge_account_source_id",
+        "source.code": "#/generators/merge_account_source_id",
+        "source.phone": "#/generators/merge_account_source_id",
+        "source.customFields.patternProperties.value": "#/generators/merge_account_source_id",
+        "source.cf.patternProperties.value": "#/generators/merge_account_source_id"
+      }
+    },
+    "getAccountsUnderContact": {
+      "200": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      },
+      "204": {
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      }
+    },
+    "getStatistics": {
+      "422": {
+        "accountId": "#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "timeRange": "#/generators/time_range"
+      },
+      "200": {
+        "accountId": "#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "timeRange": "#/generators/time_range"
+      }
+    },
+    "getTicketsByAccount": {
+      "200": {
+        "accountId": "#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204": {
+        "accountId": "#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "dissociateContactsWithAccount": {
+      "422": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "#/generators/account_associate_contact_ids"
+      },
+      "200": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "#/generators/account_associate_contact_ids"
+      }
+    },
+    "createAccount": {
+      "422": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "customFields": "#/generators/account_cf",
+        "cf": "#/generators/account_cf"
+      },
+      "200": {
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "customFields": "#/generators/account_cf",
+        "cf": "#/generators/account_cf"
+      }
+    },
+    "getContractsForAccount": {
+      "200": {
+        "accountId": "#/generators/account_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "associateContactsWithAccount": {
+      "422": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      },
+      "200": {
+        "accountId": "#/generators/account_id",
+        "ids[*]": "../Contact/test_data_generation_configurations.json#/generators/contact_id"
+      }
+    },
+    "updateAccount": {
+      "422": {
+        "accountId": "#/generators/account_id",
+        "cf": "#/generators/account_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "customFields": "#/generators/account_cf"
+      },
+      "200": {
+        "accountId": "#/generators/account_id",
+        "cf": "#/generators/account_cf",
+        "ownerId": "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "customFields": "#/generators/account_cf"
+      }
+    },
+    "getTicketHistory": {
+      "422": {
+        "accountId": "#/generators/account_id",
+        "agentId": "../Agent/test_data_generation_configurations#/generators/agent_id",
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200": {
+        "accountId": "#/generators/account_id",
+        "agentId": "../Agent/test_data_generation_configurations#/generators/agent_id",
+        "contactId": "../Contact/test_data_generation_configurations.json#/generators/contact_id",
+        "departmentId": "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getAccountsCount": {
+      "422": {
+        "viewId": "#/generators/account_custom_view_id"
+      },
+      "200": {
+        "viewId": "#/generators/account_custom_view_id"
+      }
+    },
+    "deleteAccounts": {
+      "422": {
+        "accountIds[*]": "#/generators/account_id"
+      },
+      "204": {
+        "accountIds[*]": "#/generators/account_id"
+      }
+    },
+    "getAccountsUnderProduct": {
+      "200": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      },
+      "204": {
+        "productId": "../Product/test_data_generation_configurations.json#/generators/product_id"
+      }
+    },
+    "updateMany": {
+      "422": {
+        "ids[*]": "#/generators/account_id",
+        "fieldName": "#/generators/update_many_field_name"
+      },
+      "200": {
+        "ids[*]": "#/generators/account_id",
+        "fieldName": "#/generators/update_many_field_name"
+      }
+    },
+    "getAccount": {
+      "200": {
+        "accountId": "#/generators/account_id"
+      }
+    },
+    "moveAccountsToTrash": {
+      "422": {
+        "accountIds[*]": "#/generators/account_id"
+      },
+      "200": {
+        "accountIds[*]": "#/generators/account_id"
+      },
+      "204": {
+        "accountIds[*]": "#/generators/account_id"
+      }
+    }
+  },
+  "generators": {
+    "account_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Account.createAccount",
+        "dataPath": "$.response.body:$.id",
+        "name": "accounts"
+      }
+    ],
+    "account_custom_view_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.CustomView.getViews",
+        "dataPath": "$.response.body:$.data[*].id",
+        "params": {
+          "module": "accounts"
+        }
+      }
+    ],
+    "account_associate_contact_ids": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.Account.associateContactsWithAccount",
+        "dataPath": "$.response.body:$.results[?(@.success == true)].id",
+        "params": {
+          "accountId": "$accounts.response.body:$.id"
+        }
+      }
+    ],
+    "account_cf": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+        "inputs": {
+          "moduleName": "Account"
+        }
+      }
+    ],
+    "merge_account_source_id": [
+      {
+        "type": "reference",
+        "ref": "$.input.body:$.ids[0]"
+      }
+    ],
+    "time_range": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.generateDateTimeRange",
+        "inputs": {
+          "timeLine" : "current"
+        }
+      }
+    ],
+    "update_many_field_name": [
+      {
+        "type": "remote",
+        "generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+        "inputs": {
+          "fieldName": "fieldName",
+          "moduleName": "Account",
+          "orgId": "$.input.query:$.orgId"
+        }
+      }
+    ]
+  }
+}

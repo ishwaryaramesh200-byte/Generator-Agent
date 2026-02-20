@@ -1,0 +1,270 @@
+{
+  "apis" : {
+    "getArgumentFields" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "getCustomFunctionFailures" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      }
+    },
+    "getAllCustomFunctions" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "updateCustomFunction" : {
+      "200" : {
+        "entityParams[*].value" : "#/generators/getCustomFunction_value",
+        "entityParams[*].name" : "#/generators/getCustomFunction_name",
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      }
+    },
+    "functionsWithHardcodedAuthtoken" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "executeCustomFunction" : {
+      "200" : {
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      }
+    },
+    "executeCustomFunctionWithScript" : {
+	     "200" : {
+	        "script" : "#/generators/getCustomFunctionExecuteWithScript_script",
+	        "returnType" : "#/generators/getCustomFunctionExecuteWithScript_returnType",
+	        "arguments" : "#/generators/getCustomFunctionExecuteWithScript_arguments"
+	      }
+    },
+    "getRelatedSchedules" : {
+      "200" : {
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      }
+    },
+    "getCustomFunction" : {
+      "200" : {
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      }
+    },
+    "getRelatedRules" : {
+      "200" : {
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      }
+    },
+    "createCustomFunction" : {
+      "422" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "entityParams[*].value" : "#/generators/getCustomFunction_value",
+        "entityParams[*].name" : "#/generators/getCustomFunction_name"
+      },
+      "201" : {
+        "departmentId" : "../../Department/test_data_generation_configurations.json#/generators/department_id",
+        "entityParams[*].value" : "#/generators/getCustomFunction_value",
+        "entityParams[*].name" : "#/generators/getCustomFunction_name"
+      }
+    },
+    "deleteCustomFunction" : {
+      "204" : {
+        "customFunctionId" : "#/generators/getCustomFunctions_id"
+      }
+    }
+  },
+  "generators": {
+    "getCustomFunctions_id": [
+        {
+            "type": "dynamic",
+            "generatorOperationId": "support.CustomFunctions.getAllCustomFunctions",
+            "dataPath": "$.response.body:$.data[*].id"
+        }
+    ],
+    "getCustomFunction_name": [
+        {
+            "type": "dynamic",
+            "generatorOperationId": "support.CustomFunctions.getAllCustomFunctions",
+            "dataPath": "$.response.body:$.data[*].entityParams[*].name"
+        }
+    ],
+    "getCustomFunction_value": [
+        {
+            "type": "dynamic",
+            "generatorOperationId": "support.CustomFunctions.getAllCustomFunctions",
+            "dataPath": "$.response.body:$.data[*].entityParams[*].value"
+        }
+    ],
+    "createCustomFunction_value": [
+        {
+            "type": "dynamic",
+            "generatorOperationId": "support.CustomFunctions.createCustomFunction",
+            "dataPath": "$.response.body:$.entityParams[*].value"
+        }
+    ],
+    "createCustomFunction_customFunctionId": [
+        {
+            "type": "dynamic",
+            "generatorOperationId": "support.CustomFunctions.createCustomFunction",
+            "dataPath": "$.response.body:$.id"
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script": [
+        {
+            "type": "conditional",
+            "conditions": [
+                {
+                    "when": {
+                        "key": "$.input.body:returnType",
+                        "equals": "bool"
+                    },
+                    "then": {
+                        "use": "$generators:#/generators/getCustomFunctionExecuteWithScript_script_bool"
+                    }
+                },
+                {
+                    "when": {
+                        "key": "$.input.body:returnType",
+                        "equals": "string"
+                    },
+                    "then": {
+                        "use": "$generators:#/generators/getCustomFunctionExecuteWithScript_script_string"
+                    }
+                },
+                {
+                    "when": {
+                        "key": "$.input.body:returnType",
+                        "equals": "int"
+                    },
+                    "then": {
+                        "use": "$generators:#/generators/getCustomFunctionExecuteWithScript_script_int"
+                    }
+                },
+                {
+                    "when": {
+                        "key": "$.input.body:returnType",
+                        "equals": "void"
+                    },
+                    "then": {
+                        "use": "$generators:#/generators/getCustomFunctionExecuteWithScript_script_void"
+                    }
+                },
+                {
+                    "when": {
+                        "key": "$.input.body:returnType",
+                        "equals": "date"
+                    },
+                    "then": {
+                        "use": "$generators:#/generators/getCustomFunctionExecuteWithScript_script_date"
+                    }
+                },
+                {
+                    "when": {
+                        "key": "$.input.body:returnType",
+                        "equals": "map"
+                    },
+                    "then": {
+                        "use": "$generators:#/generators/getCustomFunctionExecuteWithScript_script_map"
+                    }
+                },
+                {
+                    "when": {
+                        "key": "$.input.body:returnType",
+                        "equals": "float"
+                    },
+                    "then": {
+                        "use": "$generators:#/generators/getCustomFunctionExecuteWithScript_script_float"
+                    }
+                }
+            ]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script_bool": [
+        {
+            "type": "static",
+            "value": [ 
+            "info \"Hello. return boolean: \"; \n return true;"
+            ]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script_string": [
+        {
+            "type": "static",
+            "value": [
+            "info \"Hello. return string: \"; \n return \"string\";"
+            ]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script_int": [
+        {
+            "type": "static",
+            "value": ["info \"Hello. return int: \"; \n return 123;"
+            ]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script_void": [
+        {
+            "type": "static",
+            "value": ["info \"Hello. return void: \";"]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script_date": [
+        {
+            "type": "static",
+            "value": ["info \"Hello. return date: \"; \n return now.toLong();"]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script_map": [
+        {
+            "type": "static",
+            "value": ["info \"Hello. return map: \"; \n return {\"key1\": \"value1\", \"key2\": \"value2\"};"]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_script_float": [
+        {
+            "type": "static",
+            "value": ["info \"Hello. return float: \"; \n return 123.45;"]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_returnType": [
+        {
+            "type": "static",
+            "value": [
+                "bool"
+            ]
+        }
+    ],
+    "getCustomFunctionExecuteWithScript_arguments": [
+        {
+            "type": "static",
+            "value": [
+                [
+                    {
+                        "name": "arg1",
+                        "type": "string",
+                        "value": "World"
+                    },
+                    {
+                        "name": "arg2",
+                        "type": "int",
+                        "value": "123"
+                    }
+                ]
+            ]
+        }
+    ]
+}
+}

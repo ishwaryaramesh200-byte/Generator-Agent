@@ -1,0 +1,31 @@
+{
+  "apis" : {
+    "updateSignatures" : {
+      "422" : {
+        "customizedSignatures[*].departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      },
+      "200" : {
+        "customizedSignatures[*].departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    },
+    "getSignatures" : {
+      "200" : {
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id"
+      }
+    },
+    "updateCustomSignature" : {
+      "422" : {
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "agentId" : "../Agent/test_data_generation_configurations.json#/generators/agent_id",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : {
+  }
+}

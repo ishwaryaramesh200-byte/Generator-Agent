@@ -1,0 +1,26 @@
+{
+  "apis" : {
+    "getAssociatedBots" : {
+      "422" : {
+        "guideId" : "#/generators/getAssociatedBots_guideId",
+        "departmentId" : "#/generators/getAssociatedBots_departmentId"
+      },
+      "200" : {
+        "guideId" : "#/generators/getAssociatedBots_guideId",
+        "departmentId" : "#/generators/getAssociatedBots_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "getAssociatedBots_guideId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.GC_Guide.addGCGuide",
+      "dataPath" : "$.response.body:$.guideId"
+    } ],
+    "getAssociatedBots_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "apis": {
+    "getFeatureFileContent": {
+      "422": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id",
+        "fileId": "#/generators/feature_file_id"
+      },
+      "200": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id",
+        "fileId": "#/generators/feature_file_id"
+      }
+    },
+    "createFeatureFile": {
+      "422": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id"
+      },
+      "200": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id"
+      }
+    },
+    "getFeatureFiles": {
+      "422": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id"
+      },
+      "200": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id"
+      }
+    },
+    "saveFeatureFileContent": {
+      "422": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id",
+        "fileId": "#/generators/feature_file_id"
+      },
+      "200": {
+        "folderId": "../FeatureFolder/test_data_generation_configurations.json#/generators/feature_folder_id",
+        "fileId": "#/generators/feature_file_id"
+      }
+    }
+  },
+  "generators": {
+    "feature_file_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.FeatureFile.createFeatureFile",
+        "dataPath": "$.response.body:$.id"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "apis": {
+    "deleteComment": {
+      "204": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "commentId": "#/generators/call_comment_id"
+      }
+    },
+    "getComments": {
+      "200": {
+        "entityId": "../Call/test_data_generation_configurations.json#/generators/call_id"
+      }
+    },
+    "getComment": {
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "commentId": "#/generators/call_comment_id"
+      }
+    },
+    "updateComment": {
+      "422": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "commentId": "#/generators/call_comment_id"
+      },
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id",
+        "commentId": "#/generators/call_comment_id"
+      }
+    },
+    "createComment": {
+      "422": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id"
+      },
+      "200": {
+        "callId": "../Call/test_data_generation_configurations.json#/generators/call_id"
+      }
+    }
+  },
+  "generators": {
+    "call_comment_id": [
+      {
+        "type": "dynamic",
+        "generatorOperationId": "support.CallComments.createComment",
+        "dataPath": "$.response.body:$.id",
+        "params": {
+          "callId": "$calls.response.body:$.id"
+        }
+      }
+    ]
+  }
+}

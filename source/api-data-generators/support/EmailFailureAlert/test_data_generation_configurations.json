@@ -1,0 +1,21 @@
+{
+  "apis" : {
+    "getEmailFailureAlerts" : {
+      "422" : {
+        "department" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "department" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "clearEmailFailureAlerts" : {
+      "422" : {
+        "department" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "204" : {
+        "department" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    }
+  },
+  "generators" : null
+}

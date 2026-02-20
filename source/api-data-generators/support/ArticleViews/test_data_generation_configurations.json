@@ -1,0 +1,26 @@
+{
+  "apis" : {
+    "updateDisplayPreference" : {
+      "422" : {
+        "sortOrder" : "#/generators/updateDisplayPreference_sortOrder",
+        "departmentId" : "#/generators/updateDisplayPreference_departmentId"
+      },
+      "200" : {
+        "sortOrder" : "#/generators/updateDisplayPreference_sortOrder",
+        "departmentId" : "#/generators/updateDisplayPreference_departmentId"
+      }
+    }
+  },
+  "generators" : {
+    "updateDisplayPreference_sortOrder" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ArticleViews.listAllArticleViews",
+      "dataPath" : "$.response.body:$.data[*].sortOrder"
+    } ],
+    "updateDisplayPreference_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

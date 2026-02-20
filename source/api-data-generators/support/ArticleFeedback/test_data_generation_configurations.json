@@ -1,0 +1,147 @@
+{
+	"apis": {
+		"createFeedback": {
+			"422": {
+				"articleId": "../Article/test_data_generation_configurations.json#/generators/article_id",
+				"locale": "../Article/test_data_generation_configurations.json#/generators/locale"
+			},
+			"200": {
+				"articleId": "../Article/test_data_generation_configurations.json#/generators/article_id",
+				"locale": "../Article/test_data_generation_configurations.json#/generators/locale"
+			}
+		},
+		"getFeedbacksOfAnArticleTranslation": {
+			"200": {
+				"articleId": "../Article/test_data_generation_configurations.json#/generators/article_id",
+				"locale": "../Article/test_data_generation_configurations.json#/generators/locale",
+				"createdTimeRange": "#/generators/createdTimeRange"
+			}
+		},
+		"deleteFeedback": {
+			"204": {
+				"feedbackId": "#/generators/getFeedbackId"
+			}
+		},
+		"getFeedbackList": {
+			"200": {
+				"rootCategoryIds[*]": "#/generators/getFeedbackList_[*]",
+				"departmentIds[*]": "#/generators/getFeedbackList_[*]"
+			}
+		},
+		"getFeedbacksOfAnArticle": {
+			"200": {
+				"articleId": "../Article/test_data_generation_configurations.json#/generators/article_id"
+			}
+		},
+		"getFeedback": {
+			"200": {
+				"feedbackId": "#/generators/getFeedbackId"
+			}
+		},
+		"addFeedbackAsTicket": {
+			"200": {
+				"feedbackId": "#/generators/getFeedbackId",
+				"assigneeId": "#/generators/addFeedbackAsTicket_assigneeId",
+				"departmentId": "../Department/test_data_generation_configurations.json#/generators/getSync_DepartmentId"
+			}
+		},
+		"updateTranslationFeedback": {
+			"422": {
+				"feedbackId": "#/generators/getFeedbackId"
+			},
+			"200": {
+				"feedbackId": "#/generators/getFeedbackId"
+			}
+		}
+	},
+	"generators": {
+		"getLocale": [
+			{
+				"type": "reference",
+				"ref": "$articleId.response.body:$.locale"
+			}
+		],
+		"getFeedbackId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.ArticleFeedback.createFeedback",
+				"dataPath": "$.response.body:$.id"
+			}
+		],
+		"getFeedbacksOfAnArticleTranslation_addArticle_status": [
+			{
+				"type": "static",
+				"value": [
+					"Published"
+				]
+			}
+		],
+		"addFeedbackAsTicket_departmentId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.Department.getSyncDepartments",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		],
+		"addFeedbackAsTicket_feedbackId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "ArticleFeedback.getFeedbackList",
+				"dataPath": "$.response.body:$.data[?((@.contactId != null) && (@.ticketId == null))].id",
+				"params": {
+				}
+			}
+		],
+		"addFeedbackAsTicket_assigneeId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.Agent.getMyInfo",
+				"dataPath": "$.response.body:$.id"
+			}
+		],
+		"getFeedbacksOfAnArticleTranslation_getTranslationsOfAnArticle_sortBy": [
+			{
+				"type": "static",
+				"value": [
+					"createdTime"
+				]
+			}
+		],
+		"getFeedbacksOfAnArticleTranslation_getTranslationsOfAnArticle_status": [
+			{
+				"type": "static",
+				"value": [
+					"Published"
+				]
+			}
+		],
+		"getFeedbacksOfAnArticleTranslation_addArticle_permission": [
+			{
+				"type": "static",
+				"value": [
+					"ALL"
+				]
+			}
+		],
+		"deleteFeedback_feedbackId": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.ArticleFeedback.createFeedback",
+				"dataPath": "$.response.body:$.id"
+			}
+		],
+		"getFeedbackList_[*]": [
+			{
+				"type": "dynamic",
+				"generatorOperationId": "support.Department.getSyncDepartments",
+				"dataPath": "$.response.body:$.data[*].id"
+			}
+		],
+		"createdTimeRange": [
+			{
+				"type": "remote",
+				"generatorMethod": "applicationDriver.rpc.desk.DynamicDataProvider.generateDateTimePair"
+			}
+		]
+	}
+}

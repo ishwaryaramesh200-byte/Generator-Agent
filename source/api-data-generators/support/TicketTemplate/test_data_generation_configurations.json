@@ -1,0 +1,475 @@
+{
+  "apis" : {
+    "deleteTicketTemplates" : {
+      "422" : {
+        "ids[*]" : "#/generators/deleteTicketTemplates_[*]"
+      },
+      "200" : {
+        "ids[*]" : "#/generators/deleteTicketTemplates_[*]"
+      }
+    },
+    "getTicketTemplate" : {
+      "200" : {
+        "ticketTemplateId" : "#/generators/getTicketTemplate_ticketTemplateId"
+      }
+    },
+    "getTicketTemplates" : {
+      "422" : {
+        "layoutId" : "#/generators/getTicketTemplates_layoutId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      },
+      "200" : {
+        "layoutId" : "#/generators/getTicketTemplates_layoutId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id"
+      }
+    },
+    "addTicketTemplate" : {
+      "422" : {
+        "ticketTemplateValues.departmentId" : "#/generators/addTicketTemplate_departmentId",
+        "ticketTemplateValues.priority" : "#/generators/addTicketTemplate_priority",
+        "ticketTemplateValues.dueDate" : "#/generators/addTicketTemplate_dueDate",
+        "ticketTemplateValues.classification" : "#/generators/addTicketTemplate_classification",
+        "ticketTemplateValues.category" : "#/generators/addTicketTemplate_category",
+        "ticketTemplateValues.teamId" : "#/generators/addTicketTemplate_teamId",
+        "ticketTemplateValues.subCategory" : "#/generators/addTicketTemplate_subCategory",
+        "ticketTemplateValues.assigneeId" : "#/generators/addTicketTemplate_assigneeId",
+        "ticketTemplateValues.phone" : "#/generators/addTicketTemplate_phone",
+        "ticketTemplateValues.status" : "#/generators/addTicketTemplate_status",
+        "ticketTemplateValues.productId" : "#/generators/addTicketTemplate_productId",
+        "ticketTemplateValues.language" : "#/generators/addTicketTemplate_language",
+        "layoutId" : "#/generators/addTicketTemplate_layoutId",
+        "ticketTemplateValues.contactId" : "#/generators/addTicketTemplate_contactId",
+        "ticketTemplateValues.cf" : "#/generators/addTicketTemplate_cf",
+        "ticketTemplateValues.accountId" : "#/generators/addTicketTemplate_accountId",
+        "ticketTemplateValues.subject" : "#/generators/addTicketTemplate_subject",
+        "ticketTemplateValues.secondaryContacts[*]" : "#/generators/addTicketTemplate_[*]",
+        "ticketTemplateValues.channel" : "#/generators/addTicketTemplate_channel",
+        "ticketTemplateValues.description" : "#/generators/addTicketTemplate_description",
+        "ticketTemplateValues.email" : "#/generators/addTicketTemplate_email"
+      },
+      "200" : {
+        "ticketTemplateValues.departmentId" : "#/generators/addTicketTemplate_departmentId",
+        "ticketTemplateValues.priority" : "#/generators/addTicketTemplate_priority",
+        "ticketTemplateValues.dueDate" : "#/generators/addTicketTemplate_dueDate",
+        "ticketTemplateValues.classification" : "#/generators/addTicketTemplate_classification",
+        "ticketTemplateValues.category" : "#/generators/addTicketTemplate_category",
+        "ticketTemplateValues.teamId" : "#/generators/addTicketTemplate_teamId",
+        "ticketTemplateValues.subCategory" : "#/generators/addTicketTemplate_subCategory",
+        "ticketTemplateValues.assigneeId" : "#/generators/addTicketTemplate_assigneeId",
+        "ticketTemplateValues.phone" : "#/generators/addTicketTemplate_phone",
+        "ticketTemplateValues.status" : "#/generators/addTicketTemplate_status",
+        "ticketTemplateValues.productId" : "#/generators/addTicketTemplate_productId",
+        "ticketTemplateValues.language" : "#/generators/addTicketTemplate_language",
+        "layoutId" : "#/generators/addTicketTemplate_layoutId",
+        "ticketTemplateValues.contactId" : "#/generators/addTicketTemplate_contactId",
+        "ticketTemplateValues.cf" : "#/generators/addTicketTemplate_cf",
+        "ticketTemplateValues.accountId" : "#/generators/addTicketTemplate_accountId",
+        "ticketTemplateValues.subject" : "#/generators/addTicketTemplate_subject",
+        "ticketTemplateValues.secondaryContacts[*]" : "#/generators/addTicketTemplate_[*]",
+        "ticketTemplateValues.channel" : "#/generators/addTicketTemplate_channel",
+        "ticketTemplateValues.description" : "#/generators/addTicketTemplate_description",
+        "ticketTemplateValues.email" : "#/generators/addTicketTemplate_email"
+      }
+    },
+    "updateTicketTemplate" : {
+      "422" : {
+        "ticketTemplateId" : "#/generators/updateTicketTemplate_ticketTemplateId",
+        "ticketTemplateValues.departmentId" : "#/generators/updateTicketTemplate_departmentId",
+        "ticketTemplateValues.priority" : "#/generators/updateTicketTemplate_priority",
+        "ticketTemplateValues.dueDate" : "#/generators/updateTicketTemplate_dueDate",
+        "ticketTemplateValues.classification" : "#/generators/updateTicketTemplate_classification",
+        "ticketTemplateValues.category" : "#/generators/updateTicketTemplate_category",
+        "ticketTemplateValues.teamId" : "#/generators/updateTicketTemplate_teamId",
+        "ticketTemplateValues.subCategory" : "#/generators/updateTicketTemplate_subCategory",
+        "ticketTemplateValues.assigneeId" : "#/generators/updateTicketTemplate_assigneeId",
+        "ticketTemplateValues.phone" : "#/generators/updateTicketTemplate_phone",
+        "ticketTemplateValues.status" : "#/generators/updateTicketTemplate_status",
+        "ticketTemplateValues.productId" : "#/generators/updateTicketTemplate_productId",
+        "ticketTemplateValues.language" : "#/generators/updateTicketTemplate_language",
+        "layoutId" : "#/generators/updateTicketTemplate_layoutId",
+        "ticketTemplateValues.contactId" : "#/generators/updateTicketTemplate_contactId",
+        "ticketTemplateValues.cf" : "#/generators/updateTicketTemplate_cf",
+        "ticketTemplateValues.accountId" : "#/generators/updateTicketTemplate_accountId",
+        "ticketTemplateValues.subject" : "#/generators/updateTicketTemplate_subject",
+        "ticketTemplateValues.secondaryContacts[*]" : "#/generators/updateTicketTemplate_[*]",
+        "ticketTemplateValues.channel" : "#/generators/updateTicketTemplate_channel",
+        "ticketTemplateValues.description" : "#/generators/updateTicketTemplate_description",
+        "ticketTemplateValues.email" : "#/generators/updateTicketTemplate_email"
+      },
+      "200" : {
+        "ticketTemplateId" : "#/generators/updateTicketTemplate_ticketTemplateId",
+        "ticketTemplateValues.departmentId" : "#/generators/updateTicketTemplate_departmentId",
+        "ticketTemplateValues.priority" : "#/generators/updateTicketTemplate_priority",
+        "ticketTemplateValues.dueDate" : "#/generators/updateTicketTemplate_dueDate",
+        "ticketTemplateValues.classification" : "#/generators/updateTicketTemplate_classification",
+        "ticketTemplateValues.category" : "#/generators/updateTicketTemplate_category",
+        "ticketTemplateValues.teamId" : "#/generators/updateTicketTemplate_teamId",
+        "ticketTemplateValues.subCategory" : "#/generators/updateTicketTemplate_subCategory",
+        "ticketTemplateValues.assigneeId" : "#/generators/updateTicketTemplate_assigneeId",
+        "ticketTemplateValues.phone" : "#/generators/updateTicketTemplate_phone",
+        "ticketTemplateValues.status" : "#/generators/updateTicketTemplate_status",
+        "ticketTemplateValues.productId" : "#/generators/updateTicketTemplate_productId",
+        "ticketTemplateValues.language" : "#/generators/updateTicketTemplate_language",
+        "layoutId" : "#/generators/updateTicketTemplate_layoutId",
+        "ticketTemplateValues.contactId" : "#/generators/updateTicketTemplate_contactId",
+        "ticketTemplateValues.cf" : "#/generators/updateTicketTemplate_cf",
+        "ticketTemplateValues.accountId" : "#/generators/updateTicketTemplate_accountId",
+        "ticketTemplateValues.subject" : "#/generators/updateTicketTemplate_subject",
+        "ticketTemplateValues.secondaryContacts[*]" : "#/generators/updateTicketTemplate_[*]",
+        "ticketTemplateValues.channel" : "#/generators/updateTicketTemplate_channel",
+        "ticketTemplateValues.description" : "#/generators/updateTicketTemplate_description",
+        "ticketTemplateValues.email" : "#/generators/updateTicketTemplate_email"
+      }
+    }
+  },
+  "generators" : {
+    "updateTicketTemplate_priority" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'priority'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/updateTicketTemplate_getFields_module"
+      }
+    } ],
+    "addTicketTemplate_getFields_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets" ]
+    } ],
+    "updateTicketTemplate_assigneeId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTicketTemplate_channel" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'channel'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/updateTicketTemplate_getFields_module"
+      }
+    } ],
+    "updateTicketTemplate_classification" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'classification'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/updateTicketTemplate_getFields_module"
+      }
+    } ],
+    "addTicketTemplate_channel" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'channel'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/addTicketTemplate_getFields_module"
+      }
+    } ],
+    "updateTicketTemplate_subject" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.subject"
+    } ],
+    "deleteTicketTemplates_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.TicketTemplate.addTicketTemplate",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addTicketTemplate_subject" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.subject"
+    } ],
+    "addTicketTemplate_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.createContact",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addTicketTemplate_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "name" : "layout",
+      "params" : {
+        "module" : "$generators:#/generators/addTicketTemplate_getLayouts_module"
+      }
+    } ],
+    "updateTicketTemplate_contactId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.createContact",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTicketTemplate_language" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "language",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "addTicketTemplate_classification" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'classification'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/addTicketTemplate_getFields_module"
+      }
+    } ],
+    "updateTicketTemplate_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Department.getDepartment",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId"
+      }
+    } ],
+    "updateTicketTemplate_description" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.description"
+    } ],
+    "updateTicketTemplate_dueDate" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.dueDate"
+    } ],
+    "updateTicketTemplate_accountId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Account.createAccount",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTicketTemplate_getFields_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets" ]
+    } ],
+    "updateTicketTemplate_status" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'status'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/updateTicketTemplate_getFields_module"
+      }
+    } ],
+    "addTicketTemplate_status" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'status'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/addTicketTemplate_getFields_module"
+      }
+    } ],
+    "getTicketTemplates_getLayouts_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets" ]
+    } ],
+    "addTicketTemplate_dueDate" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.dueDate"
+    } ],
+    "updateTicketTemplate_productId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Product.getListOfProducts",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId"
+      }
+    } ],
+    "updateTicketTemplate_ticketTemplateId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.TicketTemplate.addTicketTemplate",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTicketTemplate_getLayouts_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets" ]
+    } ],
+    "addTicketTemplate_description" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.description"
+    } ],
+    "updateTicketTemplate_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "name" : "layout",
+      "params" : {
+        "module" : "$generators:#/generators/updateTicketTemplate_getLayouts_module"
+      }
+    } ],
+    "addTicketTemplate_subCategory" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'subCategory'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/addTicketTemplate_getFields_module"
+      }
+    } ],
+    "addTicketTemplate_language" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "language",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "updateTicketTemplate_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.createContact",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTicketTemplate_subCategory" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'subCategory'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/updateTicketTemplate_getFields_module"
+      }
+    } ],
+    "addTicketTemplate_priority" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'priority'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/addTicketTemplate_getFields_module"
+      }
+    } ],
+    "addTicketTemplate_assigneeId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addTicketTemplate_productId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Product.getListOfProducts",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId"
+      }
+    } ],
+    "addTicketTemplate_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Department.getDepartment",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId"
+      }
+    } ],
+    "updateTicketTemplate_email" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.email"
+    } ],
+    "addTicketTemplate_phone" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.phone"
+    } ],
+    "getTicketTemplates_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Department.getDepartment",
+      "dataPath" : "$.response.body:$.id",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId"
+      }
+    } ],
+    "addTicketTemplate_accountId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Account.createAccount",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTicketTemplate_category" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'category'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/updateTicketTemplate_getFields_module"
+      }
+    } ],
+    "updateTicketTemplate_cf" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+      "inputs" : {
+        "moduleName" : "Ticket"
+      }
+    } ],
+    "getTicketTemplates_layoutId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Layout.getLayouts",
+      "dataPath" : "$.response.body:$.data[0].id",
+      "name" : "layout",
+      "params" : {
+        "module" : "$generators:#/generators/getTicketTemplates_getLayouts_module"
+      }
+    } ],
+    "getTicketTemplate_ticketTemplateId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.TicketTemplate.addTicketTemplate",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateTicketTemplate_phone" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.phone"
+    } ],
+    "addTicketTemplate_getLayouts_module" : [ {
+      "type" : "static",
+      "value" : [ "tickets" ]
+    } ],
+    "updateTicketTemplate_teamId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Team.getTeamsInDepartment",
+      "dataPath" : "$.response.body:$.teams[0].id",
+      "params" : {
+        "department_id" : "layout.response.body:$.data[*].departmentId"
+      }
+    } ],
+    "addTicketTemplate_category" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Field.getFields",
+      "dataPath" : "$.response.body:$.data[?((@.apiName == 'category'))].allowedValues[0].value",
+      "params" : {
+        "departmentId" : "layout.response.body:$.data[*].departmentId",
+        "module" : "$generators:#/generators/addTicketTemplate_getFields_module"
+      }
+    } ],
+    "addTicketTemplate_email" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.email"
+    } ],
+    "addTicketTemplate_cf" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getCustomFieldSchema",
+      "inputs" : {
+        "moduleName" : "Ticket"
+      }
+    } ],
+    "addTicketTemplate_contactId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.createContact",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "addTicketTemplate_teamId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Team.getTeamsInDepartment",
+      "dataPath" : "$.response.body:$.teams[0].id",
+      "params" : {
+        "department_id" : "layout.response.body:$.data[*].departmentId"
+      }
+    } ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "apis" : {
+    "TicketsFieldsCount" : {
+      "422" : {
+        "accountId" : "#/generators/TicketsFieldsCount_accountId",
+        "viewId" : "#/generators/TicketsFieldsCount_viewId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "channel" : "#/generators/TicketsFieldsCount_channel",
+        "priority" : "#/generators/TicketsFieldsCount_priority",
+        "category" : "#/generators/TicketsFieldsCount_category",
+        "userId" : "#/generators/TicketsFieldsCount_userId",
+        "status" : "#/generators/status"
+      },
+      "200" : {
+        "accountId" : "#/generators/TicketsFieldsCount_accountId",
+        "viewId" : "#/generators/TicketsFieldsCount_viewId",
+        "departmentId" : "../Department/test_data_generation_configurations.json#/generators/department_id",
+        "channel" : "#/generators/TicketsFieldsCount_channel",
+        "priority" : "#/generators/TicketsFieldsCount_priority",
+        "category" : "#/generators/TicketsFieldsCount_category",
+        "userId" : "#/generators/TicketsFieldsCount_userId",
+        "status" : "#/generators/status"
+      }
+    }
+  },
+  "generators" : {
+    "TicketsFieldsCount_userId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.HelpCenterUser.getMyProfileInformation",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "TicketsFieldsCount_accountId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.Account.getAccounts",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "status" : [ {
+      "type" : "static",
+      "value" : [ "Open", "Closed", "Escalated" ]
+    } ],
+    "TicketsFieldsCount_priority" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "priority",
+        "moduleName" : "Ticket",
+        "orgId" : "16977187"
+      }
+    } ],
+    "TicketsFieldsCount_category" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "category",
+        "moduleName" : "Ticket",
+        "orgId" : "16977187"
+      }
+    } ],
+    "TicketsFieldsCount_channel" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "channel",
+        "moduleName" : "Ticket",
+        "orgId" : "16977187"
+      }
+    } ],
+    "TicketsFieldsCount_viewId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "portal.View.GetLastAccessedView",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}

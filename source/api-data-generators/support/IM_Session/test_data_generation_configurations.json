@@ -1,0 +1,149 @@
+{
+  "apis" : {
+    "getSessionMetrics" : {
+      "200" : {
+        "channelId" : "#/generators/getSessionMetrics_channelId",
+        "departmentId" : "#/generators/getSessionMetrics_departmentId"
+      },
+      "204" : {
+        "channelId" : "#/generators/getSessionMetrics_channelId",
+        "departmentId" : "#/generators/getSessionMetrics_departmentId"
+      }
+    },
+    "getIMSessionTickets" : {
+      "422" : {
+        "id" : "#/generators/getIMSessionTickets_id"
+      },
+      "200" : {
+        "id" : "#/generators/getIMSessionTickets_id"
+      },
+      "204" : {
+        "id" : "#/generators/getIMSessionTickets_id"
+      }
+    },
+    "getSessions" : {
+      "200" : {
+        "agentId" : "#/generators/getSessions_agentId",
+        "channelId[*]" : "#/generators/getSessions_[*]",
+        "contactId" : "#/generators/getSessions_contactId",
+        "profileId" : "#/generators/getSessions_profileId",
+        "departmentId" : "#/generators/getSessions_departmentId"
+      },
+      "204" : {
+        "agentId" : "#/generators/getSessions_agentId",
+        "channelId[*]" : "#/generators/getSessions_[*]",
+        "contactId" : "#/generators/getSessions_contactId",
+        "profileId" : "#/generators/getSessions_profileId",
+        "departmentId" : "#/generators/getSessions_departmentId"
+      }
+    },
+    "updateSession" : {
+      "422" : {
+        "agentId" : "#/generators/updateSession_agentId",
+        "id" : "#/generators/updateSession_id"
+      },
+      "200" : {
+        "agentId" : "#/generators/updateSession_agentId",
+        "id" : "#/generators/updateSession_id"
+      }
+    },
+    "pickupSession" : {
+      "422" : {
+        "id" : "#/generators/pickupSession_id"
+      },
+      "200" : {
+        "id" : "#/generators/pickupSession_id"
+      }
+    },
+    "getSession" : {
+      "422" : {
+        "id" : "#/generators/getSession_id"
+      },
+      "200" : {
+        "id" : "#/generators/getSession_id"
+      }
+    },
+    "getSessionParticipants" : {
+      "422" : {
+        "id" : "#/generators/getSessionParticipants_id"
+      },
+      "200" : {
+        "id" : "#/generators/getSessionParticipants_id"
+      }
+    }
+  },
+  "generators" : {
+    "getSessions_agentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getSessionMetrics_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateSession_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Session.getSessions",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getSessionMetrics_channelId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateSession_agentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Agent.getMyInfo",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "pickupSession_getSessions_assigneeFilter" : [ {
+      "type" : "static",
+      "value" : [ "NONE" ]
+    } ],
+    "getSession_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Session.getSessions",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getSessions_departmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getSessions_profileId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Profile.getMyProfile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getIMSessionTickets_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Session.getSessions",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getSessions_contactId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Contact.getContactsUnderProduct",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "pickupSession_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "IM_Session.getSessions",
+      "dataPath" : "$.response.body:$.data[?((@.status == 'CREATED'))].id",
+      "params" : {
+        "assigneeFilter" : "$generators:#/generators/pickupSession_getSessions_assigneeFilter"
+      }
+    } ],
+    "getSessions_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Channel.getIMChannelsList",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "getSessionParticipants_id" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.IM_Session.getSessions",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "apis" : {
+    "createBotConfig" : {
+      "200" : {
+        "departmentIds[*]" : "#/generators/createBotConfig_[*]"
+      },
+      "204" : {
+        "departmentIds[*]" : "#/generators/createBotConfig_[*]"
+      }
+    },
+    "updateBotConfig" : {
+      "200" : {
+        "departmentIds[*]" : "#/generators/updateBotConfig_[*]"
+      }
+    }
+  },
+  "generators" : {
+    "createBotConfig_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ],
+    "updateBotConfig_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Department.getSyncDepartments",
+      "dataPath" : "$.response.body:$.data[*].id"
+    } ]
+  }
+}

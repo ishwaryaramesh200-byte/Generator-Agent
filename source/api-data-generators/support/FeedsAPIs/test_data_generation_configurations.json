@@ -1,0 +1,54 @@
+{
+  "apis": {
+    "Mark_Notification_As_Read": {
+      "422": {
+        "fdk": "#/generators/notification_fdk",
+        "skey": "#/generators/notification_skey",
+        "skeyList": "#/generators/notification_skey_list"
+      },
+      "202": {
+        "fdk": "#/generators/notification_fdk",
+        "skey": "#/generators/notification_skey",
+        "skeyList": "#/generators/notification_skey_list"
+      }
+    },
+    "FlagNotification": {
+      "422": {
+        "fdk": "#/generators/notification_fdk",
+        "skey": "#/generators/notification_skey"
+      },
+      "202": {
+        "fdk": "#/generators/notification_fdk",
+        "skey": "#/generators/notification_skey"
+      }
+    }
+  },
+  "generators": {
+    "notification_fdk": [
+      {
+        "type": "static",
+        "value": [
+          "a9f1bc9fc0a144f65373dedff4e021f2d113d13065d348a55ebe80f92620e34d__"
+        ]
+      }
+    ],
+    "notification_skey": [
+      {
+        "type": "static",
+        "value": [
+          "698386bc3f0d101a8cd7615caf86031b7b0ca90cfd0203e5c4a75f041c3b33e4c015a11f626051aa7ca0d847c06f82ac__"
+        ]
+      }
+    ],
+    "notification_skey_list": [
+      {
+        "type": "static",
+        "value": [
+          [
+            "698386bc3f0d101a8cd7615caf86031b7b0ca90cfd0203e5c4a75f041c3b33e4c015a11f626051aa7ca0d847c06f82ac__"
+          ]
+        ]
+      }
+    ]
+  }
+}

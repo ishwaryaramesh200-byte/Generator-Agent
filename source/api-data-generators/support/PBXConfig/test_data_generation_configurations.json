@@ -1,0 +1,17 @@
+{
+  "apis" : {
+    "getPBXConfig" : {
+      "200" : {
+        "pbxName" : "#/generators/getPBXConfig_pbxName"
+      }
+    }
+  },
+  "generators" : {
+    "getPBXConfig_pbxName" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "PBX.getPBXList",
+      "dataPath" : "$.response.body:$.data[0].name",
+      "params" : { }
+    } ]
+  }
+}

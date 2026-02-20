@@ -1,0 +1,383 @@
+{
+  "apis" : {
+    "cloneThreadAttachments" : {
+      "200" : {
+        "threadId" : "#/generators/cloneThreadAttachments_threadId",
+        "ticketId" : "#/generators/cloneThreadAttachments_ticketId"
+      }
+    },
+    "getMailHeaders" : {
+      "422" : {
+        "threadId" : "#/generators/getMailHeaders_threadId",
+        "ticketId" : "#/generators/getMailHeaders_ticketId"
+      },
+      "200" : {
+        "threadId" : "#/generators/getMailHeaders_threadId",
+        "ticketId" : "#/generators/getMailHeaders_ticketId"
+      }
+    },
+    "updateFaceBookDraft" : {
+      "422" : {
+        "threadId" : "#/generators/updateFaceBookDraft_threadId",
+        "respondedIn" : "#/generators/updateFaceBookDraft_respondedIn",
+        "ticketId" : "#/generators/updateFaceBookDraft_ticketId"
+      },
+      "200" : {
+        "threadId" : "#/generators/updateFaceBookDraft_threadId",
+        "respondedIn" : "#/generators/updateFaceBookDraft_respondedIn",
+        "ticketId" : "#/generators/updateFaceBookDraft_ticketId"
+      }
+    },
+    "sendFaceBookReply" : {
+      "422" : {
+        "respondedIn" : "#/generators/sendFaceBookReply_respondedIn",
+        "ticketId" : "#/generators/sendFaceBookReply_ticketId"
+      },
+      "200" : {
+        "respondedIn" : "#/generators/sendFaceBookReply_respondedIn",
+        "ticketId" : "#/generators/sendFaceBookReply_ticketId"
+      }
+    },
+    "updateForumsDraft" : {
+      "422" : {
+        "threadId" : "#/generators/updateForumsDraft_threadId",
+        "respondedIn" : "#/generators/updateForumsDraft_respondedIn",
+        "ticketId" : "#/generators/updateForumsDraft_ticketId"
+      },
+      "200" : {
+        "threadId" : "#/generators/updateForumsDraft_threadId",
+        "respondedIn" : "#/generators/updateForumsDraft_respondedIn",
+        "ticketId" : "#/generators/updateForumsDraft_ticketId"
+      }
+    },
+    "draftFaceBookReply" : {
+      "422" : {
+        "respondedIn" : "#/generators/draftFaceBookReply_respondedIn",
+        "ticketId" : "#/generators/draftFaceBookReply_ticketId"
+      },
+      "200" : {
+        "respondedIn" : "#/generators/draftFaceBookReply_respondedIn",
+        "ticketId" : "#/generators/draftFaceBookReply_ticketId"
+      }
+    },
+    "getScheduledThreads" : {
+      "200" : {
+        "viewId" : "#/generators/getScheduledThreads_viewId"
+      }
+    },
+    "sendForumsReply" : {
+      "422" : {
+        "respondedIn" : "#/generators/sendForumsReply_respondedIn",
+        "ticketId" : "#/generators/sendForumsReply_ticketId"
+      },
+      "200" : {
+        "respondedIn" : "#/generators/sendForumsReply_respondedIn",
+        "ticketId" : "#/generators/sendForumsReply_ticketId"
+      }
+    },
+    "updateEmailDraft" : {
+      "422" : {
+        "threadId" : "#/generators/updateEmailDraft_threadId",
+        "fromEmailAddress" : "#/generators/updateEmailDraft_fromEmailAddress",
+        "ticketId" : "#/generators/updateEmailDraft_ticketId",
+        "ticketStatus" : "#/generators/updateEmailDraft_ticketStatus",
+        "attachmentIds[*]" : "#/generators/updateEmailDraft_[*]"
+      },
+      "200" : {
+        "threadId" : "#/generators/updateEmailDraft_threadId",
+        "fromEmailAddress" : "#/generators/updateEmailDraft_fromEmailAddress",
+        "ticketId" : "#/generators/updateEmailDraft_ticketId",
+        "ticketStatus" : "#/generators/updateEmailDraft_ticketStatus",
+        "attachmentIds[*]" : "#/generators/updateEmailDraft_[*]"
+      }
+    },
+    "getOriginalMailContent" : {
+      "200" : {
+        "threadId" : "#/generators/getOriginalMailContent_threadId",
+        "requestId" : "#/generators/getOriginalMailContent_requestId"
+      }
+    },
+    "sendTwitterReply" : {
+      "422" : {
+        "respondedIn" : "#/generators/sendTwitterReply_respondedIn",
+        "ticketId" : "#/generators/sendTwitterReply_ticketId"
+      },
+      "200" : {
+        "respondedIn" : "#/generators/sendTwitterReply_respondedIn",
+        "ticketId" : "#/generators/sendTwitterReply_ticketId"
+      }
+    },
+    "draftEmailReply" : {
+      "422" : {
+        "fromEmailAddress" : "#/generators/draftEmailReply_fromEmailAddress",
+        "ticketId" : "#/generators/draftEmailReply_ticketId",
+        "ticketStatus" : "#/generators/draftEmailReply_ticketStatus",
+        "attachmentIds[*]" : "#/generators/draftEmailReply_[*]"
+      },
+      "200" : {
+        "fromEmailAddress" : "#/generators/draftEmailReply_fromEmailAddress",
+        "ticketId" : "#/generators/draftEmailReply_ticketId",
+        "ticketStatus" : "#/generators/draftEmailReply_ticketStatus",
+        "attachmentIds[*]" : "#/generators/draftEmailReply_[*]"
+      }
+    },
+    "sendEmailReply" : {
+      "422" : {
+        "fromEmailAddress" : "#/generators/sendEmailReply_fromEmailAddress",
+        "ticketId" : "#/generators/sendEmailReply_ticketId",
+        "ticketStatus" : "#/generators/sendEmailReply_ticketStatus",
+        "attachmentIds[*]" : "#/generators/sendEmailReply_[*]"
+      },
+      "200" : {
+        "fromEmailAddress" : "#/generators/sendEmailReply_fromEmailAddress",
+        "ticketId" : "#/generators/sendEmailReply_ticketId",
+        "ticketStatus" : "#/generators/sendEmailReply_ticketStatus",
+        "attachmentIds[*]" : "#/generators/sendEmailReply_[*]"
+      }
+    },
+    "getThreads" : {
+      "200" : {
+        "ticketId" : "#/generators/getThreads_ticketId"
+      }
+    },
+    "deleteAttachment" : {
+      "200" : {
+        "threadId" : "#/generators/deleteAttachment_threadId",
+        "ticketId" : "#/generators/deleteAttachment_ticketId",
+        "attachmentId" : "#/generators/deleteAttachment_attachmentId"
+      }
+    },
+    "draftForumsReply" : {
+      "422" : {
+        "respondedIn" : "#/generators/draftForumsReply_respondedIn",
+        "ticketId" : "#/generators/draftForumsReply_ticketId"
+      },
+      "200" : {
+        "respondedIn" : "#/generators/draftForumsReply_respondedIn",
+        "ticketId" : "#/generators/draftForumsReply_ticketId"
+      }
+    }
+  },
+  "generators" : {
+    "thread_id": [
+      {
+        "type" : "dynamic",
+        "generatorOperationId" : "support.Thread.getThreads",
+        "dataPath" : "$.response.body:$.data[*].id"
+      }
+    ],
+    "updateEmailDraft_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "draftEmailReply_fromEmailAddress" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.MailReplyAddress.getReplyMailAddresses",
+      "dataPath" : "$.response.body:$.data[*].address"
+    } ],
+    "sendFaceBookReply_respondedIn" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].respondedIn"
+    } ],
+    "draftEmailReply_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Upload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sendEmailReply_fromEmailAddress" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.MailReplyAddress.getReplyMailAddresses",
+      "dataPath" : "$.response.body:$.data[*].address"
+    } ],
+    "updateFaceBookDraft_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sendForumsReply_respondedIn" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].respondedIn"
+    } ],
+    "sendForumsReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "cloneThreadAttachments_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "draftForumsReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sendEmailReply_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Upload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sendTwitterReply_respondedIn" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].respondedIn"
+    } ],
+    "getMailHeaders_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "Thread.sendEmailReply",
+      "dataPath" : "$.response.body:$.id",
+      "params" : { }
+    } ],
+    "deleteAttachment_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getOriginalMailContent_requestId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getThreads_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateForumsDraft_respondedIn" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].respondedIn"
+    } ],
+    "sendEmailReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "draftForumsReply_respondedIn" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].respondedIn"
+    } ],
+    "draftEmailReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateEmailDraft_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.EmailThread.sendEmailReply",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sendTwitterReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "draftFaceBookReply_respondedIn" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].respondedIn"
+    } ],
+    "updateFaceBookDraft_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.FaceBookThread.sendFaceBookReply",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateEmailDraft_[*]" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Upload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sendFaceBookReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateEmailDraft_fromEmailAddress" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.MailReplyAddress.getReplyMailAddresses",
+      "dataPath" : "$.response.body:$.data[*].address"
+    } ],
+    "draftFaceBookReply_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateForumsDraft_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deleteAttachment_attachmentId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Upload.uploadFile",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "getOriginalMailContent_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "sendEmailReply_ticketStatus" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "ticketStatus",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "getMailHeaders_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateEmailDraft_ticketStatus" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "ticketStatus",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "cloneThreadAttachments_ticketId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Ticket.createTicket",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateForumsDraft_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.ForumsThread.sendForumsReply",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "updateFaceBookDraft_respondedIn" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getThreads",
+      "dataPath" : "$.response.body:$.data[*].respondedIn"
+    } ],
+    "draftEmailReply_ticketStatus" : [ {
+      "type" : "remote",
+      "generatorMethod" : "applicationDriver.rpc.desk.DynamicDataProvider.getDynamicEnumValues",
+      "inputs" : {
+        "fieldName" : "ticketStatus",
+        "moduleName" : "Ticket",
+        "orgId" : "$.input.query:$.orgId"
+      }
+    } ],
+    "getScheduledThreads_viewId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.CustomView.getRecentView",
+      "dataPath" : "$.response.body:$.id"
+    } ],
+    "deleteAttachment_threadId" : [ {
+      "type" : "dynamic",
+      "generatorOperationId" : "support.Thread.getScheduledThreads",
+      "dataPath" : "$.response.body:$.id"
+    } ]
+  }
+}
