@@ -56,7 +56,9 @@ Responsible for building generators that follow strict rules and guidelines base
 
 ## Generator Structure Rule
 
-All generators must be created using the following structure:
+**MANDATORY - STRICT COMPLIANCE REQUIRED**
+
+All generators must be created using the following structure WITHOUT EXCEPTION:
 
 ```json
 {
@@ -68,8 +70,11 @@ All generators must be created using the following structure:
 }
 ```
 
-- All dependencies for a generator must be included in the same array under the generator name.
+- **CRITICAL:** All dependencies for a generator MUST be included in the SAME ARRAY under the generator name.
+- **DO NOT** create separate generator names for each dependency (e.g., do NOT use `contact_id`, `department_id`, `ticket` separately).
+- **DO NOT** nest generators or create multiple top-level keys for related operations.
 - This ensures clarity, maintainability, and proper grouping of related generator steps.
+- Dependency execution order must be maintained within the single array.
 - Generator name should be descriptive of the entity and purpose, following the snake_case convention.
 ---
 
@@ -91,8 +96,10 @@ All generators must be created using the following structure:
 
 4. Don't edit OpenAPI specification files.
 
-5.  Don't use params in a generator if the API doesn't have that parameter defined in the OpenAPI specification.
+5. Don't use params in a generator if the API doesn't have that parameter defined in the OpenAPI specification.
 
-6. Don't ask permission for read access to OAS or generator files, as you have full access to read any file in the specified paths.You have permission to read files outside of the workspace.
+6. Don't ask permission for read access to OAS or generator files, as you have full access to read any file in the specified paths. You have permission to read files outside of the workspace.
 
-7. Don't give text response in chat window.Only output the generator JSON object as specified.
+7. Don't give text response in chat window. Only output the generator JSON object as specified.
+
+8. **CRITICAL - Don't violate the Generator Structure Rule.** Never create separate generator names for dependencies. Always group all related generators (main + dependencies) under ONE generator name in a SINGLE array. This is non-negotiable.
