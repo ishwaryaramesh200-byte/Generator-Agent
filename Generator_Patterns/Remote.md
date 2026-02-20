@@ -25,27 +25,27 @@ Use REMOTE when you need:
 
 ## Required Properties
 
-| Property          | Type   | Purpose                 |
-| ----------------- | ------ | ----------------------- |
-| `type`            | string | Must be `"remote"`      |
+| Property | Type | Purpose |
+|----------|------|---------|
+| `type` | string | Must be `"remote"` |
 | `generatorMethod` | string | System function to call |
-| `inputs`          | object | Function parameters     |
+| `inputs` | object | Function parameters |
 
 ## Optional Properties
 
-| Property | Type   | Purpose              |
-| -------- | ------ | -------------------- |
-| `name`   | string | Generator identifier |
+| Property | Type | Purpose |
+|----------|------|---------|
+| `name` | string | Generator identifier |
 
 ---
 
 ## System Methods Reference
 
-| Method                 | Purpose                | Use Case                      |
-| ---------------------- | ---------------------- | ----------------------------- |
-| `getDateTime`          | Generate timestamps    | Created, modified, due dates  |
+| Method | Purpose | Use Case |
+|--------|---------|----------|
+| `getDateTime` | Generate timestamps | Created, modified, due dates |
 | `getDynamicEnumValues` | Get enumeration values | Status, priority, type fields |
-| `getCustomFieldSchema` | Get field structure    | Custom field metadata         |
+| `getCustomFieldSchema` | Get field structure | Custom field metadata |
 
 ### Full Method Paths
 
@@ -110,35 +110,35 @@ Get system enums:
 
 ### Format Strings (Java SimpleDateFormat)
 
-| Format                         | Example                  | Use Case               |
-| ------------------------------ | ------------------------ | ---------------------- |
+| Format | Example | Use Case |
+|--------|---------|----------|
 | `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'` | 2026-02-11T14:30:45.123Z | APIs with milliseconds |
-| `yyyy-MM-dd'T'HH:mm:ss'Z'`     | 2026-02-11T14:30:45Z     | ISO 8601 (recommended) |
-| `yyyy-MM-dd HH:mm:ss`          | 2026-02-11 14:30:45      | Database format        |
-| `yyyy-MM-dd`                   | 2026-02-11               | Date only              |
+| `yyyy-MM-dd'T'HH:mm:ss'Z'` | 2026-02-11T14:30:45Z | ISO 8601 (recommended) |
+| `yyyy-MM-dd HH:mm:ss` | 2026-02-11 14:30:45 | Database format |
+| `yyyy-MM-dd` | 2026-02-11 | Date only |
 
 ### Format Components
 
-| Symbol | Meaning               | Example       |
-| ------ | --------------------- | ------------- |
-| `yyyy` | 4-digit year          | 2026          |
-| `MM`   | 2-digit month         | 02 (01-12)    |
-| `dd`   | 2-digit day           | 11 (01-31)    |
-| `HH`   | 2-digit hour          | 14 (00-23)    |
-| `mm`   | 2-digit minute        | 30 (00-59)    |
-| `ss`   | 2-digit second        | 45 (00-59)    |
-| `SSS`  | 3-digit milliseconds  | 123 (000-999) |
-| `'Z'`  | UTC timezone (quoted) | Z             |
+| Symbol | Meaning | Example |
+|--------|---------|---------|
+| `yyyy` | 4-digit year | 2026 |
+| `MM` | 2-digit month | 02 (01-12) |
+| `dd` | 2-digit day | 11 (01-31) |
+| `HH` | 2-digit hour | 14 (00-23) |
+| `mm` | 2-digit minute | 30 (00-59) |
+| `ss` | 2-digit second | 45 (00-59) |
+| `SSS` | 3-digit milliseconds | 123 (000-999) |
+| `'Z'` | UTC timezone (quoted) | Z |
 
 ---
 
 ## Timeline Values
 
-| Value     | Generates    | Use Case            | Example                              |
-| --------- | ------------ | ------------------- | ------------------------------------ |
-| `current` | Now (today)  | Creation timestamps | `createdAt: "2026-02-11T14:30:45Z"`  |
-| `future`  | Later date   | Deadlines, expiry   | `dueDate: "2026-03-15T23:59:59Z"`    |
-| `past`    | Earlier date | Historical data     | `modifiedAt: "2026-01-10T08:00:00Z"` |
+| Value | Generates | Use Case | Example |
+|-------|-----------|----------|---------|
+| `current` | Now (today) | Creation timestamps | `createdAt: "2026-02-11T14:30:45Z"` |
+| `future` | Later date | Deadlines, expiry | `dueDate: "2026-03-15T23:59:59Z"` |
+| `past` | Earlier date | Historical data | `modifiedAt: "2026-01-10T08:00:00Z"` |
 
 ---
 
