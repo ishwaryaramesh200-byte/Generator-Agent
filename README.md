@@ -40,10 +40,10 @@
 
 | Step | Action | Details                                              |
 |------|--------|------------------------------------------------------|
-| 1    | Install| Follow the Quick Install steps                        |
+| 1    | Install| Follow the Quick Install steps                       |
 | 2    | Setup  | Copy `.github/agents` folder to your project root    |
 | 3    | Open   | Launch GitHub Copilot Chat in VS Code                |
-| 4    | Select | Choose "Generators" agent                             |
+| 4    | Select | Choose "Generators" agent                            |
 | 5    | Prompt | Start using the agent with your requests             |
 
 ### Key Commands
