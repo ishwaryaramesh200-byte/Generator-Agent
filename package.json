@@ -14,18 +14,14 @@
     "contributes": {
         "agents": [
             {
-                "name": "conditional-generator",
-                "description": "Generates text based on conditional rules"
-            },
-            {
                 "name": "generators",
                 "description": "Generator Configuration Agent responsible for generating generators"
             }
         ],
         "commands": [
             {
-                "command": "conditional-generator.start",
-                "title": "Start Conditional Generator Agent"
+                "command": "generator.start",
+                "title": "Start Generator Agent"
             }
         ]
     },
