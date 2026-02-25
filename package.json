@@ -3,7 +3,7 @@
     "displayName": "GeneratorAgent",
     "description": "A VS Code extension for conditional rule-based data generation",
     "version": "1.0.0",
-    "publisher": "ZohoDesk",
+    "publisher": "zohodesk",
     "engines": {
         "vscode": "^1.80.0"
     },
