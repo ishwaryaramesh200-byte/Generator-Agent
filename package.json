@@ -9,6 +9,10 @@
     },
     "main": "./main.js",
     "license": "MIT",
+    "homepage": "https://github.com/ishwaryaramesh200-byte/Generator-Agent",
+    "bugs": {
+        "url": "https://github.com/ishwaryaramesh200-byte/Generator-Agent/issues"
+    },
     "activationEvents": [
         "onStartupFinished"
     ],
@@ -32,6 +36,10 @@
         "generator",
         "automation"
     ],
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
     "devDependencies": {
         "@types/vscode": "^1.80.0",
         "@vscode/vsce": "^2.20.0"
