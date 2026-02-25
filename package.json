@@ -8,7 +8,8 @@
         "vscode": "^1.80.0"
     },
     "main": "./main.js",
-    "activationEvents": ["onCommand:generator.start"
+    "activationEvents": [
+        "onStartupFinished"
     ],
     "contributes": {
         "commands": [
