@@ -1,23 +1,16 @@
 {
-    "name": "conditional-generator-agent",
+    "name": "generatoragent",
     "displayName": "Conditional Generator Agent",
-    "description": "A VS Code agent for conditional rule-based data generation",
+    "description": "A VS Code extension for conditional rule-based data generation",
     "version": "1.0.0",
     "publisher": "ishwarya",
     "engines": {
         "vscode": "^1.80.0"
     },
     "main": "./main.js",
-    "activationEvents": [
-        "onStartupFinished"
+    "activationEvents": ["onCommand:generator.start"
     ],
     "contributes": {
-        "agents": [
-            {
-                "name": "generators",
-                "description": "Generator Configuration Agent responsible for generating generators"
-            }
-        ],
         "commands": [
             {
                 "command": "generator.start",
@@ -29,6 +22,14 @@
         "type": "git",
         "url": "https://github.com/ishwaryaramesh200-byte/Generator-Agent.git"
     },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "agent",
+        "generator",
+        "automation"
+    ],
     "devDependencies": {
         "@types/vscode": "^1.80.0",
         "@vscode/vsce": "^2.20.0"
